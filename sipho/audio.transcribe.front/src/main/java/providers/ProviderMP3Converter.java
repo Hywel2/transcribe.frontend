@@ -39,7 +39,6 @@ public class ProviderMP3Converter {
             while ((line = in.readLine()) != null) {
             }
             p.waitFor();
-            System.out.println("Video converted successfully!");
             in.close();
             File returnFile = new File (mp3File);
             return returnFile;

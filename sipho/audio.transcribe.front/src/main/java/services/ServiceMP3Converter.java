@@ -7,6 +7,7 @@ import models.Mp3Base64;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 
+import java.awt.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -39,6 +40,29 @@ public class ServiceMP3Converter {
                 mp3Base64);
 
     }
+
+//    @GET
+//    @Path("/1.0/car/vrm")
+//    @Produces(PageAttributes.MediaType.APPLICATION_JSON)
+//    @Valid
+//    public Response getCar(@NotNull(message = "{vehicleId.notNull}")
+//                           @QueryParam("identifier") String identifier) {
+//        try {
+//            DvlaServiceInterface vehicleServiceInterface = factory.createDvlaService(configureDvlaClient(containerRequestContext),
+//                    configureBaseUriDvla(), configureSqlSession(), configureApiUser());
+//
+//            Vehicle vehicleResponse = vehicleServiceInterface.vehicleCall(identifier);
+//
+//            if (vehicleResponse == null) {
+//                return Response.status(Response.Status.NO_CONTENT).build();
+//            } else {
+//                return Response.status(Response.Status.OK).entity(vehicleResponse).build();
+//            }
+//        } catch (Exception e) {
+//            LOGGER.error(e);
+//            return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("").build();
+//        }
+//    }
 
 
 

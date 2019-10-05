@@ -6,7 +6,6 @@ import java.awt.*;
 public class FileUploadJFrame extends JFrame {
 
     private GridBagConstraints gbc = new GridBagConstraints();
-    private FileUploadJPanel fileUploadJPanel;
 
     public FileUploadJFrame() throws HeadlessException {
         this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
