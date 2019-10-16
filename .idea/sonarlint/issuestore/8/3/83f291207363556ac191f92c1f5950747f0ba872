@@ -1,6 +1,6 @@
 
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ìº‚Ýüÿÿÿÿ8ÿ‘º¸Ö-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îå³þ
+fsquid:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ºÀœx8þ¤™ÊÖ-
 %squid:RedundantThrowsDeclarationCheck
 "eRemove the declaration of thrown exception 'java.awt.HeadlessException' which is a runtime exception.(ƒøÓö8ÉÚ¹¸Ö-
-qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Ìº‚Ýüÿÿÿÿ8ÿ‘º¸Ö-
-fsquid:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ºÀœx8þ¤™ÊÖ-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îå³þ
