@@ -89,7 +89,7 @@ public class ProviderMP3Converter {
         connection.setDoOutput(true);
 
         //Add authorizer
-        connection.setRequestProperty("AKIAUY25KD2RGY62ZB7V","55UpVteqyJ3jmTVtGJ8LTB+TjCQSDTfJ+8CTeyBT");
+        connection.setRequestProperty("key","value");
 
 
         //Send request
