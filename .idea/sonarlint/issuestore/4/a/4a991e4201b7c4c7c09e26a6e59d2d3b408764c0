@@ -1,0 +1,22 @@
+
+>squid:S1481j"'Remove this unused "is" local variable.(¶ÁôŒ
+N
+squid:S106i"9Replace this use of System.out or System.err by a logger.(ÁØÕx
+?squid:S2129:"#Remove this "Character" constructor(¤ÐÏÁøÿÿÿÿ
+^squid:CallToDeprecatedMethod:"1Remove this use of "Character"; it is deprecated.(¤ÐÏÁøÿÿÿÿ
+T
+squid:S106h"9Replace this use of System.out or System.err by a logger.(Þúò»üÿÿÿÿ
+{squid:S1149n"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(Ôô¡Óüÿÿÿÿ
+Asquid:S00108&")Either remove or fill this block of code.(‘Æìó
+?squid:S2129="#Remove this "Character" constructor(ÒÖøøüÿÿÿÿ
+^squid:CallToDeprecatedMethod="1Remove this use of "Character"; it is deprecated.(ÒÖøøüÿÿÿÿ
+N
+squid:S106g"9Replace this use of System.out or System.err by a logger.(îÁ 
+Msquid:S1854j"6Remove this useless assignment to local variable "is".(¶ÁôŒ
+Zsquid:S1854N">Remove this useless assignment to local variable "connection".(ëÖÍþýÿÿÿÿ
+~squid:S1488*"bImmediately return this expression instead of assigning it to the temporary variable "returnFile".(ßï—µùÿÿÿÿ
+Osquid:S1854&"8Remove this useless assignment to local variable "line".(‘Æìó
+xsquid:UselessImportCheck"ORemove this unused import 'com.fasterxml.jackson.core.JsonProcessingException'.(ßÔïÇûÿÿÿÿ
+T
+squid:S106v"9Replace this use of System.out or System.err by a logger.(ÐÙÀ‰ýÿÿÿÿ
+]squid:S2142,"FEither re-interrupt this method or rethrow the "InterruptedException".(òž¶È

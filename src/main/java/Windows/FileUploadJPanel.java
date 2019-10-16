@@ -73,7 +73,7 @@ public class FileUploadJPanel extends JPanel implements ActionListener {
         if (actionEvent.getSource() == sendButton) {
             String filePath = filePathField.getText();
             try {
-                serviceMP3Converter.sendValue(filePath);
+                serviceMP3Converter.convertToBase64(filePath);
             } catch (IOException e) {
                 e.printStackTrace();
             }

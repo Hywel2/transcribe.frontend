@@ -88,6 +88,10 @@ public class ProviderMP3Converter {
         connection.setUseCaches(false);
         connection.setDoOutput(true);
 
+        //Add authorizer
+        connection.setRequestProperty("AKIAUY25KD2RGY62ZB7V","55UpVteqyJ3jmTVtGJ8LTB+TjCQSDTfJ+8CTeyBT");
+
+
         //Send request
         DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
         wr.writeBytes("base64=" + mp3Base64Json);

@@ -1,0 +1,7 @@
+
+Asquid:S1068"*Remove this unused "LOGGER" private field.(§¡Æê
+[squid:UselessImportCheck"7Remove this unused import 'java.net.HttpURLConnection'.(¬¬˜­
+_squid:UselessImportCheck";Remove this unused import 'java.net.MalformedURLException'.(ªËÞˆ
+Rsquid:UselessImportCheck")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ
+xsquid:UselessImportCheck"ORemove this unused import 'com.fasterxml.jackson.core.JsonProcessingException'.(ßÔïÇûÿÿÿÿ
+lsquid:UselessImportCheck"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™
