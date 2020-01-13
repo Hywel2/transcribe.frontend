@@ -1,0 +1,5 @@
+
+›%squid:RedundantThrowsDeclarationCheck"eRemove the declaration of thrown exception 'java.awt.HeadlessException' which is a runtime exception.(―ÿΒϊÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ξε³ώ
+jsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(Μ²δÿÿÿÿÿ
+_squid:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(Ίΐx

@@ -1,4 +1,8 @@
 
-Ä%squid:RedundantThrowsDeclarationCheck"‹Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException', as it cannot be thrown from method's body.(“û€‹8þ®Ï‡Û-
-Ssquid:S1481"5Remove this unused "fileUploadJFrame" local variable.(’¯÷Ü8þ®Ï‡Û-
-bsquid:S1854"DRemove this useless assignment to local variable "fileUploadJFrame".(’¯÷Ü8þ®Ï‡Û-
+¤%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†îæÆ8™ ÄÊî-
+Ssquid:S1481
+"5Remove this unused "fileUploadJFrame" local variable.(’¯÷Ü8þ®Ï‡Û-
+¯%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(†îæÆ8™ ÄÊî-
+°%squid:RedundantThrowsDeclarationCheck"xRemove the declaration of thrown exception 'ws.schild.jave.EncoderException', as it cannot be thrown from method's body.(†îæÆ8™ ÄÊî-
+bsquid:S1854
+"DRemove this useless assignment to local variable "fileUploadJFrame".(’¯÷Ü8þ®Ï‡Û-
