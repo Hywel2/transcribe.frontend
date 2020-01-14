@@ -1,4 +1,4 @@
-package Resources;
+package resources;
 
 import org.apache.http.*;
 import org.apache.http.client.HttpClient;
@@ -6,15 +6,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
-import org.apache.log4j.Logger;
 
 public class Http {
-    private static final Logger LOGGER = Logger.getLogger(Http.class);
     HttpClient client = HttpClientBuilder.create().build();
-
-    public Http() {
-        // no args needed
-    }
 
     /**
      * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as a
@@ -31,16 +25,14 @@ public class Http {
                 params = new StringEntity(json);
             }
 
-            request.addHeader("Authorization", "transcribeMp3");
+            request.addHeader(System.getenv("tokensource"), System.getenv("tokenvalue"));
             request.setEntity(params);
 
             HttpResponse httpResponse = client.execute(request);
             return EntityUtils.toString(httpResponse.getEntity());
         } catch (Exception e) {
-            LOGGER.info("Something isn't right! Error: " + e);
+            e.printStackTrace();
         }
         return null;
     }
 }
-
-//    /Users/hywelgriffiths/Documents/personal/pictures/Test.mp4

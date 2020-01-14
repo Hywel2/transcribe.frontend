@@ -1,9 +1,9 @@
 
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îå³þ
 xsquid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îå³þ
 Tsquid:S1854\"=Remove this useless assignment to local variable "menuFrame".(©€µº
-?squid:S1148^"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
-?squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 Esquid:S1481\".Remove this unused "menuFrame" local variable.(©€µº
-Hsquid:S1948"1Make "serviceDownload" transient or serializable.(³Ë»¶
+?squid:S1148W"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
 Asquid:S1068"*Remove this unused "jFrame" private field.(ì¬‡Ü
+?squid:S1148^"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Hsquid:S1948"1Make "serviceDownload" transient or serializable.(³Ë»¶

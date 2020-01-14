@@ -1,14 +1,11 @@
 package providers;
 
-import Resources.Http;
-import ws.schild.jave.*;
-
-import java.io.*;
+import resources.Http;
 
 public class ProviderUpload {
 
     /**
-     * This method prepares the upload json and Http object to send the http
+     * This method creates a json and Http object to send a http in the upload.
      *
      * @param mp3Base64
      * @return

@@ -1,12 +1,12 @@
 
-?squid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Lsquid:S1481r".Remove this unused "menuFrame" local variable.(©€µº8“°Õíù-
-?squid:S1148k"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-\squid:S2147l"ECombine this catch with the one at line 106, which has the same body.(”ı¾
-Fsquid:S1068"*Remove this unused "jFrame" private field.(Â»¦ûÿÿÿÿ
-Fsquid:S1148t"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8“°Õíù-
-wsquid:S1450"[Remove the "jobNameLabel" field and declare it as a local variable in the relevant methods.(Š†“Ãÿÿÿÿÿ
-[squid:S1854r"=Remove this useless assignment to local variable "menuFrame".(©€µº8“°Õíù-
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(îå³ş
-xsquid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ
-Rsquid:S1948"/Make "serviceUpload" transient or serializable.(ü•Âƒúÿÿÿÿ8Œ£­Ìù-
+Fsquid:S1148k"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8«•ÿú-
+Fsquid:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8«•ÿú-
+Fsquid:S1148t"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8«•ÿú-
+~squid:S1450"[Remove the "jobNameLabel" field and declare it as a local variable in the relevant methods.(Š†“Ãÿÿÿÿÿ8«•ÿú-
+squid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ8«•ÿú-
+Rsquid:S1948"/Make "serviceUpload" transient or serializable.(ü•Âƒúÿÿÿÿ8«•ÿú-
+[squid:S1854r"=Remove this useless assignment to local variable "menuFrame".(©€µº8«•ÿú-
+csquid:S2147l"ECombine this catch with the one at line 106, which has the same body.(”ı¾8«•ÿú-
+Lsquid:S1481r".Remove this unused "menuFrame" local variable.(©€µº8«•ÿú-
+Msquid:S1068"*Remove this unused "jFrame" private field.(Â»¦ûÿÿÿÿ8«•ÿú-

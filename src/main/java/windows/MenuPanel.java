@@ -1,4 +1,4 @@
-package Windows;
+package windows;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,8 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuPanel extends JPanel implements ActionListener {
-    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(MenuPanel.class);
-
     private MenuFrame jFrame;
     private JButton downloadButton;
     private JButton uploadButton;
@@ -19,8 +17,12 @@ public class MenuPanel extends JPanel implements ActionListener {
         setButtons();
         setAction();
         setSize(350, 300);
+
     }
 
+    /**
+     * Method sets and add the JButtons to the panel
+     */
     void setButtons() {
         this.setLayout(new GridBagLayout());
         downloadButton = new JButton("Download");
@@ -37,25 +39,35 @@ public class MenuPanel extends JPanel implements ActionListener {
         gbc.weightx = 0;
         gbc.weighty = 0;
         add(uploadButton, gbc);
+
     }
 
+    /**
+     * This method sets the actionListeners
+     */
     void setAction() {
         downloadButton.addActionListener(this);
         uploadButton.addActionListener(this);
     }
 
+    /**
+     * This method sets the actions that will be performed when the JButtons are pressed
+     * @param actionEvent
+     */
+
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         try {
             if (actionEvent.getSource() == uploadButton) {
-                UploadFrame uploadFrame = new UploadFrame();
 
+                UploadFrame uploadFrame = new UploadFrame();
             }
             if (actionEvent.getSource() == downloadButton) {
                 DownloadFrame downloadFrame = new DownloadFrame();
             }
-        } catch(Exception e){
-                LOGGER.error(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
+

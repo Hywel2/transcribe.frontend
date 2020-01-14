@@ -1,13 +1,11 @@
 package providers;
 
-import Resources.Http;
+import resources.Http;
 
 public class ProviderDownload {
 
-    ProviderUpload providerUpload = new ProviderUpload();
-
     /**
-     * This method prepares the Http object and json to send the http
+     * This method creates the json and the Http object that will be used to send the http request for the download
      * @param jobName
      * @return
      */

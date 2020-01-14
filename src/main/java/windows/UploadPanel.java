@@ -1,4 +1,4 @@
-package Windows;
+package windows;
 
 import services.ServiceUpload;
 
@@ -8,7 +8,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class UploadPanel extends JPanel implements ActionListener {
-    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(UploadPanel.class);
 
     private UploadFrame jFrame;
     private JButton sendButton;
@@ -21,7 +20,6 @@ public class UploadPanel extends JPanel implements ActionListener {
     private ServiceUpload serviceUpload = new ServiceUpload();
 
     public UploadPanel(UploadFrame jFrame) {
-
         this.jFrame = jFrame;
 
         setJLabels();
@@ -32,8 +30,11 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     }
 
-    void setJLabels() {
+    /**
+     * Method sets and add the JLabels to the panel
+     */
 
+    void setJLabels() {
         filePathLabel = new JLabel("File path:");
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -50,8 +51,10 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     }
 
+    /**
+     * Method sets and add the JTextFields to the panel
+     */
     void setJTextField() {
-
         this.setLayout(new GridBagLayout());
         filePathField = new JTextField(20);
         gbc.gridx = 1;
@@ -71,8 +74,10 @@ public class UploadPanel extends JPanel implements ActionListener {
         add(jobNameField, gbc);
     }
 
+    /**
+     * Method sets and add the JButtons to the panel
+     */
     void setButtons() {
-
         this.setLayout(new GridBagLayout());
         sendButton = new JButton("Send");
         gbc.gridx = 1;
@@ -90,24 +95,31 @@ public class UploadPanel extends JPanel implements ActionListener {
         add(menuButton, gbc);
     }
 
+    /**
+     * Method creates the actionListeners
+     */
     void setAction() {
         sendButton.addActionListener(this);
         menuButton.addActionListener(this);
     }
 
+    /**
+     * Metbod sets the actions that will take place when buttons are pressed
+     * @param actionEvent
+     */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        try{
-        if (actionEvent.getSource() == sendButton) {
-            String filePath = filePathField.getText();
-            String jobName = jobNameField.getText();
+        try {
+            if (actionEvent.getSource() == sendButton) {
+                String filePath = filePathField.getText();
+                String jobName = jobNameField.getText();
                 serviceUpload.convertToBase64AndSend(filePath, jobName);
             }
-        if (actionEvent.getSource() == menuButton) {
+            if (actionEvent.getSource() == menuButton) {
                 MenuFrame menuFrame = new MenuFrame();
             }
-        } catch(Exception e){
-            LOGGER.error(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

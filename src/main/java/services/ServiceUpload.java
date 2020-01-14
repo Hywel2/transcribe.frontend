@@ -8,13 +8,7 @@ import java.io.*;
 import java.util.Base64;
 
 public class ServiceUpload {
-
-    private static final org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger.getLogger(ServiceUpload.class);
     private ProviderUpload providerUpload = new ProviderUpload();
-
-    public ServiceUpload() {
-        //null
-    }
 
     /**
      * Converts mp4 to mp3 and convert to Base64 code. Uses the ProviderMP3Converter convertToMp3 method to create MP3
@@ -26,15 +20,13 @@ public class ServiceUpload {
      */
 
     public String convertToBase64AndSend(String filePath, String jobName) {
-
-        File mp3 = null;
         try {
-            mp3 = new File(convertToMp3(filePath));
-        byte[] bytes = FileUtils.readFileToByteArray(mp3);
-        String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-        return providerUpload.executePost(mpBase64Piece, jobName);
-        } catch (EncoderException | IOException e) {
-            LOGGER.error(e);
+            File mp3 = new File(convertToMp3(filePath));
+            byte[] bytes = FileUtils.readFileToByteArray(mp3);
+            String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
+            return providerUpload.executePost(mpBase64Piece, jobName);
+        } catch (Exception e){
+            System.out.println("Something isn't right! Error: " + e);
         }
         return null;
     }
@@ -46,28 +38,32 @@ public class ServiceUpload {
      * @return
      */
 
-    public String convertToMp3(String mp4File) throws EncoderException {
+    public String convertToMp3(String mp4File){
+        try {
+            File source = new File(mp4File);
+            File target = new File(createMp3(mp4File));
 
-        File source = new File(mp4File);
-        File target = new File(createMp3(mp4File));
+            //Audio Attributes
+            AudioAttributes audio = new AudioAttributes();
+            audio.setCodec("libmp3lame");
+            audio.setBitRate(128000);
+            audio.setChannels(2);
+            audio.setSamplingRate(44100);
 
-        //Audio Attributes
-        AudioAttributes audio = new AudioAttributes();
-        audio.setCodec("libmp3lame");
-        audio.setBitRate(128000);
-        audio.setChannels(2);
-        audio.setSamplingRate(44100);
+            //Encoding attributes
+            EncodingAttributes attrs = new EncodingAttributes();
+            attrs.setFormat("mp3");
+            attrs.setAudioAttributes(audio);
 
-        //Encoding attributes
-        EncodingAttributes attrs = new EncodingAttributes();
-        attrs.setFormat("mp3");
-        attrs.setAudioAttributes(audio);
+            //Encode
+            Encoder encoder = new Encoder();
+            encoder.encode(new MultimediaObject(source), target, attrs);
 
-        //Encode
-        Encoder encoder = new Encoder();
-        encoder.encode(new MultimediaObject(source), target, attrs);
-
-        return createMp3(mp4File);
+            return createMp3(mp4File);
+        } catch (Exception e){
+            System.out.println("Something isn't right! Error: " + e);
+        }
+        return null;
     }
 
     /**

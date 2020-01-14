@@ -1,4 +1,4 @@
-package Windows;
+package windows;
 
 import services.ServiceDownload;
 
@@ -29,8 +29,11 @@ public class DownloadPanel extends JPanel implements ActionListener {
 
     }
 
-    void setJLabels() {
+    /**
+     * Method creates the attributes of the JLabels and adds them to the panel
+     */
 
+    void setJLabels() {
         filePathLabel = new JLabel("Name of job:");
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -40,8 +43,10 @@ public class DownloadPanel extends JPanel implements ActionListener {
 
     }
 
+    /**
+     * Method creates the attributes of the JTextFields and adds them to the panel
+     */
     void setJTextField() {
-
         this.setLayout(new GridBagLayout());
         jobField = new JTextField(20);
         gbc.gridx = 1;
@@ -52,6 +57,9 @@ public class DownloadPanel extends JPanel implements ActionListener {
         add(jobField, gbc);
     }
 
+    /**
+     * Method creates the attributes of the JButtons and adds them to the panel
+     */
     void setButtons() {
 
         this.setLayout(new GridBagLayout());
@@ -72,27 +80,30 @@ public class DownloadPanel extends JPanel implements ActionListener {
 
     }
 
+    /**
+     * Method sets the actionListener
+     */
     void setAction() {
         sendButton.addActionListener(this);
         menuButton.addActionListener(this);
     }
 
+    /**
+     * Method sets the actions carried out when the JButtons are pressed
+     * @param actionEvent
+     */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        if (actionEvent.getSource() == sendButton) {
-            String jobName = jobField.getText();
-            try {
-                serviceDownload.sendDownloadHttp(jobName+".json");
-            } catch (Exception e) {
-                e.printStackTrace();
+        try {
+            if (actionEvent.getSource() == sendButton) {
+                String jobName = jobField.getText();
+                serviceDownload.sendDownloadHttp(jobName + ".json");
             }
-        }
-        if (actionEvent.getSource() == menuButton) {
-            try {
+            if (actionEvent.getSource() == menuButton) {
                 MenuFrame menuFrame = new MenuFrame();
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

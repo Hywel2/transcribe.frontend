@@ -1,6 +1,4 @@
-package Windows;
-
-import services.ServiceUpload;
+package windows;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +10,7 @@ public class MenuFrame extends JFrame {
      * Creates a JFrame for the file uploading panel to sit in
      * @throws HeadlessException
      */
-    public MenuFrame() {
+    public MenuFrame() throws HeadlessException {
         this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         setLayout(new GridBagLayout());
         setTitle("Menu");
