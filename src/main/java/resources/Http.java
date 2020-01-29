@@ -16,7 +16,7 @@ public class Http {
      */
     public String sendPost(String json) {
         try {
-            HttpPost request = new HttpPost("https://ea8s51420g.execute-api.eu-west-2.amazonaws.com/prod/TranscribeAuthorizer");
+            HttpPost request = new HttpPost(System.getenv("url"));
             StringEntity params;
 
             if (json.equalsIgnoreCase("")) {

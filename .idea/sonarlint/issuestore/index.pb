@@ -7,12 +7,6 @@ J
 audio.transcribe.front.iml,0/4/04e0002753d61a0006265a84cc15fb2365550a2c
 Q
 !src/main/java/Resources/Http.java,3/3/339175015759659f1f4c47fc1360e618f0f6375f
-Z
-*src/main/java/models/Mp3Base64WithMap.java,5/2/521d359c7a04290aea7f3842a4279844a68e0427
-R
-"src/main/java/models/Response.java,c/1/c115f034b96402b234e9893ce0dc887dc1a9544a
-U
-%src/main/java/models/ResponseMap.java,d/4/d44b659d8c7bb8f236ba017a9ba9834035ca9240
 T
 $src/main/java/Windows/MenuFrame.java,4/7/47090d6f4f465dbde7567f12d8b3f0c449722022
 T
@@ -35,3 +29,11 @@ X
 (src/main/java/Windows/DownloadPanel.java,1/f/1fdd6737c0fae2ed81de952e13013ec9abf7e257
 K
 src/main/java/settings.yaml,7/a/7acb4b7ee9767a89547140d9635b83bc43d22c45
+V
+&src/main/java/windows/UploadPanel.java,1/b/1b36d5f37aee9f3f3b804611db9cad3795455ad3
+Q
+!src/main/java/resources/Http.java,7/3/7310eaa0f816543f7702ddcbcffc03360b517c81
+X
+(src/main/java/windows/DownloadPanel.java,a/4/a4c8e02dd02f2a8deafffa960082ac849a6aeece
+X
+(src/main/java/windows/DownloadFrame.java,a/9/a9f0db74259d5b6c19a30672f370b78f34869f63

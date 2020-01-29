@@ -1,9 +1,3 @@
 
-Lsquid:S1481
-".Remove this unused "menuFrame" local variable.(©€µº8ùñÑ€ú-
-[squid:S1854
-"=Remove this useless assignment to local variable "menuFrame".(©€µº8ùñÑ€ú-
-`squid:UselessImportCheck"0Remove this unused import 'Windows.UploadFrame'.(¾áÃüÿÿÿÿ8ù•ÿú-
-¤%squid:RedundantThrowsDeclarationCheck	"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†îæÆ8ù•ÿú-
-¯%squid:RedundantThrowsDeclarationCheck	"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(†îæÆ8ù•ÿú-
-°%squid:RedundantThrowsDeclarationCheck	"xRemove the declaration of thrown exception 'ws.schild.jave.EncoderException', as it cannot be thrown from method's body.(†îæÆ8ù•ÿú-
+[squid:S1854	"=Remove this useless assignment to local variable "menuFrame".(©€µº8“™ç„ÿ-
+Lsquid:S1481	".Remove this unused "menuFrame" local variable.(©€µº8“™ç„ÿ-
