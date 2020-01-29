@@ -1,0 +1,4 @@
+
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(žÌ²äÿÿÿÿÿ8´“ÿú-
+_squid:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(ºÀœx
+¢%squid:RedundantThrowsDeclarationCheck"eRemove the declaration of thrown exception 'java.awt.HeadlessException' which is a runtime exception.(š¯ÿÂúÿÿÿÿ8´“ÿú-

@@ -12,10 +12,10 @@ public class ProviderUpload {
      * @throws Exception
      */
 
-    public String executePost(String mp3Base64, String jobName) {
-        Http http = new Http();
-        String json;
-        json = "{\"mp3Base64\": \" " + mp3Base64 + "hgend" + jobName + " \"}";
-        return http.sendPost(json);
-    }
+//    public String executePost(String mp3Base64, String jobName) {
+//        Http http = new Http();
+//        String json;
+//        json = "{\"mp3Base64\": \" " + mp3Base64 + "hgend" + jobName + " \"}";
+//        return http.sendPost(json);
+//    }
 }

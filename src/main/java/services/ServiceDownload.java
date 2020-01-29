@@ -9,7 +9,7 @@ public class ServiceDownload {
      * This method sends the request for a download to the provider
      * @param job
      */
-    public void sendDownloadHttp(String job) {
-        System.out.println(providerDownload.sendDownloadHttp(job));
-    }
+//    public void sendDownloadHttp(String job) {
+//        System.out.println(providerDownload.sendDownloadHttp(job));
+//    }
 }

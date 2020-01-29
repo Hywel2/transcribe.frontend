@@ -10,10 +10,10 @@ public class ProviderDownload {
      * @return
      */
 
-    public String sendDownloadHttp(String jobName) {
-        Http http = new Http();
-        String json;
-        json = "{\"mp3Base64\": \" " + "Download" + "hgend" + jobName + " \"}";
-        return http.sendPost(json);
-    }
+//    public String sendDownloadHttp(String jobName) {
+//        Http http = new Http();
+//        String json;
+//        json = "{\"mp3Base64\": \" " + "Download" + "hgend" + jobName + " \"}";
+//        return http.sendPost(json);
+//    }
 }

@@ -2,6 +2,7 @@ package services;
 
 import providers.ProviderUpload;
 import org.apache.commons.io.FileUtils;
+import resources.Http;
 import ws.schild.jave.*;
 
 import java.io.*;
@@ -22,9 +23,16 @@ public class ServiceUpload {
     public String convertToBase64AndSend(String filePath, String jobName) {
         try {
             File mp3 = new File(convertToMp3(filePath));
-            byte[] bytes = FileUtils.readFileToByteArray(mp3);
-            String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-            return providerUpload.executePost(mpBase64Piece, jobName);
+            byte[] mpBase64Piece = FileUtils.readFileToByteArray(mp3);
+
+//            byte[] bytes = FileUtils.readFileToByteArray(mp3);
+//            System.out.println(bytes.length);
+//            String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
+//            System.out.println(mpBase64Piece);
+//            System.out.println(mpBase64Piece.length());
+//            return providerUpload.executePost(mpBase64Piece, jobName);
+            Http http = new Http();
+            http.sendPost(mpBase64Piece);
         } catch (Exception e){
             System.out.println("Something isn't right! Error: " + e);
         }

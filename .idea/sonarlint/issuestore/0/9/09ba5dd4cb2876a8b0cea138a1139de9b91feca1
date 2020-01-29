@@ -1,2 +1,7 @@
 
-esquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(º½Ü8¶”ÿú-
+V
+squid:S106A"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8Œƒğ•ú-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8Îôì•ú-
+U
+squid:S106"9Replace this use of System.out or System.err by a logger.(¯§Ø8“èö½ı-

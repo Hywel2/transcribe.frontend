@@ -1,0 +1,8 @@
+
+wsquid:S1450"[Remove the "jobNameLabel" field and declare it as a local variable in the relevant methods.(Š†“Ãÿÿÿÿÿ
+Ksquid:S1948"/Make "serviceUpload" transient or serializable.(ü•Âƒúÿÿÿÿ
+xsquid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ
+?squid:S1148z"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+Tsquid:S1854w"=Remove this useless assignment to local variable "menuFrame".(©€µº
+Esquid:S1481w".Remove this unused "menuFrame" local variable.(©€µº
+Fsquid:S1068"*Remove this unused "jFrame" private field.(Âž»¦ûÿÿÿÿ

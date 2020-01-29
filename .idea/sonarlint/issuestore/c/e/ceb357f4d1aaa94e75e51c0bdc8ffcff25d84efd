@@ -1,0 +1,7 @@
+
+Hsquid:S1068	"*Remove this unused "jFrame" private field.(Ø¨ë‚8Ë´…–ú-
+Fsquid:S1148E"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ì‘ÿú-
+Osquid:S1481B"2Remove this unused "downloadFrame" local variable.(®îËl8Ì‘ÿú-
+bsquid:S1854?"?Remove this useless assignment to local variable "uploadFrame".(Á¾ûúÿÿÿÿ8Ì‘ÿú-
+^squid:S1854B"ARemove this useless assignment to local variable "downloadFrame".(®îËl8Ì‘ÿú-
+Ssquid:S1481?"0Remove this unused "uploadFrame" local variable.(Á¾ûúÿÿÿÿ8Ì‘ÿú-
