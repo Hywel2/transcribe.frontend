@@ -5,7 +5,10 @@ import org.apache.commons.io.FileUtils;
 import ws.schild.jave.*;
 
 import java.io.*;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 public class ServiceUpload {
     private ProviderUpload providerUpload = new ProviderUpload();
@@ -24,11 +27,32 @@ public class ServiceUpload {
             File mp3 = new File(convertToMp3(filePath));
             byte[] bytes = FileUtils.readFileToByteArray(mp3);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-            return providerUpload.executePost(mpBase64Piece, jobName);
+            return cuttingLoop(mpBase64Piece, jobName);
         } catch (Exception e){
             System.out.println("Something isn't right! Error: " + e);
         }
         return null;
+    }
+
+    /**
+     * This method cuts the base64 into 1000 character pieces, sending each one as a http until it reaches the end tag
+     * @param mpBase64Piece
+     */
+    private String cuttingLoop(String mpBase64Piece, String jobName) {
+        Integer numberOfPiecesMinusEnd = mpBase64Piece.length()/1000000;
+        List<String> base64List = new ArrayList<>();
+        for (int i = 1; i<numberOfPiecesMinusEnd; i++){
+            base64List.add(mpBase64Piece.substring(0, 999999));
+            if (mpBase64Piece.length() != 0) {
+                mpBase64Piece = mpBase64Piece.substring(1000000);
+            }
+        }
+        base64List.add(mpBase64Piece+"end");
+        for (int n = 0; n<base64List.size(); n++){
+            String response = providerUpload.executePost(base64List.get(n), jobName);
+            System.out.println(response);
+        }
+        return "Complete";
     }
 
     /**
