@@ -1,0 +1,6 @@
+
+Asquid:S1068	"*Remove this unused "jFrame" private field.(Ø¨ë‚
+Wsquid:S1854B"ARemove this useless assignment to local variable "downloadFrame".(®îËl
+[squid:S1854?"?Remove this useless assignment to local variable "uploadFrame".(Á¾ûúÿÿÿÿ
+Hsquid:S1481B"2Remove this unused "downloadFrame" local variable.(®îËl
+Lsquid:S1481?"0Remove this unused "uploadFrame" local variable.(Á¾ûúÿÿÿÿ

@@ -37,3 +37,9 @@ X
 (src/main/java/windows/DownloadPanel.java,a/4/a4c8e02dd02f2a8deafffa960082ac849a6aeece
 X
 (src/main/java/windows/DownloadFrame.java,a/9/a9f0db74259d5b6c19a30672f370b78f34869f63
+T
+$src/main/java/windows/MenuPanel.java,c/e/ceb357f4d1aaa94e75e51c0bdc8ffcff25d84efd
+T
+$src/main/java/windows/MenuFrame.java,7/4/749e3c66b53b2f805439341c8fa18423722d0849
+V
+&src/main/java/windows/UploadFrame.java,0/b/0b01a00164dc4f2f20fbc292b42ee9828b5ceabf

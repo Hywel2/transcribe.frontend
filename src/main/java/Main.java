@@ -9,6 +9,8 @@ public class Main {
         MenuFrame menuFrame = new MenuFrame();
     }
 
-    //    File on my computer for testing code: /Users/hywelgriffiths/Documents/personal/pictures/Test.mp4
+//    /Users/hywelgriffiths/Documents/personal/pictures/Test.mp4
+//    /Users/hywelgriffiths/Documents/personal/pictures/BiggerFile.mp4
+//    /Users/hywelgriffiths/Documents/personal/pictures/Maths.mp4
 
 }

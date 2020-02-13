@@ -1,5 +1,17 @@
 
+isquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(¸ûÕÉ8¬³þÏƒ.
 V
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8ž¥…ÿ-
+squid:S106!"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8ž¥…ÿ-
 V
-squid:S106@"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8ž¥…ÿ-
+squid:S1066"9Replace this use of System.out or System.err by a logger.(Ðô•ù8ãåúÏƒ.
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Õïø£ýÿÿÿÿ8—ãª„‚.
+V
+squid:S106`"9Replace this use of System.out or System.err by a logger.(Ì¹¢Õ8ãåúÏƒ.
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ðô•ù8Ó¶€‘.
+V
+squid:S1063"9Replace this use of System.out or System.err by a logger.(Ðô•ù8÷úÏƒ.
+_squid:S1854;"<Remove this useless assignment to local variable "response".(÷¼ÿÿÿÿÿ8É«Ðƒ.
+Psquid:S1481;"-Remove this unused "response" local variable.(÷¼ÿÿÿÿÿ8É«Ðƒ.
+isquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(æ¸ï‰8É«Ðƒ.
