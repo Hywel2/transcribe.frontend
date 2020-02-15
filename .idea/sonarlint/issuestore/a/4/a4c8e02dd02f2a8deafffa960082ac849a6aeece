@@ -1,6 +1,6 @@
 
-Asquid:S1068"*Remove this unused "jFrame" private field.(ì¬‡Ü
-Hsquid:S1948"1Make "serviceDownload" transient or serializable.(³Ë»¶
 Esquid:S1481g".Remove this unused "menuFrame" local variable.(©€µº
-xsquid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ
+Asquid:S1068"*Remove this unused "jFrame" private field.(ì¬‡Ü
 Tsquid:S1854g"=Remove this useless assignment to local variable "menuFrame".(©€µº
+xsquid:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ
+Hsquid:S1948"1Make "serviceDownload" transient or serializable.(³Ë»¶

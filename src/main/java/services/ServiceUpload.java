@@ -26,7 +26,6 @@ public class ServiceUpload {
             File mp3 = new File(convertToMp3(filePath));
             byte[] bytes = FileUtils.readFileToByteArray(mp3);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-            System.out.println("Full base64:" + mpBase64Piece.substring(0,3));
             return cuttingLoop(mpBase64Piece, jobName);
         } catch (Exception e){
             System.out.println("Something isn't right! Error: " + e);
@@ -39,28 +38,32 @@ public class ServiceUpload {
      * @param mpBase64Piece
      */
     private String cuttingLoop(String mpBase64Piece, String jobName) {
-        mpBase64Piece = "start" + mpBase64Piece;
+        String tag = null;
+        String response = null;
         Integer numberOfPiecesMinusEnd = (int) Math.ceil( mpBase64Piece.length()/500000.0);
         List<String> base64List = new ArrayList<>();
-        for (int i = 0; i<numberOfPiecesMinusEnd-1; i++){
+        for (int i = 0; i<numberOfPiecesMinusEnd; i++){
             if (mpBase64Piece.length() >= 500000) {
                 base64List.add(mpBase64Piece.substring(0, 500000));
                 mpBase64Piece = mpBase64Piece.substring(500000);
             }
-            System.out.println(mpBase64Piece.length());
         }
-        base64List.add(mpBase64Piece+"end");
-        System.out.println(mpBase64Piece.length());
         for (int n = 0; n<base64List.size(); n++){
             if (base64List.get(n) != null) {
-//                System.out.println(base64List.get(n));
-//                System.out.println(base64List.size()-n);
-                System.out.println(n+1 + ":" + base64List.get(n).length());
-                String response = providerUpload.executePost(base64List.get(n), jobName);
-                System.out.println(response);
+                if (n==0){
+                    tag = "start";
+                }
+                else if (n==base64List.size()-1){
+                    tag = "end";
+                }
+                else {
+                    tag = "middle";
+                }
+                response = providerUpload.executePost(base64List.get(n), jobName, tag);
+                System.out.println(base64List.size()-n);
             }
         }
-        return "Complete";
+        return response;
     }
 
     /**
