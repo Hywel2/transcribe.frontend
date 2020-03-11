@@ -13,12 +13,13 @@ public class DownloadPanel extends JPanel implements ActionListener {
     private JButton sendButton;
     private JButton menuButton;
     private JTextField jobField;
+    private JTextField filePathField;
+    private JLabel jobLabel;
     private JLabel filePathLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceDownload serviceDownload = new ServiceDownload();
 
     public DownloadPanel(DownloadFrame jFrame) {
-
         this.jFrame = jFrame;
 
         setJLabels();
@@ -34,9 +35,16 @@ public class DownloadPanel extends JPanel implements ActionListener {
      */
 
     void setJLabels() {
-        filePathLabel = new JLabel("Name of job:");
+        jobLabel = new JLabel("Name of job:");
         gbc.gridx = 0;
         gbc.gridy = 0;
+        gbc.weightx = 0.5;
+        gbc.weighty = 0.5;
+        add(jobLabel, gbc);
+
+        filePathLabel = new JLabel("Name of file path:");
+        gbc.gridx = 0;
+        gbc.gridy = 1;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
         add(filePathLabel, gbc);
@@ -55,6 +63,15 @@ public class DownloadPanel extends JPanel implements ActionListener {
         gbc.weighty = 0;
         gbc.gridwidth = 4;
         add(jobField, gbc);
+
+        this.setLayout(new GridBagLayout());
+        filePathField = new JTextField(20);
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.weightx = 0;
+        gbc.weighty = 0;
+        gbc.gridwidth = 4;
+        add(filePathField, gbc);
     }
 
     /**
@@ -97,7 +114,8 @@ public class DownloadPanel extends JPanel implements ActionListener {
         try {
             if (actionEvent.getSource() == sendButton) {
                 String jobName = jobField.getText();
-                serviceDownload.sendDownloadHttp(jobName + ".json");
+                String filePath = filePathField.getText();
+                serviceDownload.sendDownloadHttp(jobName + ".json", filePath);
             }
             if (actionEvent.getSource() == menuButton) {
                 MenuFrame menuFrame = new MenuFrame();
