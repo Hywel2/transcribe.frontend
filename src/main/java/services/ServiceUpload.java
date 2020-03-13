@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class ServiceUpload {
-    private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(ServiceUpload.class.getName());
     private ProviderUpload providerUpload = new ProviderUpload();
 
     /**
@@ -62,9 +62,9 @@ public class ServiceUpload {
                     tag = "middle";
                 }
                 response = providerUpload.executePost(base64List.get(n), jobName, tag);
-                LOGGER.info(String.valueOf(base64List.size()-n));
             }
         }
+        LOGGER.info("complete");
         return response;
     }
 

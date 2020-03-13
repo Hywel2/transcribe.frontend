@@ -18,14 +18,16 @@ public class ServiceDownload {
      * @param filePath
      */
     private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
-    public void sendDownloadHttp(String job, String filePath) {
+    public boolean sendDownloadHttp(String job, String filePath) {
 
         try {
             Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.sendDownloadHttp(job + ".json").getBytes());
             LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
             LOGGER.info("complete");
+            return true;
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.info(e.toString());
+            return false;
         }
     }
 }
