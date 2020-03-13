@@ -4,8 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Logger;
 
 public class MenuPanel extends JPanel implements ActionListener {
+    private static final Logger LOGGER = Logger.getLogger(MenuPanel.class.getName());
+
     private MenuFrame jFrame;
     private JButton downloadButton;
     private JButton uploadButton;
@@ -66,7 +69,7 @@ public class MenuPanel extends JPanel implements ActionListener {
                 new DownloadFrame();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.info(e.toString());
         }
     }
 }

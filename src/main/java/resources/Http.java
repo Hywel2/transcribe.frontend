@@ -1,13 +1,16 @@
 package resources;
 
-import org.apache.http.*;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
+import java.util.logging.Logger;
+
 public class Http {
+    private static final Logger LOGGER = Logger.getLogger(Http.class.getName());
     HttpClient client = HttpClientBuilder.create().build();
 
     /**
@@ -31,7 +34,7 @@ public class Http {
             HttpResponse httpResponse = client.execute(request);
             return EntityUtils.toString(httpResponse.getEntity());
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.info(e.toString());
         }
         return null;
     }

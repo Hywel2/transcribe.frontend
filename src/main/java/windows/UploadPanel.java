@@ -6,8 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Logger;
 
 public class UploadPanel extends JPanel implements ActionListener {
+    private static final Logger LOGGER = Logger.getLogger(UploadPanel.class.getName());
 
     private UploadFrame jFrame;
     private JButton sendButton;
@@ -114,7 +116,7 @@ public class UploadPanel extends JPanel implements ActionListener {
                 new MenuFrame();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.info(e.toString());
         }
     }
 }

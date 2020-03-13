@@ -1,3 +1,5 @@
+package application;
+
 import windows.MenuFrame;
 
 public class Main {
