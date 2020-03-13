@@ -8,8 +8,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class ServiceUpload {
@@ -26,7 +24,6 @@ public class ServiceUpload {
      */
 
     public String convertToBase64AndSend(String filePath, String jobName) {
-        LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
         try {
             File mp3 = new File(convertToMp3(filePath));
             byte[] bytes = FileUtils.readFileToByteArray(mp3);
