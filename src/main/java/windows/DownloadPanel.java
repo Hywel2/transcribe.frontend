@@ -110,7 +110,7 @@ public class DownloadPanel extends JPanel implements ActionListener {
             if (actionEvent.getSource() == sendButton) {
                 String jobName = jobField.getText();
                 String filePath = filePathField.getText();
-                serviceDownload.sendDownloadHttp(jobName + ".json", filePath);
+                serviceDownload.sendDownloadHttp(jobName, filePath);
             }
             if (actionEvent.getSource() == menuButton) {
                 new MenuFrame();
