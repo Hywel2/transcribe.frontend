@@ -1,11 +1,8 @@
 import windows.MenuFrame;
-import ws.schild.jave.*;
-
-import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException, EncoderException {
+    public static void main(String[] args){
         new MenuFrame();
     }
 

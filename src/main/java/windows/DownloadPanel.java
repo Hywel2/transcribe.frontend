@@ -14,8 +14,6 @@ public class DownloadPanel extends JPanel implements ActionListener {
     private JButton menuButton;
     private JTextField jobField;
     private JTextField filePathField;
-    private JLabel jobNameLabel;
-    private JLabel filePathLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceDownload serviceDownload = new ServiceDownload();
 
@@ -35,14 +33,14 @@ public class DownloadPanel extends JPanel implements ActionListener {
      */
 
     void setJLabels() {
-        filePathLabel = new JLabel("File path:");
+        JLabel filePathLabel = new JLabel("File path:");
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
         add(filePathLabel, gbc);
 
-        jobNameLabel = new JLabel("Job name:");
+        JLabel jobNameLabel = new JLabel("Job name:");
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weightx = 0.5;

@@ -60,10 +60,10 @@ public class MenuPanel extends JPanel implements ActionListener {
         try {
             if (actionEvent.getSource() == uploadButton) {
 
-                UploadFrame uploadFrame = new UploadFrame();
+                new UploadFrame();
             }
             if (actionEvent.getSource() == downloadButton) {
-                DownloadFrame downloadFrame = new DownloadFrame();
+                new DownloadFrame();
             }
         } catch (Exception e) {
             e.printStackTrace();

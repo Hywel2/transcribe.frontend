@@ -12,10 +12,8 @@ public class UploadPanel extends JPanel implements ActionListener {
     private UploadFrame jFrame;
     private JButton sendButton;
     private JButton menuButton;
-    private JLabel jobNameLabel;
     private JTextField filePathField;
     private JTextField jobNameField;
-    private JLabel filePathLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceUpload serviceUpload = new ServiceUpload();
 
@@ -35,14 +33,14 @@ public class UploadPanel extends JPanel implements ActionListener {
      */
 
     void setJLabels() {
-        jobNameLabel = new JLabel("Job name:");
+        JLabel jobNameLabel = new JLabel("Job name:");
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
         add(jobNameLabel, gbc);
 
-        filePathLabel = new JLabel("File path:");
+        JLabel filePathLabel = new JLabel("File path:");
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.weightx = 0.5;
@@ -77,7 +75,6 @@ public class UploadPanel extends JPanel implements ActionListener {
      * Method sets and add the JButtons to the panel
      */
     void setButtons() {
-        this.setLayout(new GridBagLayout());
         sendButton = new JButton("Send");
         gbc.gridx = 1;
         gbc.gridy = 5;
@@ -85,7 +82,6 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.weighty = 0;
         add(sendButton, gbc);
 
-        this.setLayout(new GridBagLayout());
         menuButton = new JButton("Menu");
         gbc.gridx = 1;
         gbc.gridy = 3;

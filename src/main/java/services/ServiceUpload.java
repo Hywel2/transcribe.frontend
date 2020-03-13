@@ -8,8 +8,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class ServiceUpload {
+    private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
     private ProviderUpload providerUpload = new ProviderUpload();
 
     /**
@@ -22,13 +26,14 @@ public class ServiceUpload {
      */
 
     public String convertToBase64AndSend(String filePath, String jobName) {
+        LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
         try {
             File mp3 = new File(convertToMp3(filePath));
             byte[] bytes = FileUtils.readFileToByteArray(mp3);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
             return cuttingLoop(mpBase64Piece, jobName);
         } catch (Exception e){
-            System.out.println("Something isn't right! Error: " + e);
+            LOGGER.info("Something isn't right! Error: " + e);
         }
         return null;
     }
@@ -60,7 +65,7 @@ public class ServiceUpload {
                     tag = "middle";
                 }
                 response = providerUpload.executePost(base64List.get(n), jobName, tag);
-                System.out.println(base64List.size()-n);
+                LOGGER.info(String.valueOf(base64List.size()-n));
             }
         }
         return response;
@@ -96,7 +101,7 @@ public class ServiceUpload {
 
             return createMp3(mp4File);
         } catch (Exception e){
-            System.out.println("Something isn't right! Error: " + e);
+            LOGGER.info("Something isn't right! Error: " + e);
         }
         return null;
     }
