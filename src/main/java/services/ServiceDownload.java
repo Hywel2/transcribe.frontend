@@ -13,7 +13,8 @@ public class ServiceDownload {
     ProviderDownload providerDownload = new ProviderDownload();
 
     /**
-     * This method sends the request for a download to the provider
+     * This method sends the request for a download to the provider. It then writes a file using the transcription text
+     * that is returned by the server.
      * @param job
      * @param filePath
      */

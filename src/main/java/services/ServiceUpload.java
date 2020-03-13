@@ -36,11 +36,12 @@ public class ServiceUpload {
     }
 
     /**
-     * This method cuts the base64 into 1000 character pieces, sending each one as a http until it reaches the end tag
+     * This method cuts the base64 into 1000 character pieces, sending each one as a http until it reaches the end tag.
+     * It sets a tag to the status of start, end or middle, depending on which part of the base64 the code comes from.
      * @param mpBase64Piece
      */
     private String cuttingLoop(String mpBase64Piece, String jobName) {
-        String tag = null;
+        String tag;
         String response = null;
         Integer numberOfPiecesMinusEnd = (int) Math.ceil( mpBase64Piece.length()/500000.0);
         List<String> base64List = new ArrayList<>();
