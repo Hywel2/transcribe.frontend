@@ -27,8 +27,6 @@ V
 &src/main/java/Windows/UploadFrame.java,4/f/4fcd50314e79206aebfb6f1490592cc0148bedf5
 X
 (src/main/java/Windows/DownloadPanel.java,1/f/1fdd6737c0fae2ed81de952e13013ec9abf7e257
-K
-src/main/java/settings.yaml,7/a/7acb4b7ee9767a89547140d9635b83bc43d22c45
 V
 &src/main/java/windows/UploadPanel.java,1/b/1b36d5f37aee9f3f3b804611db9cad3795455ad3
 Q
@@ -43,3 +41,5 @@ T
 $src/main/java/windows/MenuFrame.java,7/4/749e3c66b53b2f805439341c8fa18423722d0849
 V
 &src/main/java/windows/UploadFrame.java,0/b/0b01a00164dc4f2f20fbc292b42ee9828b5ceabf
+D
+config/settings.yaml,4/c/4c73d38ee1571d511c9dddbaea0594a562d6a4a2

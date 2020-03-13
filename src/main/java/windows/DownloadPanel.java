@@ -14,7 +14,7 @@ public class DownloadPanel extends JPanel implements ActionListener {
     private JButton menuButton;
     private JTextField jobField;
     private JTextField filePathField;
-    private JLabel jobLabel;
+    private JLabel jobNameLabel;
     private JLabel filePathLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceDownload serviceDownload = new ServiceDownload();
@@ -35,43 +35,40 @@ public class DownloadPanel extends JPanel implements ActionListener {
      */
 
     void setJLabels() {
-        jobLabel = new JLabel("Name of job:");
+        filePathLabel = new JLabel("File path:");
         gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.5;
-        add(jobLabel, gbc);
-
-        filePathLabel = new JLabel("Name of file path:");
-        gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
         add(filePathLabel, gbc);
 
+        jobNameLabel = new JLabel("Job name:");
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 0.5;
+        gbc.weighty = 0.5;
+        add(jobNameLabel, gbc);
     }
 
     /**
      * Method creates the attributes of the JTextFields and adds them to the panel
      */
     void setJTextField() {
-        this.setLayout(new GridBagLayout());
+        filePathField = new JTextField(20);
+        gbc.gridx = 2;
+        gbc.gridy = 2;
+        gbc.weightx = 0;
+        gbc.weighty = 0;
+        gbc.gridwidth = 4;
+        add(filePathField, gbc);
+
         jobField = new JTextField(20);
-        gbc.gridx = 1;
+        gbc.gridx = 2;
         gbc.gridy = 0;
         gbc.weightx = 0;
         gbc.weighty = 0;
         gbc.gridwidth = 4;
         add(jobField, gbc);
-
-        this.setLayout(new GridBagLayout());
-        filePathField = new JTextField(20);
-        gbc.gridx = 1;
-        gbc.gridy = 1;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
-        gbc.gridwidth = 4;
-        add(filePathField, gbc);
     }
 
     /**
@@ -79,7 +76,6 @@ public class DownloadPanel extends JPanel implements ActionListener {
      */
     void setButtons() {
 
-        this.setLayout(new GridBagLayout());
         sendButton = new JButton("Retrieve");
         gbc.gridx = 1;
         gbc.gridy = 5;
@@ -87,7 +83,6 @@ public class DownloadPanel extends JPanel implements ActionListener {
         gbc.weighty = 0;
         add(sendButton, gbc);
 
-        this.setLayout(new GridBagLayout());
         menuButton = new JButton("Menu");
         gbc.gridx = 1;
         gbc.gridy = 3;
@@ -118,7 +113,7 @@ public class DownloadPanel extends JPanel implements ActionListener {
                 serviceDownload.sendDownloadHttp(jobName + ".json", filePath);
             }
             if (actionEvent.getSource() == menuButton) {
-                MenuFrame menuFrame = new MenuFrame();
+                new MenuFrame();
             }
         } catch (Exception e) {
             e.printStackTrace();

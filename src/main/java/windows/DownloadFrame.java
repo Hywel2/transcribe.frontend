@@ -10,7 +10,7 @@ public class DownloadFrame extends JFrame  {
      * Creates a JFrame for the file uploading panel to sit in
      * @throws HeadlessException
      */
-    public DownloadFrame(){
+    public DownloadFrame() throws HeadlessException{
         this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
         setLayout(new GridBagLayout());
         setTitle("Download file");

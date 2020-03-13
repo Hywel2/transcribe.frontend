@@ -35,19 +35,19 @@ public class UploadPanel extends JPanel implements ActionListener {
      */
 
     void setJLabels() {
-        filePathLabel = new JLabel("File path:");
+        jobNameLabel = new JLabel("Job name:");
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
-        add(filePathLabel, gbc);
+        add(jobNameLabel, gbc);
 
-        jobNameLabel = new JLabel("Job name:");
+        filePathLabel = new JLabel("File path:");
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.weightx = 0.5;
         gbc.weighty = 0.5;
-        add(jobNameLabel, gbc);
+        add(filePathLabel, gbc);
 
     }
 
@@ -55,7 +55,7 @@ public class UploadPanel extends JPanel implements ActionListener {
      * Method sets and add the JTextFields to the panel
      */
     void setJTextField() {
-        this.setLayout(new GridBagLayout());
+
         filePathField = new JTextField(20);
         gbc.gridx = 1;
         gbc.gridy = 0;
@@ -64,7 +64,6 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.gridwidth = 4;
         add(filePathField, gbc);
 
-        this.setLayout(new GridBagLayout());
         jobNameField = new JTextField(20);
         gbc.gridx = 1;
         gbc.gridy = 1;
@@ -116,7 +115,7 @@ public class UploadPanel extends JPanel implements ActionListener {
                 serviceUpload.convertToBase64AndSend(filePath, jobName);
             }
             if (actionEvent.getSource() == menuButton) {
-                MenuFrame menuFrame = new MenuFrame();
+                new MenuFrame();
             }
         } catch (Exception e) {
             e.printStackTrace();

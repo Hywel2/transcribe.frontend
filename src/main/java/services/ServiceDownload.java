@@ -16,7 +16,8 @@ public class ServiceDownload {
      */
     public void sendDownloadHttp(String job, String filePath) {
         try {
-            Files.write( Paths.get(filePath), providerDownload.sendDownloadHttp(job).getBytes());
+            Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.sendDownloadHttp(job).getBytes());
+            System.out.println("complete");
         } catch (IOException e) {
             e.printStackTrace();
         }

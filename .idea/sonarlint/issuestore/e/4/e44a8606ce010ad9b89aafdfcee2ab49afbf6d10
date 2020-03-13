@@ -1,6 +1,4 @@
 
-¤%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†îæÆ8Ôë÷€.
 °%squid:RedundantThrowsDeclarationCheck"xRemove the declaration of thrown exception 'ws.schild.jave.EncoderException', as it cannot be thrown from method's body.(†îæÆ8Ôë÷€.
+¤%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†îæÆ8Ôë÷€.
 ¯%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(†îæÆ8Ôë÷€.
-Lsquid:S1481	".Remove this unused "menuFrame" local variable.(©€µº8Ôë÷€.
-[squid:S1854	"=Remove this useless assignment to local variable "menuFrame".(©€µº8Ôë÷€.
