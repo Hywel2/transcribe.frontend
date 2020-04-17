@@ -56,6 +56,7 @@ public class ServiceUpload {
                 mpBase64Piece = mpBase64Piece.substring(500000);
             }
         }
+        base64List.add(mpBase64Piece);
         for (int n = 0; n<base64List.size(); n++){
             if (base64List.get(n) != null) {
                 if (n==0){
