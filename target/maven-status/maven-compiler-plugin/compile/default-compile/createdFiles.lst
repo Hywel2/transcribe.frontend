@@ -1,0 +1,12 @@
+transcription/providers/ProviderDownload.class
+transcription/windows/MenuPanel.class
+transcription/windows/UploadPanel.class
+transcription/providers/ProviderUpload.class
+transcription/windows/DownloadPanel.class
+transcription/services/ServiceUpload.class
+transcription/windows/DownloadFrame.class
+transcription/Main.class
+transcription/windows/MenuFrame.class
+transcription/windows/UploadFrame.class
+resources/Http.class
+transcription/services/ServiceDownload.class

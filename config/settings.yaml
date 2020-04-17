@@ -1,0 +1,5 @@
+tokensource: Authorization
+
+tokenvalue: transcribeMp3
+
+url: https://ea8s51420g.execute-api.eu-west-2.amazonaws.com/prod/TranscribeAuthorizer
