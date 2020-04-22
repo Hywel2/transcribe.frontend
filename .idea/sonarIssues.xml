@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/README.MD">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/pom.xml">
           <value>
             <set />
@@ -33,6 +38,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/resources/mappers/EncounterMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/ModelTestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/integration/tests/ApiUnauthorisedIT.java">
           <value>
             <set />
@@ -44,6 +64,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/rest/resource/EncounterResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/service/EncounterServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/resources/endpoints.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/config/settings.yaml">
           <value>
             <set />
           </value>
@@ -69,6 +104,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/encryption/Encryption.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/providers/ProviderDownload.java">
           <value>
             <set />
           </value>
