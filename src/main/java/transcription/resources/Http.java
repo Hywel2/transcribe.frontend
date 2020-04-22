@@ -6,6 +6,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import transcription.encryption.Encryption;
 
 import java.util.logging.Logger;
 
@@ -36,6 +37,14 @@ public class Http {
         } catch (Exception e) {
             LOGGER.info(e.toString());
         }
+        return null;
+    }
+
+    public String requestSecret(){
+        Encryption encryption = new Encryption();
+
+        System.out.println(encryption.encrypt("test"));
+
         return null;
     }
 }

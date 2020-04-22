@@ -39,3 +39,9 @@ m
 =src/test/java/transcription/services/ServiceDownloadTest.java,0/d/0ded9c3d3229175cc22c3878321dff49bc283af3
 k
 ;src/test/java/transcription/services/ServiceUploadTest.java,3/7/37c9f044647a56d7c01578bb0ed67b3af8f39233
+g
+7src/main/java/transcription/encryption/BasicCrypto.java,f/3/f37af5db879c2aad05efbfdacbf6c1a1cc883c3b
+b
+2src/main/java/transcription/encryption/Crypto.java,7/3/73be2ce7b8dfc783626e0d156d593162772a9b22
+f
+6src/main/java/transcription/encryption/Encryption.java,0/6/068e0bb88d26691328b8d010dfb8e0182f776f61

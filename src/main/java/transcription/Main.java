@@ -1,10 +1,13 @@
 package transcription;
 
-import transcription.windows.MenuFrame;
+import resources.Http;
 
 public class Main {
 
     public static void main(String[] args) {
-        new MenuFrame();
+//        new MenuFrame();
+
+        Http http = new Http();
+        http.requestSecret();
     }
 }
