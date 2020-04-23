@@ -3,6 +3,26 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/rest/resource/EncounterResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/ModelTestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/rest/resource/EncounterResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/README.MD">
           <value>
             <set />
