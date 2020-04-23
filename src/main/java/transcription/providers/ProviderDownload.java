@@ -1,6 +1,6 @@
 package transcription.providers;
 
-import resources.Http;
+import transcription.resources.Http;
 
 public class ProviderDownload {
 

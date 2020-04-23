@@ -1,3 +1,4 @@
+/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/encryption/Encryption.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/MenuPanel.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/services/ServiceUpload.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/DownloadPanel.java
@@ -6,8 +7,9 @@
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/Main.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/UploadPanel.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/MenuFrame.java
-/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/FileChooserFrame.java
+/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/encryption/BasicCrypto.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/resources/Http.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/windows/DownloadFrame.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/providers/ProviderUpload.java
 /Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/services/ServiceDownload.java
+/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front/src/main/java/transcription/encryption/Crypto.java

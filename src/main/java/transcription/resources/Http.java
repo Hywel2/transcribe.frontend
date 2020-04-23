@@ -1,4 +1,4 @@
-package resources;
+package transcription.resources;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -6,6 +6,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import transcription.encryption.Encryption;
 
 import java.util.logging.Logger;
 
@@ -18,8 +19,9 @@ public class Http {
      * header and prints a response according to the response sent back by the lambda.
      */
     public String sendPost(String json) {
+        Encryption encryption = new Encryption();
         try {
-            HttpPost request = new HttpPost(System.getenv("url"));
+            HttpPost request = new HttpPost(encryption.decrypt("isuot90.f`9r60511f/dyddtud.`qh/dvfjs!,xdts.1/`n`{no`xr/bpl0osne.UqbmtbshcdBtugpqjyfq"));
             StringEntity params;
 
             if (json.equalsIgnoreCase("")) {
@@ -28,7 +30,7 @@ public class Http {
                 params = new StringEntity(json);
             }
 
-            request.addHeader(System.getenv("tokensource"), System.getenv("tokenvalue"));
+            request.addHeader(encryption.decrypt("Btugpqjybsjno"), encryption.decrypt("uqbmtbshcdNo4"));
             request.setEntity(params);
 
             HttpResponse httpResponse = client.execute(request);
