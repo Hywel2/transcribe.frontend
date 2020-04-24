@@ -3,8 +3,6 @@
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 J
 audio.transcribe.front.iml,0/4/04e0002753d61a0006265a84cc15fb2365550a2c
-D
-config/settings.yaml,4/c/4c73d38ee1571d511c9dddbaea0594a562d6a4a2
 f
 6src/main/java/transcription/windows/DownloadFrame.java,5/d/5d1195a9e31b9c6dd7840d029d03e45d93adc6ee
 d
