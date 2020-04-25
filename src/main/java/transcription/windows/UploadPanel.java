@@ -17,13 +17,13 @@ public class UploadPanel extends JPanel implements ActionListener {
     private JButton sendButton;
     private JButton menuButton;
     private JButton filePathButton;
-    private JButton youTubeButton;
+    private JButton httpButton;
     private JTextField filePathField;
     private JTextField jobNameField;
-    private JTextField youTubeField;
+    private JTextField httpField;
     private JLabel jobNameLabel;
     private JLabel filePathLabel;
-    private JLabel youTubeLabel;
+    private JLabel httpLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceUpload serviceUpload = new ServiceUpload();
     private String filePath = "No file path selected";
@@ -38,19 +38,19 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.insets.left = 1;
         gbc.weightx = 1;
         gbc.weighty = 1;
-        setLayout( new GridBagLayout() );
+        setLayout(new GridBagLayout());
         setFilePath();
-        setJLabels();
-        setJTextField();
+        setHttp();
+        setJobName();
         setButtons();
         setAction();
     }
 
     private void setFilePath() {
         filePathLabel = new JLabel("File path:");
-        gbc.gridx = 0;
+        gbc.gridx = 1;
         gbc.gridy = 0;
-        gbc.gridwidth = 2;
+        gbc.gridwidth = 1;
         gbc.gridheight = 1;
         add(filePathLabel, gbc);
 
@@ -64,33 +64,31 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     }
 
-    /**
-     * Method sets and add the JLabels to the panel
-     */
+    private void setHttp() {
 
-    void setJLabels() {
-        jobNameLabel = new JLabel("Job name:");
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.gridwidth = 2;
+        httpLabel = new JLabel("YouTube http:");
+        gbc.gridx = 1;
+        gbc.gridy = 1;
+        gbc.gridwidth = 1;
         gbc.gridheight = 1;
-        add(jobNameLabel, gbc);
+        add(httpLabel, gbc);
 
-
-
-        youTubeLabel = new JLabel("YouTube http:");
-        gbc.gridx = 0;
+        httpField = new JTextField();
+        httpField.setText("Default");
+        gbc.gridx = 2;
         gbc.gridy = 1;
         gbc.gridwidth = 2;
         gbc.gridheight = 1;
-        add(youTubeLabel, gbc);
+        add(httpField, gbc);
     }
 
-    /**
-     * Method sets and add the JTextFields to the panel
-     */
-    void setJTextField() {
-
+    private void setJobName() {
+        jobNameLabel = new JLabel("Job name:");
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        add(jobNameLabel, gbc);
 
         jobNameField = new JTextField();
         jobNameField.setText("Default");
@@ -100,13 +98,6 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.gridheight = 1;
         add(jobNameField, gbc);
 
-        youTubeField = new JTextField();
-        youTubeField.setText("Default");
-        gbc.gridx = 2;
-        gbc.gridy = 1;
-        gbc.gridwidth = 2;
-        gbc.gridheight = 1;
-        add(youTubeField, gbc);
     }
 
     /**
@@ -134,12 +125,12 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.gridheight = 1;
         add(filePathButton, gbc);
 
-        youTubeButton = new JButton("YouTube Download");
+        httpButton = new JButton("YouTube Download");
         gbc.gridx = 3;
         gbc.gridy = 3;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
-        add(youTubeButton, gbc);
+        add(httpButton, gbc);
     }
 
     /**
@@ -149,6 +140,7 @@ public class UploadPanel extends JPanel implements ActionListener {
         sendButton.addActionListener(this);
         menuButton.addActionListener(this);
         filePathButton.addActionListener(this);
+        httpButton.addActionListener(this);
     }
 
     /**
@@ -173,7 +165,7 @@ public class UploadPanel extends JPanel implements ActionListener {
                 filePathField.setText(chooseFile().getAbsolutePath());
             }
 
-            if (actionEvent.getSource() == youTubeButton) {
+            if (actionEvent.getSource() == httpButton) {
                 filePathField.setText(serviceUpload.httpPath());
             }
         } catch (Exception e) {
@@ -183,6 +175,7 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     /**
      * This method creates the JFileChooser that allows the selection of the file being sent to AWS
+     *
      * @return File
      */
     private File chooseFile() {
