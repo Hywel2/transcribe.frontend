@@ -126,4 +126,8 @@ public class ServiceUpload {
         mp4file = mp4file + "Audio.mp3";
         return mp4file;
     }
+
+    public String httpPath() {
+        return null;
+    }
 }

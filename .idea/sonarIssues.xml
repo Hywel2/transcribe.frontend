@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/AuthenticationFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/ConnectionBase.java">
           <value>
             <set />
@@ -24,6 +29,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/MUserMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/UserMapper.xml">
           <value>
             <set />
           </value>
@@ -163,12 +173,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/services/ServiceUpload.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuFrame.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuPanel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadFrame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadPanel.java">
           <value>
             <set />
           </value>

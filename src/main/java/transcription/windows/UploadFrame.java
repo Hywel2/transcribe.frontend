@@ -12,12 +12,10 @@ public class UploadFrame extends JFrame {
      */
     public UploadFrame(){
         this.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-        setLayout(new GridBagLayout());
         setTitle("Download file");
         setSize(700, 300);
         setLocationRelativeTo(null);
-        add(new UploadPanel(this),gbc);
-        this.getContentPane().setLayout(null);
+        this.setContentPane(new UploadPanel());
         setVisible(true);
     }
 }

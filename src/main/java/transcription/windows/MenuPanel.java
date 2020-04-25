@@ -40,8 +40,8 @@ public class MenuPanel extends JPanel implements ActionListener {
         uploadButton = new JButton("  Upload   ");
         gbc.gridx = 0;
         gbc.gridy = 1;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
         gbc.fill = GridBagConstraints.RELATIVE;
         add(uploadButton, gbc);
 
