@@ -17,7 +17,6 @@ public class UploadPanel extends JPanel implements ActionListener {
     private JButton sendButton;
     private JButton menuButton;
     private JButton filePathButton;
-    private JButton httpButton;
     private JTextField filePathField;
     private JTextField jobNameField;
     private JTextField httpField;
@@ -125,12 +124,6 @@ public class UploadPanel extends JPanel implements ActionListener {
         gbc.gridheight = 1;
         add(filePathButton, gbc);
 
-        httpButton = new JButton("YouTube Download");
-        gbc.gridx = 3;
-        gbc.gridy = 3;
-        gbc.gridwidth = 1;
-        gbc.gridheight = 1;
-        add(httpButton, gbc);
     }
 
     /**
@@ -140,7 +133,6 @@ public class UploadPanel extends JPanel implements ActionListener {
         sendButton.addActionListener(this);
         menuButton.addActionListener(this);
         filePathButton.addActionListener(this);
-        httpButton.addActionListener(this);
     }
 
     /**
@@ -152,9 +144,11 @@ public class UploadPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         try {
             if (actionEvent.getSource() == sendButton) {
-
-                String jobName = jobNameField.getText();
-                serviceUpload.convertToBase64AndSend(jobName, mp4);
+                if (httpField.getText() != "Default") {
+                    serviceUpload.getMp4FromYoutube(httpField.getText(), mp4.getAbsolutePath(), jobNameField.getText());
+                } else {
+                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), mp4);
+                }
             }
 
             if (actionEvent.getSource() == menuButton) {
@@ -163,10 +157,6 @@ public class UploadPanel extends JPanel implements ActionListener {
 
             if (actionEvent.getSource() == filePathButton) {
                 filePathField.setText(chooseFile().getAbsolutePath());
-            }
-
-            if (actionEvent.getSource() == httpButton) {
-                filePathField.setText(serviceUpload.httpPath());
             }
         } catch (Exception e) {
             LOGGER.info(e.toString());
