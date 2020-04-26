@@ -139,13 +139,7 @@ public class ServiceUpload {
     }
 
     public String getFilePath(String httpPath, String absolutePath){
-        String fileEnding=null;
-        while (absolutePath.charAt(httpPath.length())!='='){
-            fileEnding = fileEnding + httpPath.charAt(absolutePath.length());
-            httpPath = httpPath.substring(0, httpPath.length()-1);
-        }
-        fileEnding = new StringBuilder(fileEnding).reverse().toString();
-        fileEnding = fileEnding + "mp4";
+        String fileEnding=httpPath.substring(httpPath.indexOf('=')+1)+".mp4";
         File[] fileList = new File (absolutePath).listFiles();
         for (File file : fileList){
             if (file.getAbsolutePath().contains(fileEnding)){

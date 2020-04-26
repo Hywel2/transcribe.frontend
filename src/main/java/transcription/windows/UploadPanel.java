@@ -145,7 +145,7 @@ public class UploadPanel extends JPanel implements ActionListener {
         try {
             if (actionEvent.getSource() == sendButton) {
                 if (httpField.getText() != "Default") {
-                    serviceUpload.getMp4FromYoutube(httpField.getText(), mp4.getAbsolutePath(), jobNameField.getText());
+                    serviceUpload.getMp4FromYoutube(httpField.getText(), filePathField.getText(), jobNameField.getText());
                 } else {
                     serviceUpload.convertToBase64AndSend(jobNameField.getText(), mp4);
                 }
