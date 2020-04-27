@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 public class DownloadPanel extends JPanel implements ActionListener {
     private static final Logger LOGGER = Logger.getLogger(DownloadPanel.class.getName());
 
-    private DownloadFrame jFrame;
     private JButton selectDirectoryButton;
     private JButton retrieveButton;
     private JButton menuButton;
@@ -21,9 +20,16 @@ public class DownloadPanel extends JPanel implements ActionListener {
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceDownload serviceDownload = new ServiceDownload();
 
-    public DownloadPanel(DownloadFrame jFrame) {
-        this.jFrame = jFrame;
+    public DownloadPanel() {
 
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets.bottom = 1;
+        gbc.insets.top = 1;
+        gbc.insets.right = 1;
+        gbc.insets.left = 1;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        setLayout(new GridBagLayout());
         setJLabels();
         setJTextField();
         setButtons();

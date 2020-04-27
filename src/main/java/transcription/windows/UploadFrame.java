@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class UploadFrame extends JFrame {
-    private GridBagConstraints gbc = new GridBagConstraints();
 
     /**
      * Creates a JFrame for the file uploading panel to sit in

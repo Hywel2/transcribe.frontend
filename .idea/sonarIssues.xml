@@ -138,6 +138,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/SyncPipe.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/encryption/BasicCrypto.java">
           <value>
             <set />
@@ -174,6 +179,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/services/ServiceUpload.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/DownloadFrame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/DownloadPanel.java">
           <value>
             <set />
           </value>

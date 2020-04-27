@@ -1,0 +1,7 @@
+
+=
+java:S2129" Remove this "String" constructor(œﬂÍ⁄8∫Â∑¡õ.
+•
+java:S1130
+"áRemove the declaration of thrown exception 'com.github.kiulian.downloader.YoutubeException', as it cannot be thrown from method's body.(ÕÊﬁ8ö¡π¡õ.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(€‡Ã—8ö¡π¡õ.
