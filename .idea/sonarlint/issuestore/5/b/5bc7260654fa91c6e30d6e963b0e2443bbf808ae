@@ -1,5 +1,13 @@
 
+z
+java:S1450"XRemove the "httpLabel" field and declare it as a local variable in the relevant methods.(ñÑƒÚøÿÿÿÿ8ØâŞ”›.
 Q
-java:S1948"/Make "serviceUpload" transient or serializable.(ü•Âƒúÿÿÿÿ8µ³»—˜.
-L
-java:S1068"*Remove this unused "jFrame" private field.(Â»¦ûÿÿÿÿ8ğè–˜.
+java:S1948"/Make "serviceUpload" transient or serializable.(ü•Âƒúÿÿÿÿ8•‰Ê”›.
+j
+java:S1192L"HDefine a constant instead of duplicating this literal "Default" 3 times.(†¾ôÇüÿÿÿÿ8Äğ™›.
+}
+java:S1450"[Remove the "jobNameLabel" field and declare it as a local variable in the relevant methods.(Š†“Ãÿÿÿÿÿ8•‰Ê”›.
+W
+java:S4973“"9Use the "equals" method if value comparison was intended.(Å°üÎ8Äğ™›.
+~
+java:S1450"\Remove the "filePathLabel" field and declare it as a local variable in the relevant methods.(°é°”úÿÿÿÿ8ƒ‘Ò”›.

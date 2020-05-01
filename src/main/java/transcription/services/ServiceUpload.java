@@ -126,4 +126,27 @@ public class ServiceUpload {
         mp4file = mp4file + "Audio.mp3";
         return mp4file;
     }
+
+    public void getMp4FromYoutube(String httpPath, String absolutePath, String jobName) {
+        try {
+            System.out.println(Runtime.getRuntime().exec("ls"));
+            Runtime.getRuntime().exec("cd "+ absolutePath);
+            Runtime.getRuntime().exec( "youtube-dl "+ httpPath);
+            String filePath = getFilePath(httpPath, absolutePath);
+            convertToBase64AndSend(jobName, new File(filePath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String getFilePath(String httpPath, String absolutePath){
+        String fileEnding=httpPath.substring(httpPath.indexOf('=')+1)+".mp4";
+        File[] fileList = new File (absolutePath).listFiles();
+        for (File file : fileList){
+            if (file.getAbsolutePath().contains(fileEnding)){
+                return file.getAbsolutePath();
+            }
+        }
+        return null;
+    }
 }

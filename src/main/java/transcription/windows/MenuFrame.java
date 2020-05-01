@@ -16,8 +16,10 @@ public class MenuFrame extends JFrame {
         setTitle("Menu");
         setSize(350, 300);
         setLocationRelativeTo(null);
-        add(new MenuPanel(this),gbc);
-        this.getContentPane().setLayout(null);
+        MenuPanel menuPanel = new MenuPanel(this);
+        menuPanel.setLayout(new GridBagLayout());
+        add(menuPanel,gbc);
+        this.getContentPane().setLayout(new GridBagLayout());
         setVisible(true);
     }
 }

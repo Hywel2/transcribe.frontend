@@ -19,7 +19,7 @@ public class MenuPanel extends JPanel implements ActionListener {
 
         setButtons();
         setAction();
-        setSize(350, 300);
+        setSize(300, 250);
 
     }
 
@@ -29,18 +29,20 @@ public class MenuPanel extends JPanel implements ActionListener {
     void setButtons() {
         this.setLayout(new GridBagLayout());
         downloadButton = new JButton("Download");
-        gbc.gridx = 1;
-        gbc.gridy = 5;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.RELATIVE;
         add(downloadButton, gbc);
 
         this.setLayout(new GridBagLayout());
-        uploadButton = new JButton("Upload");
-        gbc.gridx = 2;
-        gbc.gridy = 5;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        uploadButton = new JButton("  Upload   ");
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        gbc.fill = GridBagConstraints.RELATIVE;
         add(uploadButton, gbc);
 
     }

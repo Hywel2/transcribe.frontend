@@ -14,70 +14,89 @@ import java.util.logging.Logger;
 public class UploadPanel extends JPanel implements ActionListener {
     private static final Logger LOGGER = Logger.getLogger(UploadPanel.class.getName());
 
-    private UploadFrame jFrame;
     private JButton sendButton;
     private JButton menuButton;
     private JButton filePathButton;
     private JTextField filePathField;
     private JTextField jobNameField;
+    private JTextField httpField;
+    private JLabel jobNameLabel;
+    private JLabel filePathLabel;
+    private JLabel httpLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceUpload serviceUpload = new ServiceUpload();
     private String filePath = "No file path selected";
     private File mp4 = null;
 
-    public UploadPanel(UploadFrame jFrame) {
-        this.jFrame = jFrame;
+    public UploadPanel() {
 
-        setJLabels();
-        setJTextField();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets.bottom = 1;
+        gbc.insets.top = 1;
+        gbc.insets.right = 1;
+        gbc.insets.left = 1;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        setLayout(new GridBagLayout());
+        setFilePath();
+        setHttp();
+        setJobName();
         setButtons();
         setAction();
-        setSize(700, 300);
-
     }
 
-    /**
-     * Method sets and add the JLabels to the panel
-     */
-
-    void setJLabels() {
-        JLabel jobNameLabel = new JLabel("Job name:");
-        gbc.gridx = 0;
+    private void setFilePath() {
+        filePathLabel = new JLabel("File path:");
+        gbc.gridx = 1;
         gbc.gridy = 0;
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.5;
-        add(jobNameLabel, gbc);
-
-        JLabel filePathLabel = new JLabel("Select file path:");
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.weightx = 0.5;
-        gbc.weighty = 0.5;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
         add(filePathLabel, gbc);
 
-    }
-
-    /**
-     * Method sets and add the JTextFields to the panel
-     */
-    void setJTextField() {
-
-        filePathField = new JTextField(20);
+        filePathField = new JTextField();
         filePathField.setText(filePath);
-        gbc.gridx = 1;
+        gbc.gridx = 2;
         gbc.gridy = 0;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
-        gbc.gridwidth = 4;
+        gbc.gridwidth = 2;
+        gbc.gridheight = 1;
         add(filePathField, gbc);
 
-        jobNameField = new JTextField(20);
+    }
+
+    private void setHttp() {
+
+        httpLabel = new JLabel("YouTube http:");
         gbc.gridx = 1;
         gbc.gridy = 1;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
-        gbc.gridwidth = 4;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        add(httpLabel, gbc);
+
+        httpField = new JTextField();
+        httpField.setText("Default");
+        gbc.gridx = 2;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2;
+        gbc.gridheight = 1;
+        add(httpField, gbc);
+    }
+
+    private void setJobName() {
+        jobNameLabel = new JLabel("Job name:");
+        gbc.gridx = 1;
+        gbc.gridy = 2;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        add(jobNameLabel, gbc);
+
+        jobNameField = new JTextField();
+        jobNameField.setText("Default");
+        gbc.gridx = 2;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        gbc.gridheight = 1;
         add(jobNameField, gbc);
+
     }
 
     /**
@@ -85,25 +104,26 @@ public class UploadPanel extends JPanel implements ActionListener {
      */
     void setButtons() {
         sendButton = new JButton("Send");
-        gbc.gridx = 1;
-        gbc.gridy = 5;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
         add(sendButton, gbc);
 
         menuButton = new JButton("Menu");
         gbc.gridx = 1;
         gbc.gridy = 3;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
         add(menuButton, gbc);
 
         filePathButton = new JButton("Select file");
-        gbc.gridx = 1;
-        gbc.gridy = 7;
-        gbc.weightx = 0;
-        gbc.weighty = 0;
+        gbc.gridx = 2;
+        gbc.gridy = 3;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
         add(filePathButton, gbc);
+
     }
 
     /**
@@ -124,8 +144,11 @@ public class UploadPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         try {
             if (actionEvent.getSource() == sendButton) {
-                String jobName = jobNameField.getText();
-                serviceUpload.convertToBase64AndSend(jobName, mp4);
+                if (httpField.getText() != "Default") {
+                    serviceUpload.getMp4FromYoutube(httpField.getText(), filePathField.getText(), jobNameField.getText());
+                } else {
+                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), mp4);
+                }
             }
 
             if (actionEvent.getSource() == menuButton) {
@@ -142,6 +165,7 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     /**
      * This method creates the JFileChooser that allows the selection of the file being sent to AWS
+     *
      * @return File
      */
     private File chooseFile() {
