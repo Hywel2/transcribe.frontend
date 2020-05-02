@@ -45,7 +45,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.cuttingLoop(base64, "JOBNAME"));
+        assertNull(serviceUpload.cuttingLoop(base64, "JOBNAME", email));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.cuttingLoop("SHORTBASE64", "JOBNAME"));
+        assertNull(serviceUpload.cuttingLoop("SHORTBASE64", "JOBNAME", email));
     }
 
     @Test
@@ -77,7 +77,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.convertToBase64AndSend(jobName, file));
+        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, emailField.getText()));
     }
 
     @Test
@@ -94,7 +94,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.convertToBase64AndSend(jobName, file));
+        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, emailField.getText()));
     }
 
     @Test

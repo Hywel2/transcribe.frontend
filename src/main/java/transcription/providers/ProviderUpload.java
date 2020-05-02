@@ -10,14 +10,15 @@ public class ProviderUpload {
      *
      * @param mp3Base64
      * @param tag
+     * @param email
      * @return
      * @throws Exception
      */
 
-    public String executePost(String mp3Base64, String jobName, String tag) {
+    public String executeUploadHttp(String mp3Base64, String jobName, String tag, String email) {
         Http http = new Http();
         String json;
-        json = ("{\"mp3Base64\":\"" + mp3Base64 + "hgend" + jobName + "\", \"tag\":\"" + tag + "\"}");
+        json = ("{\"mp3Base64\":\"" + mp3Base64 + "hgend" + jobName + "\", \"tag\":\"" + tag + "\",\"email\":\"" + email + "\"}");
         return http.sendPost(json);
     }
 }

@@ -22,18 +22,19 @@ public class ServiceUpload {
      * Converts mp4 to mp3 and convert to Base64 code. Uses the ProviderMP3Converter convertToMp3 method to create MP3
      * and sends in http with sendHttp method.
      *
-     * @param mp4 File
      * @param jobName String
+     * @param mp4 File
+     * @param email
      * @throws IOException
      * @return
      */
 
-    public String convertToBase64AndSend(String jobName, File mp4) {
+    public String convertToBase64AndSend(String jobName, File mp4, String email) {
         try {
             File mp3 = new File(convertToMp3(mp4.getAbsolutePath()));
             byte[] bytes = FileUtils.readFileToByteArray(mp3);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-            return cuttingLoop(mpBase64Piece, jobName);
+            return cuttingLoop(mpBase64Piece, jobName, email);
         } catch (Exception e){
             LOGGER.info("Something isn't right! Error: " + e);
         }
@@ -44,8 +45,9 @@ public class ServiceUpload {
      * This method cuts the base64 into 1000 character pieces, sending each one as a http until it reaches the end tag.
      * It sets a tag to the status of start, end or middle, depending on which part of the base64 the code comes from.
      * @param mpBase64Piece
+     * @param email
      */
-    public String cuttingLoop(String mpBase64Piece, String jobName) {
+    public String cuttingLoop(String mpBase64Piece, String jobName, String email) {
         String tag;
         String response = null;
         Integer numberOfPiecesMinusEnd = (int) Math.ceil( mpBase64Piece.length()/500000.0);
@@ -68,7 +70,7 @@ public class ServiceUpload {
                 else {
                     tag = "middle";
                 }
-                response = providerUpload.executePost(base64List.get(n), jobName, tag);
+                response = providerUpload.executeUploadHttp(base64List.get(n), jobName, tag, email);
             }
         }
         LOGGER.info("complete");
@@ -127,13 +129,13 @@ public class ServiceUpload {
         return mp4file;
     }
 
-    public void getMp4FromYoutube(String httpPath, String absolutePath, String jobName) {
+    public void getMp4FromYoutube(String httpPath, String absolutePath, String jobName, String email) {
         try {
             System.out.println(Runtime.getRuntime().exec("ls"));
             Runtime.getRuntime().exec("cd "+ absolutePath);
             Runtime.getRuntime().exec( "youtube-dl "+ httpPath);
             String filePath = getFilePath(httpPath, absolutePath);
-            convertToBase64AndSend(jobName, new File(filePath));
+            convertToBase64AndSend(jobName, new File(filePath), email);
         } catch (IOException e) {
             e.printStackTrace();
         }

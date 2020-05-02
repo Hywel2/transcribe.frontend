@@ -22,7 +22,7 @@ public class ServiceDownload {
     public boolean sendDownloadHttp(String job, String filePath) {
 
         try {
-            Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.sendDownloadHttp(job + ".json").getBytes());
+            Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.executeDownloadHttp(job + ".json").getBytes());
             LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
             LOGGER.info("complete");
             return true;
