@@ -100,6 +100,10 @@ public class UploadPanel extends JPanel implements ActionListener {
 
     }
 
+    /**
+     * Method adds the email label and textfield.
+     */
+
     private void setEmail() {
         emailLabel = new JLabel("Email:");
         gbc.gridx = 1;

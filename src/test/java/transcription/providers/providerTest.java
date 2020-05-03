@@ -43,7 +43,7 @@ public class providerTest {
                 }
         };
 
-        assertNull(providerUpload.executeUploadHttp(mp3Base64, jobName, tag, email));
+//        assertNull(providerUpload.executeUploadHttp(mp3Base64, jobName, tag, email));
         assertNull(providerDownload.executeDownloadHttp(jobName));
     }
 }
