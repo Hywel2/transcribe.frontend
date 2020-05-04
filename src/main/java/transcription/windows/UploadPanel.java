@@ -20,13 +20,14 @@ public class UploadPanel extends JPanel implements ActionListener {
     private JTextField filePathField;
     private JTextField jobNameField;
     private JTextField httpField;
+    private JTextField emailField;
     private JLabel jobNameLabel;
     private JLabel filePathLabel;
     private JLabel httpLabel;
+    private JLabel emailLabel;
     private GridBagConstraints gbc = new GridBagConstraints();
     private ServiceUpload serviceUpload = new ServiceUpload();
     private String filePath = "No file path selected";
-    private File mp4 = null;
 
     public UploadPanel() {
 
@@ -41,6 +42,7 @@ public class UploadPanel extends JPanel implements ActionListener {
         setFilePath();
         setHttp();
         setJobName();
+        setEmail();
         setButtons();
         setAction();
     }
@@ -64,7 +66,6 @@ public class UploadPanel extends JPanel implements ActionListener {
     }
 
     private void setHttp() {
-
         httpLabel = new JLabel("YouTube http:");
         gbc.gridx = 1;
         gbc.gridy = 1;
@@ -100,26 +101,47 @@ public class UploadPanel extends JPanel implements ActionListener {
     }
 
     /**
+     * Method adds the email label and textfield.
+     */
+
+    private void setEmail() {
+        emailLabel = new JLabel("Email:");
+        gbc.gridx = 1;
+        gbc.gridy = 3;
+        gbc.gridwidth = 1;
+        gbc.gridheight = 1;
+        add(emailLabel, gbc);
+
+        emailField = new JTextField();
+        emailField.setText("Default");
+        gbc.gridx = 2;
+        gbc.gridy = 3;
+        gbc.gridwidth = 2;
+        gbc.gridheight = 1;
+        add(emailField, gbc);
+    }
+
+    /**
      * Method sets and add the JButtons to the panel
      */
     void setButtons() {
         sendButton = new JButton("Send");
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         add(sendButton, gbc);
 
         menuButton = new JButton("Menu");
         gbc.gridx = 1;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         add(menuButton, gbc);
 
         filePathButton = new JButton("Select file");
         gbc.gridx = 2;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         gbc.gridwidth = 1;
         gbc.gridheight = 1;
         add(filePathButton, gbc);
@@ -145,9 +167,9 @@ public class UploadPanel extends JPanel implements ActionListener {
         try {
             if (actionEvent.getSource() == sendButton) {
                 if (!httpField.getText().equals("Default")) {
-                    serviceUpload.getMp4FromYoutube(httpField.getText(), httpField.getText(), jobNameField.getText());
+                    serviceUpload.getMp4FromYoutube(httpField.getText(), httpField.getText(), jobNameField.getText(), emailField.getText());
                 } else {
-                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), mp4 = new File (filePathField.getText()));
+                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File (filePathField.getText()), emailField.getText());
                 }
             }
 
