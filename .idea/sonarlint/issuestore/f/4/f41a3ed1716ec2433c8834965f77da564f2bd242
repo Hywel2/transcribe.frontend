@@ -1,9 +1,0 @@
-
-]	java:S125
-"<This block of commented-out lines of code should be removed.(Üê¾¹üÿÿÿÿ8¾ÙöĞ›.
-‰
-java:S1130	"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(ÍğæŞ8šÁ¹Á›.
-”
-java:S1130	"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(ÍğæŞ8¾ÙöĞ›.
-¥
-java:S1130	"‡Remove the declaration of thrown exception 'com.github.kiulian.downloader.YoutubeException', as it cannot be thrown from method's body.(ÍğæŞ8¾ÙöĞ›.
