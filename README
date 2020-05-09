@@ -1,0 +1,74 @@
+Audio Transcription - Front end (audio.transcribe.front)
+
+One Paragraph of project description goes here
+
+   This project has a interface to allow the user to upload mp4/mp3 files for transcription and download the transcribed
+    document once an alert has been issued. A JFileChooser allows the user to select the file to be uploaded (or use
+    of a file path) and the file is then converted ot Base64, cut up, and sent in a series of Http calls to the AWS
+    Lambda where audio.transcribe.back processes the Base64. A end, front or middle tag is added so
+    audio.transcribe.back knows whether the Base64 is complete or not. The user can also download the completed
+    transcription by selecting the download JButton, entering the job name and a directory (using a JFileChooser) and
+    sending the request. This will send out a http call that selects the file that collects the file from
+    audio.transcribe.back to be inserted into the selected directory.
+
+Getting Started
+
+   This file can be downloaded from github, using the SSH provided by the website. This is only available to
+   the programmers of the software.
+
+   If the .jar file is being used,it can be executed through java -jar audio.transcribe.front.jar when in the correct
+   directory.
+
+Prerequisites
+
+Java is required and, if you wish to download videos from YouTube to transcribe, we would recommend installing
+youtube-dl from https://youtube-dl.org/.
+
+Installing
+
+Sign in to GitHub and GitHub Desktop before you start to clone.
+On GitHub, navigate to the main page of the repository.
+Under your repository name, click Clone or download.
+Click Open in Desktop to clone the repository and open it in GitHub Desktop.
+Click Choose... and, using the Finder window, navigate to a local path where you want to clone the repository.
+Click Clone.
+
+To run the program, it must be uploaded to the AWS lambda and activated through audio.transcribe.front
+
+Running the tests
+
+Right click on test.java to run the jUnit tests.
+
+Explain what these tests test and why
+
+The tests are designed to check the functionality fo the code and maintain good coverage in order to prevent damage.
+There should be 100% coverage of new code and at least 95% coverage of the full code before merging new branches. jUnit
+tests are used throughout though Mockito is also available.
+
+Built With
+
+    Maven - This project if based on Maven, using its Dependency Management system
+    AWS - AmazonS3 and AmazonTranscribe are interacted with through the corresponding clients
+    Java Swing and gridbagconstraints - used for creation of the front end
+
+Contributing
+
+Please note that this is a private program and only project developers can contribute.
+
+Versioning
+
+    In relation to our version structure. The first number represents the version of our software, the second
+    represents large version changes that are not yet released (e.g. a new function or alteration to a large
+     portion of the structure) and the third represents small changed that are not yet released (e.g. bug fixed and new
+     endpoints).
+
+List of contributors
+
+    Hywel Griffiths
+
+License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Acknowledgments
+
