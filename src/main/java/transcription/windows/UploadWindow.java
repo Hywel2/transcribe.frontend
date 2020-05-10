@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class UploadWindow implements ActionListener {
-    private static final Logger LOGGER = Logger.getLogger(DownloadWindow.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(UploadWindow.class.getName());
 
     private JButton sendButton;
     private JButton menuButton;
@@ -23,15 +23,12 @@ public class UploadWindow implements ActionListener {
     private JTextField jobNameField;
     private JTextField httpField;
     private JTextField emailField;
-    private JLabel jobNameLabel;
-    private JLabel filePathLabel;
-    private JLabel httpLabel;
-    private JLabel emailLabel;
     private GridBagConstraints frameGbc = new GridBagConstraints();
     private GridBagConstraints panelGbc = new GridBagConstraints();
     private ServiceUpload serviceUpload = new ServiceUpload();
     private String filePath = "No file path selected";
     private JPanel uploadPanel = new JPanel();
+    private String emptyField = "default";
 
     public JFrame setUploadWindow(){
         JFrame uploadFrame = new JFrame();
@@ -70,7 +67,7 @@ public class UploadWindow implements ActionListener {
     }
 
     private void setFilePath(JPanel uploadPanel) {
-        filePathLabel = new JLabel("File path:");
+        JLabel filePathLabel = new JLabel("File path:");
         panelGbc.gridx = 1;
         panelGbc.gridy = 0;
         panelGbc.gridwidth = 1;
@@ -88,7 +85,7 @@ public class UploadWindow implements ActionListener {
     }
 
     private void setHttp(JPanel uploadPanel) {
-        httpLabel = new JLabel("YouTube http:");
+        JLabel httpLabel = new JLabel("YouTube http:");
         panelGbc.gridx = 1;
         panelGbc.gridy = 1;
         panelGbc.gridwidth = 1;
@@ -96,7 +93,7 @@ public class UploadWindow implements ActionListener {
         uploadPanel.add(httpLabel, panelGbc);
 
         httpField = new JTextField();
-        httpField.setText("Default");
+        httpField.setText(emptyField);
         panelGbc.gridx = 2;
         panelGbc.gridy = 1;
         panelGbc.gridwidth = 2;
@@ -105,7 +102,7 @@ public class UploadWindow implements ActionListener {
     }
 
     private void setJobName(JPanel uploadPanel) {
-        jobNameLabel = new JLabel("Job name:");
+        JLabel jobNameLabel = new JLabel("Job name:");
         panelGbc.gridx = 1;
         panelGbc.gridy = 2;
         panelGbc.gridwidth = 1;
@@ -113,7 +110,7 @@ public class UploadWindow implements ActionListener {
         uploadPanel.add(jobNameLabel, panelGbc);
 
         jobNameField = new JTextField();
-        jobNameField.setText("Default");
+        jobNameField.setText(emptyField);
         panelGbc.gridx = 2;
         panelGbc.gridy = 2;
         panelGbc.gridwidth = 2;
@@ -128,7 +125,7 @@ public class UploadWindow implements ActionListener {
      */
 
     private void setEmail(JPanel uploadPanel) {
-        emailLabel = new JLabel("Email:");
+        JLabel emailLabel = new JLabel("Email:");
         panelGbc.gridx = 1;
         panelGbc.gridy = 3;
         panelGbc.gridwidth = 1;
@@ -136,7 +133,7 @@ public class UploadWindow implements ActionListener {
         uploadPanel.add(emailLabel, panelGbc);
 
         emailField = new JTextField();
-        emailField.setText("Default");
+        emailField.setText(emptyField);
         panelGbc.gridx = 2;
         panelGbc.gridy = 3;
         panelGbc.gridwidth = 2;
@@ -190,7 +187,7 @@ public class UploadWindow implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         try {
             if (actionEvent.getSource() == sendButton) {
-                if (!httpField.getText().equals("Default")) {
+                if (!httpField.getText().equals(emptyField)) {
                     serviceUpload.getMp4FromYoutube(httpField.getText(), httpField.getText(), jobNameField.getText(), emailField.getText());
                 } else {
                     serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File(filePathField.getText()), emailField.getText());
