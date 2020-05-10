@@ -131,7 +131,6 @@ public class ServiceUpload {
 
     public void getMp4FromYoutube(String httpPath, String absolutePath, String jobName, String email) {
         try {
-            System.out.println(Runtime.getRuntime().exec("ls"));
             Runtime.getRuntime().exec("cd "+ absolutePath);
             Runtime.getRuntime().exec( "youtube-dl "+ httpPath);
             String filePath = getFilePath(httpPath, absolutePath);
