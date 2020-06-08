@@ -468,6 +468,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/HelpWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuFrame.java">
           <value>
             <set />
@@ -494,6 +499,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/downloadHelp.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/menuHelp.txt">
           <value>
             <set />
           </value>

@@ -1,0 +1,11 @@
+Upload - Allows the upload of files to be transcribed. An email will be returned when the job is
+
+This window is used to download the transcribed file once you have received the email alerting
+you of completion. It requires the following information:
+
+Job name - This is the name that you gave to the job when uploading the file. These must be
+different to any other job you have sent and identical to the job name you used to upload
+the file.
+
+Directory - Use the file chooser to select the directory that you wish to download the complete
+text document into.

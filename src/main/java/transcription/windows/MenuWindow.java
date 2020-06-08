@@ -11,6 +11,7 @@ public class MenuWindow implements ActionListener {
 
     private JButton downloadButton;
     private JButton uploadButton;
+    private JButton helpButton;
     private GridBagConstraints panelGbc = new GridBagConstraints();
     private GridBagConstraints frameGbc = new GridBagConstraints();
     private JPanel menuPanel = new JPanel();
@@ -69,6 +70,15 @@ public class MenuWindow implements ActionListener {
         panelGbc.fill = GridBagConstraints.RELATIVE;
         menuPanel.add(uploadButton, panelGbc);
 
+        menuPanel.setLayout(new GridBagLayout());
+        helpButton = new JButton("  Help   ");
+        panelGbc.gridx = 0;
+        panelGbc.gridy = 2;
+        panelGbc.weightx = 1;
+        panelGbc.weighty = 1;
+        panelGbc.fill = GridBagConstraints.RELATIVE;
+        menuPanel.add(helpButton, panelGbc);
+
     }
 
     /**
@@ -77,6 +87,7 @@ public class MenuWindow implements ActionListener {
     void setAction() {
         downloadButton.addActionListener(this);
         uploadButton.addActionListener(this);
+        helpButton.addActionListener(this);
     }
 
     /**
@@ -94,6 +105,10 @@ public class MenuWindow implements ActionListener {
             if (actionEvent.getSource() == downloadButton) {
                 DownloadWindow downloadWindow = new DownloadWindow();
                 downloadWindow.setDownloadWindow();
+            }
+            if (actionEvent.getSource() == helpButton) {
+                HelpWindow helpWindow = new HelpWindow("menu");
+                helpWindow.setHelpWindow();
             }
         } catch (Exception e) {
             LOGGER.info(e.toString());

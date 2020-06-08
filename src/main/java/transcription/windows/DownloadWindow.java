@@ -17,6 +17,7 @@ public class DownloadWindow implements ActionListener {
     private JButton selectDirectoryButton;
     private JButton retrieveButton;
     private JButton menuButton;
+    private JButton helpButton;
     private JTextField jobField;
     private JTextField filePathField;
     private GridBagConstraints panelGbc = new GridBagConstraints();
@@ -128,6 +129,13 @@ public class DownloadWindow implements ActionListener {
         panelGbc.weightx = 0;
         panelGbc.weighty = 0;
         downloadPanel.add(retrieveButton, panelGbc);
+
+        helpButton = new JButton("Help");
+        panelGbc.gridx = 1;
+        panelGbc.gridy = 9;
+        panelGbc.weightx = 0;
+        panelGbc.weighty = 0;
+        downloadPanel.add(helpButton, panelGbc);
     }
 
     /**
@@ -137,6 +145,7 @@ public class DownloadWindow implements ActionListener {
         selectDirectoryButton.addActionListener(this);
         menuButton.addActionListener(this);
         retrieveButton.addActionListener(this);
+        helpButton.addActionListener(this);
     }
 
     /**
@@ -162,6 +171,11 @@ public class DownloadWindow implements ActionListener {
                 String jobName = jobField.getText();
 
                 serviceDownload.sendDownloadHttp(jobName, filePathField.getText());
+            }
+
+            if (actionEvent.getSource() == helpButton) {
+                HelpWindow helpWindow = new HelpWindow("download");
+                helpWindow.setHelpWindow();
             }
 
         } catch (Exception e) {
