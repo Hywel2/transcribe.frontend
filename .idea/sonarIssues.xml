@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/generated/swagger-ui/swagger.json">
           <value>
             <set />
@@ -83,6 +88,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/dozerBeanMapping.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/EncounterMapper.xml">
           <value>
             <set />
@@ -103,7 +113,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/RetryHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/model/defects/PartTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/provider/AuroraTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/provider/EncounterTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/rest/resource/EncounterResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/resources/mockEncounter">
           <value>
             <set />
           </value>
@@ -263,6 +303,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/java/ConvertJson.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/java/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/resources/xml.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../audio.transcribe.back/README">
           <value>
             <set />
@@ -288,7 +343,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceDownloadTranscript.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceHttpAndTranslation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/resources/base64example.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/ApplicationHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/ModelBaseTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/resources/base64Example.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/resources/base64ExampleCompletePiece.txt">
           <value>
             <set />
           </value>

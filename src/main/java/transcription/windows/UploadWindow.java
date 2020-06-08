@@ -218,7 +218,7 @@ public class UploadWindow implements ActionListener {
                 "MP4");
 
         chooser.setFileFilter(filter);
-        chooser.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         chooser.showOpenDialog(null);
 
         return chooser.getSelectedFile();
