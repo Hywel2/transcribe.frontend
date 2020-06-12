@@ -16,6 +16,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class UploadWindow implements ActionListener {
     private static final Logger LOGGER = Logger.getLogger(UploadWindow.class.getName());
 
+    private JButton helpButton;
     private JButton sendButton;
     private JButton menuButton;
     private JButton filePathButton;
@@ -81,7 +82,6 @@ public class UploadWindow implements ActionListener {
         panelGbc.gridwidth = 2;
         panelGbc.gridheight = 1;
         uploadPanel.add(filePathField, panelGbc);
-
     }
 
     private void setHttp(JPanel uploadPanel) {
@@ -167,6 +167,13 @@ public class UploadWindow implements ActionListener {
         panelGbc.gridheight = 1;
         uploadPanel.add(filePathButton, panelGbc);
 
+        helpButton = new JButton("Help");
+        panelGbc.gridx = 3;
+        panelGbc.gridy = 4;
+        panelGbc.gridwidth = 1;
+        panelGbc.gridheight = 1;
+        uploadPanel.add(helpButton, panelGbc);
+
     }
 
     /**
@@ -176,6 +183,7 @@ public class UploadWindow implements ActionListener {
         sendButton.addActionListener(this);
         menuButton.addActionListener(this);
         filePathButton.addActionListener(this);
+        helpButton.addActionListener(this);
     }
 
     /**
@@ -193,15 +201,18 @@ public class UploadWindow implements ActionListener {
                     serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File(filePathField.getText()), emailField.getText());
                 }
             }
-
-            if (actionEvent.getSource() == menuButton) {
+            else if (actionEvent.getSource() == menuButton) {
                 MenuWindow menuWindow = new MenuWindow();
                 menuWindow.setMenuWindow();
             }
-
-            if (actionEvent.getSource() == filePathButton) {
+            else if (actionEvent.getSource() == filePathButton) {
                 filePathField.setText(chooseFile().getAbsolutePath());
             }
+            else if (actionEvent.getSource() == helpButton){
+                HelpWindow helpWindow = new HelpWindow("upload");
+                helpWindow.setHelpWindow();
+            }
+
         } catch (Exception e) {
             LOGGER.info(e.toString());
         }

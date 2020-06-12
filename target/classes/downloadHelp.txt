@@ -1,5 +1,3 @@
-Upload - Allows the upload of files to be transcribed. An email will be returned when the job is
-
 This window is used to download the transcribed file once you have received the email alerting
 you of completion. It requires the following information:
 
@@ -9,3 +7,5 @@ the file.
 
 Directory - Use the file chooser to select the directory that you wish to download the complete
 text document into.
+
+When you have field in the information, click 'retrieve'.

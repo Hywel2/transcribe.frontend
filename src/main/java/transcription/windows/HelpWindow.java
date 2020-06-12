@@ -93,6 +93,14 @@ public class HelpWindow implements ActionListener {
                 MenuWindow menuWindow = new MenuWindow();
                 menuWindow.setMenuWindow();
             }
+            if (actionEvent.getSource() == returnButton && previousWindow.equals("download")) {
+                DownloadWindow downloadWindow = new DownloadWindow();
+                downloadWindow.setDownloadWindow();
+            }
+            if (actionEvent.getSource() == returnButton && previousWindow.equals("upload")) {
+                UploadWindow uploadWindow = new UploadWindow();
+                uploadWindow.setUploadWindow();
+            }
         } catch (Exception e) {
             LOGGER.info(e.toString());
         }
@@ -100,13 +108,7 @@ public class HelpWindow implements ActionListener {
 
     private String readTxtFile(String previousWindow) {
         try {
-            String menuHelpText = null;
-            if (previousWindow.equals("menu")) {
-                menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/menuHelp.txt")));
-            }
-            if (previousWindow.equals("download")){
-                menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/downloadHelp.txt")));
-            }
+            String menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
             return menuHelpText;
         } catch (IOException e) {
             e.printStackTrace();

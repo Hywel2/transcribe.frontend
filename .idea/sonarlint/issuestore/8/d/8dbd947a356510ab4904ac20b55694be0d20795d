@@ -1,0 +1,13 @@
+
+u
+java:S1450"XRemove the "jTextArea" field and declare it as a local variable in the relevant methods.(ÌîñÁ8¼¯ü¡©.
+}
+java:S3252B"[Use static access with "javax.swing.ScrollPaneConstants" for "HORIZONTAL_SCROLLBAR_ALWAYS".(…İÿÎüÿÿÿÿ8©×¶¢©.
+u
+java:S1450"XRemove the "helpFrame" field and declare it as a local variable in the relevant methods.(Ù„ÛË8Ë‡ò¢©.
+{
+java:S3252B"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(…İÿÎüÿÿÿÿ8©×¶¢©.
+O
+java:S3416"-Update this logger to use "HelpWindow.class".(íˆ»ãûÿÿÿÿ8èÿÚ¢©.
+
+java:S1488o"dImmediately return this expression instead of assigning it to the temporary variable "menuHelpText".(ö´×µ8×¸¯£©.

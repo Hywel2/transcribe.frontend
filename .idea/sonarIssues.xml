@@ -223,6 +223,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-reference-data-service/src/main/java/dvsa/reference/data/rest/resources/LogonResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-reference-data-service/src/main/java/dvsa/reference/data/rest/resources/UserResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-training/projects/apprentice-passport-service/src/main/java/dvsa/passport/service/LambdaHandler.java">
           <value>
             <set />
@@ -509,6 +519,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/menuHelp.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/uploadHelp.txt">
           <value>
             <set />
           </value>

@@ -41,3 +41,5 @@ g
 7src/main/java/transcription/windows/DownloadWindow.java,8/6/86a5da4bd70bdcbd5589d081ea1982e1d82bd999
 e
 5src/main/java/transcription/windows/UploadWindow.java,5/d/5d081bb88a82c82f91f42f48e4dfdbd1d3e7bded
+c
+3src/main/java/transcription/windows/HelpWindow.java,8/d/8dbd947a356510ab4904ac20b55694be0d20795d

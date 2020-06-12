@@ -7,3 +7,5 @@ the file.
 
 Directory - Use the file chooser to select the directory that you wish to download the complete
 text document into.
+
+When you have field in the information, click 'retrieve'.
