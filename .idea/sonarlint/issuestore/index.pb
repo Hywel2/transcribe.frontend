@@ -43,3 +43,5 @@ e
 5src/main/java/transcription/windows/UploadWindow.java,5/d/5d081bb88a82c82f91f42f48e4dfdbd1d3e7bded
 c
 3src/main/java/transcription/windows/HelpWindow.java,8/d/8dbd947a356510ab4904ac20b55694be0d20795d
+I
+src/main/java/myScript.py,f/d/fd0a47ef5f5c93dd9fee954d3c3a2531eac47035

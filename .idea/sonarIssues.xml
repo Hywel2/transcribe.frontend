@@ -8,6 +8,66 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/config/settings.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/ConnectionBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/components/IncompleteEncounterComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/components/VersionComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/modules/AuroraModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/providers/Aurora.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/rest/resources/IncompleteEncounterResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/services/IncompleteEncounterService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/resources/AuroraConfiguration.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/resources/mappers/IncompleteEncounterMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/target/generated-sources/annotations/dvsa/incomplete/components/DaggerAuroraComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/generated/swagger-ui/swagger.json">
           <value>
             <set />
@@ -73,12 +133,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/rest/resource/PostcodeResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/rest/resource/VersionResource.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/service/EncounterService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/AuroraConfiguration.xml">
           <value>
             <set />
           </value>
@@ -149,6 +219,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/README.MD">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/config/settings.yaml">
           <value>
             <set />
           </value>
@@ -399,6 +474,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/myScript.py">
           <value>
             <set />
           </value>

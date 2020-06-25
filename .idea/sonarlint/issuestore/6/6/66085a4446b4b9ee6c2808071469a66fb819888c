@@ -1,0 +1,21 @@
+
+P
+java:S1068"3Remove this unused "MP3_URL_PATTERN" private field.(Ö¬¶œ8‹¨éÕ­.
+O
+java:S1068"2Remove this unused "VID_ID_PATTERN" private field.(õú¸É8—ş¯Õ­.
+l
+java:S2095ï"IUse try-with-resources or close this "InputStream" in a "finally" clause.(¡©ÎĞüÿÿÿÿ8¿«ÇÚ¬.
+y
+java:S1488§"[Immediately return this expression instead of assigning it to the temporary variable "mp3".(¾Ã­ü8µ“ÂÚ¬.
+[	java:S106õ"9Replace this use of System.out or System.err by a logger.(·®Öıÿÿÿÿ8õ¶´­.
+K
+java:S1125ß"(Remove the literal "true" boolean value.(åŸÇ¹ıÿÿÿÿ8÷ÂÅÚ¬.
+{	java:S135³"YReduce the total number of break and continue statements in this loop to use at most one.(º‚Ê°úÿÿÿÿ8…ÌÕ­.
+?
+java:S1643Ú"Use a StringBuilder instead.(ûÙ‘ßøÿÿÿÿ8÷ÂÅÚ¬.
+:
+java:S1643»"Use a StringBuilder instead.(¾½Ãº8½ıÂÕ­.
+k
+java:S2095•"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ŠşÎD8ê¸Ú¬.
+J
+java:S1659"-Declare "MP3_URL_PATTERN" on a separate line.(Ö¬¶œ8¸÷¾Ú¬.
