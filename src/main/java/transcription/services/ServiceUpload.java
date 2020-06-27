@@ -32,9 +32,11 @@ public class ServiceUpload {
 
     public String convertToBase64AndSend(String jobName, File inputFile, String email, boolean youTubeFlag) {
         try {
+
             if (!youTubeFlag) {
                 inputFile = new File(convertToMp3(inputFile.getAbsolutePath()));
             }
+
             byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
             return cuttingLoop(mpBase64Piece, jobName, email);
@@ -56,14 +58,19 @@ public class ServiceUpload {
         String response = null;
         Integer numberOfPiecesMinusEnd = (int) Math.ceil(mpBase64Piece.length() / 500000.0);
         List<String> base64List = new ArrayList<>();
+
         for (int i = 0; i < numberOfPiecesMinusEnd; i++) {
+
             if (mpBase64Piece.length() >= 500000) {
                 base64List.add(mpBase64Piece.substring(0, 500000));
                 mpBase64Piece = mpBase64Piece.substring(500000);
             }
+
         }
         base64List.add(mpBase64Piece);
+
         for (int n = 0; n < base64List.size(); n++) {
+
             if (base64List.get(n) != null) {
                 if (n == 0) {
                     tag = "start";
@@ -74,7 +81,9 @@ public class ServiceUpload {
                 }
                 response = providerUpload.executeUploadHttp(base64List.get(n), jobName, tag, email);
             }
+
         }
+
         LOGGER.info("complete");
         return response;
     }
@@ -123,10 +132,12 @@ public class ServiceUpload {
 
     public String createMp3(String mp4file) {
         Character character = mp4file.charAt(mp4file.length() - 1);
+
         while (!character.equals('/')) {
             mp4file = mp4file.substring(0, mp4file.length() - 1);
             character = mp4file.charAt(mp4file.length() - 1);
         }
+
         mp4file = mp4file + "Audio.mp3";
         return mp4file;
     }
@@ -139,16 +150,13 @@ public class ServiceUpload {
      */
     public void getMp4FromYoutube(String httpPath) {
         try {
-
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
             OutputStream os = new FileOutputStream(mp3File, true);
+
             os.write(mp3ByteArray);
             os.flush();
             os.close();
-            System.out.println(mp3ByteArray.length);
-            System.out.println(mp3File.length());
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -164,8 +172,7 @@ public class ServiceUpload {
         String id = getID(youtubeUrl);
         String converter = loadConverter(id);
         String mp3url = getMP3URL(converter);
-        byte[] mp3 = load(mp3url);
-        return mp3;
+        return load(mp3url);
     }
 
     /**
@@ -176,7 +183,9 @@ public class ServiceUpload {
     private static String getID(String youtubeUrl) {
         String id = "";
         boolean equalsFlag = false;
+
         for (int i = 0; i<youtubeUrl.length(); i++){
+
             if (youtubeUrl.charAt(i)!='=' && !equalsFlag){
                 continue;
             }
@@ -184,7 +193,9 @@ public class ServiceUpload {
                 equalsFlag = true;
                 continue;
             }
+
             id = id + youtubeUrl.charAt(i);
+
         }
         return id;
     }
@@ -211,11 +222,15 @@ public class ServiceUpload {
 
         String http = "";
         boolean marker = false;
+
         for (int i = 0; i < html.length(); i++) {
+
             if (i + 11 > html.length()) {
                 return null;
             }
+
             http = http + html.charAt(i);
+
             if (html.substring(i, i + 10).equals("https://s0")) {
                 http = "h";
                 marker = true;
@@ -223,7 +238,9 @@ public class ServiceUpload {
             if (html.charAt(i) == '\"' && marker == true) {
                 return http.substring(0, http.length() - 1);
             }
+
         }
+
         return null;
     }
 
@@ -241,16 +258,17 @@ public class ServiceUpload {
         int n;
 
         while ((n = is.read(byteChunk)) > 0) {
+
             if (n%10==0) {
                 System.out.println("Downloading");
             }
             baos.write(byteChunk, 0, n);
+
         }
 
         is.close();
         baos.flush();
         baos.close();
-
         return baos.toByteArray();
     }
 }

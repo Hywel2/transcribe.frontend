@@ -12,9 +12,7 @@ public class ProviderDownload {
      */
 
     public String executeDownloadHttp(String jobName) {
-        Http http = new Http();
-        String json;
-        json = ("{\"mp3Base64\":\"" + "Download" + "hgend" + jobName + "\", \"tag\":\"" + "NA" + "\"}");
-        return http.sendPost(json);
+        String json = ("{\"mp3Base64\":\"" + "Download" + "hgend" + jobName + "\", \"tag\":\"" + "NA" + "\"}");
+        return new Http().sendPost(json);
     }
 }

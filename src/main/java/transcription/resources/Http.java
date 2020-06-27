@@ -32,7 +32,6 @@ public class Http {
 
             request.addHeader(encryption.decrypt("Btugpqjybsjno"), encryption.decrypt("uqbmtbshcdNo4"));
             request.setEntity(params);
-
             HttpResponse httpResponse = client.execute(request);
             return EntityUtils.toString(httpResponse.getEntity());
         } catch (Exception e) {
