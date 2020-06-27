@@ -15,8 +15,8 @@ public class Http {
     HttpClient client = HttpClientBuilder.create().build();
 
     /**
-     * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as a
-     * header and prints a response according to the response sent back by the lambda.
+     * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as an
+     * encrypted header and prints a response according to the response sent back by the lambda.
      */
     public String sendPost(String json) {
         Encryption encryption = new Encryption();

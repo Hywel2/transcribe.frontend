@@ -77,7 +77,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, null));
+        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, null, true));
     }
 
     @Test
@@ -94,7 +94,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, null));
+        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, null, true));
     }
 
     @Test

@@ -26,6 +26,10 @@ public class HelpWindow implements ActionListener {
         this.previousWindow = previousWindow;
     }
 
+    /**
+     * This method sets the variables of the frame to be put in the help window
+     * @return
+     */
     public JFrame setHelpWindow() {
         helpFrame = new JFrame();
         helpFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -41,6 +45,10 @@ public class HelpWindow implements ActionListener {
         return helpFrame;
     }
 
+    /**
+     * This method sets the variables of the panel to be put in the frame
+     * @return
+     */
     private JPanel setHelpPanel() {
         panelGbc.fill = GridBagConstraints.HORIZONTAL;
         panelGbc.insets.bottom = 1;
@@ -58,6 +66,10 @@ public class HelpWindow implements ActionListener {
         return helpPanel;
     }
 
+    /**
+     * This method creates the text panel that the help information is placed in
+     * @param helpPanel
+     */
     private void setText(JPanel helpPanel) {
         jTextArea = new JTextArea(10, 50);
         jTextArea.setEditable(false);
@@ -73,6 +85,10 @@ public class HelpWindow implements ActionListener {
         helpPanel.add(scroll, panelGbc);
     }
 
+    /**
+     * This method sets the variables of the buttons
+     * @param helpPanel
+     */
     private void setButtons(JPanel helpPanel) {
         returnButton = new JButton("Return");
         panelGbc.gridx = 0;
@@ -82,10 +98,17 @@ public class HelpWindow implements ActionListener {
         helpPanel.add(returnButton, panelGbc);
     }
 
+    /**
+     * This method gives and actionListener to the button so tha it can respond to being pressed.
+     */
     private void setAction() {
         returnButton.addActionListener(this);
     }
 
+    /**
+     * This method sets the actions taken by buttons when pressed. It carries out this according the the window it has come from, allowing it to return to the right window.
+     * @param actionEvent
+     */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         try {
@@ -106,6 +129,11 @@ public class HelpWindow implements ActionListener {
         }
     }
 
+    /**
+     * This menu reads the information from the text file to put it in the jTextArea. The file can be modified to change the text.
+     * @param previousWindow
+     * @return
+     */
     private String readTxtFile(String previousWindow) {
         try {
             String menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));

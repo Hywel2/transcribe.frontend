@@ -8,5 +8,4 @@ public class Main {
         MenuWindow menuWindow = new MenuWindow();
         menuWindow.setMenuWindow();
     }
-
 }

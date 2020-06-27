@@ -213,6 +213,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/service/EncounterServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/resources/mockEncounter">
           <value>
             <set />
@@ -589,6 +594,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/audio.mp3">
           <value>
             <set />
           </value>

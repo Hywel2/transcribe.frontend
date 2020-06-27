@@ -13,30 +13,29 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.regex.Pattern;
 
 public class ServiceUpload {
     private static final Logger LOGGER = Logger.getLogger(ServiceUpload.class.getName());
     private ProviderUpload providerUpload = new ProviderUpload();
-    private static final Pattern VID_ID_PATTERN = Pattern.compile("(?<=v\\=|youtu\\.be\\/)\\w+"),
-            MP3_URL_PATTERN = Pattern
-                    .compile("(?<=href=\\\")https{0,1}\\:\\/\\/(\\w|\\d){3}\\.ytapivmp3\\.com.+\\.mp3(?=\\\")");
 
     /**
      * Converts mp4 to mp3 and convert to Base64 code. Uses the ProviderMP3Converter convertToMp3 method to create MP3
      * and sends in http with sendHttp method.
      *
      * @param jobName String
-     * @param mp4     File
-     * @param email
+     * @param inputFile     File
+     * @param email String
+     * @param youTubeFlag boolean
      * @return
      * @throws IOException
      */
 
-    public String convertToBase64AndSend(String jobName, File mp4, String email) {
+    public String convertToBase64AndSend(String jobName, File inputFile, String email, boolean youTubeFlag) {
         try {
-            File mp3 = new File(convertToMp3(mp4.getAbsolutePath()));
-            byte[] bytes = FileUtils.readFileToByteArray(mp3);
+            if (!youTubeFlag) {
+                inputFile = new File(convertToMp3(inputFile.getAbsolutePath()));
+            }
+            byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
             return cuttingLoop(mpBase64Piece, jobName, email);
         } catch (Exception e) {
@@ -137,20 +136,19 @@ public class ServiceUpload {
     /**
      * Converts the audio of the youtube to a byte array and writes it to a file to be converted
      * @param httpPath String
-     * @param absolutePath String
-     * @param jobName String
-     * @param email String
      */
-    public void getMp4FromYoutube(String httpPath, String absolutePath, String jobName, String email) {
+    public void getMp4FromYoutube(String httpPath) {
         try {
 
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
-            OutputStream os = new FileOutputStream(mp3File);
+            OutputStream os = new FileOutputStream(mp3File, true);
             os.write(mp3ByteArray);
+            os.flush();
             os.close();
+            System.out.println(mp3ByteArray.length);
+            System.out.println(mp3File.length());
 
-            convertToBase64AndSend(jobName, mp3File, email);
         } catch (IOException e) {
             e.printStackTrace();
         }
