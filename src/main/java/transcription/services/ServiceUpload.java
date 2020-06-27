@@ -22,9 +22,9 @@ public class ServiceUpload {
      * Converts mp4 to mp3 and convert to Base64 code. Uses the ProviderMP3Converter convertToMp3 method to create MP3
      * and sends in http with sendHttp method.
      *
-     * @param jobName String
-     * @param inputFile     File
-     * @param email String
+     * @param jobName     String
+     * @param inputFile   File
+     * @param email       String
      * @param youTubeFlag boolean
      * @return
      * @throws IOException
@@ -146,17 +146,17 @@ public class ServiceUpload {
 
     /**
      * Converts the audio of the youtube to a byte array and writes it to a file to be converted
+     *
      * @param httpPath String
      */
     public void getMp4FromYoutube(String httpPath) {
         try {
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
-            OutputStream os = new FileOutputStream(mp3File, true);
-
-            os.write(mp3ByteArray);
-            os.flush();
-            os.close();
+            try(OutputStream os = new FileOutputStream(mp3File, true)) {
+                os.write(mp3ByteArray);
+                os.flush();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -164,6 +164,7 @@ public class ServiceUpload {
 
     /**
      * This method extracts the byteArray from the website using the getID, loadConverter and getMP3URL methods
+     *
      * @param youtubeUrl String
      * @return byte[]
      * @throws IOException
@@ -177,31 +178,33 @@ public class ServiceUpload {
 
     /**
      * This method obtains the ID from the youtubeUrl (the details after the = sign)
+     *
      * @param youtubeUrl String
      * @return String
      */
     private static String getID(String youtubeUrl) {
-        String id = "";
+        StringBuilder id = new StringBuilder();
         boolean equalsFlag = false;
 
-        for (int i = 0; i<youtubeUrl.length(); i++){
+        for (int i = 0; i < youtubeUrl.length(); i++) {
 
-            if (youtubeUrl.charAt(i)!='=' && !equalsFlag){
-                continue;
-            }
-            if (youtubeUrl.charAt(i)=='=' && !equalsFlag){
+            if (youtubeUrl.charAt(i) == '=' && !equalsFlag) {
                 equalsFlag = true;
+            }
+
+            if (youtubeUrl.charAt(i) != '=' && !equalsFlag || youtubeUrl.charAt(i) == '=' && !equalsFlag) {
                 continue;
             }
 
-            id = id + youtubeUrl.charAt(i);
+            id = id.append(youtubeUrl.charAt(i));
 
         }
-        return id;
+        return id.toString();
     }
 
     /**
      * This method extracts the converter from the 320 website using the load method
+     *
      * @param id String
      * @return String
      * @throws IOException
@@ -215,12 +218,13 @@ public class ServiceUpload {
     /**
      * This method looks through the converter document for the correct https that will allow the download of
      * the youtube video
+     *
      * @param html String
      * @return String
      */
     private static String getMP3URL(String html) {
 
-        String http = "";
+        StringBuilder http = new StringBuilder();
         boolean marker = false;
 
         for (int i = 0; i < html.length(); i++) {
@@ -229,13 +233,13 @@ public class ServiceUpload {
                 return null;
             }
 
-            http = http + html.charAt(i);
+            http = http.append(html.charAt(i));
 
             if (html.substring(i, i + 10).equals("https://s0")) {
-                http = "h";
+                http.append("h");
                 marker = true;
             }
-            if (html.charAt(i) == '\"' && marker == true) {
+            if (html.charAt(i) == '\"' && marker) {
                 return http.substring(0, http.length() - 1);
             }
 
@@ -246,6 +250,7 @@ public class ServiceUpload {
 
     /**
      * This method uses the converter to load the mp3 byte array from the youtub website
+     *
      * @param url String
      * @return byte[]t
      * @throws IOException
@@ -253,22 +258,17 @@ public class ServiceUpload {
     private static byte[] load(String url) throws IOException {
         URL url2 = new URL(url);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        InputStream is = url2.openStream();
-        byte[] byteChunk = new byte[2500];
-        int n;
+        try (InputStream is = url2.openStream()) {
+            byte[] byteChunk = new byte[2500];
+            int n;
 
-        while ((n = is.read(byteChunk)) > 0) {
-
-            if (n%10==0) {
-                System.out.println("Downloading");
+            while ((n = is.read(byteChunk)) > 0) {
+                baos.write(byteChunk, 0, n);
             }
-            baos.write(byteChunk, 0, n);
 
+            baos.close();
+            baos.flush();
         }
-
-        is.close();
-        baos.flush();
-        baos.close();
         return baos.toByteArray();
     }
 }

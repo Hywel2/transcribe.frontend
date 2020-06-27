@@ -4,6 +4,7 @@ transcription/encryption/Encryption.class
 transcription/providers/ProviderDownload.class
 transcription/providers/ProviderUpload.class
 transcription/services/ServiceUpload.class
+transcription/windows/HelpWindow.class
 transcription/windows/MenuWindow.class
 transcription/Main.class
 transcription/windows/DownloadWindow.class

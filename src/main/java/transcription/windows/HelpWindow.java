@@ -10,12 +10,12 @@ import java.nio.file.Paths;
 import java.util.logging.Logger;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
+import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
 public class HelpWindow implements ActionListener {
-    private static final Logger LOGGER = Logger.getLogger(MenuWindow.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(HelpWindow.class.getName());
 
-    private JTextArea jTextArea;
-    private JFrame helpFrame;
     private JButton returnButton;
     private GridBagConstraints panelGbc = new GridBagConstraints();
     private GridBagConstraints frameGbc = new GridBagConstraints();
@@ -31,7 +31,7 @@ public class HelpWindow implements ActionListener {
      * @return
      */
     public JFrame setHelpWindow() {
-        helpFrame = new JFrame();
+        JFrame helpFrame = new JFrame();
         helpFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         helpFrame.setLayout(new GridBagLayout());
         helpFrame.setTitle("Help");
@@ -71,11 +71,11 @@ public class HelpWindow implements ActionListener {
      * @param helpPanel
      */
     private void setText(JPanel helpPanel) {
-        jTextArea = new JTextArea(10, 50);
+        JTextArea jTextArea = new JTextArea(10, 50);
         jTextArea.setEditable(false);
         jTextArea.append(readTxtFile(previousWindow));
         JScrollPane scroll = new JScrollPane(jTextArea,
-                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+                VERTICAL_SCROLLBAR_ALWAYS, HORIZONTAL_SCROLLBAR_ALWAYS);
         panelGbc.gridx = 0;
         panelGbc.gridy = 1;
         panelGbc.weightx = 0.5;
@@ -134,10 +134,9 @@ public class HelpWindow implements ActionListener {
      * @param previousWindow
      * @return
      */
-    private String readTxtFile(String previousWindow) {
+    public String readTxtFile(String previousWindow) {
         try {
-            String menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
-            return menuHelpText;
+            return new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
         } catch (IOException e) {
             e.printStackTrace();
         }
