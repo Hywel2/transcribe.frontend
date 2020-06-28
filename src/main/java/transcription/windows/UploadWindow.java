@@ -31,7 +31,11 @@ public class UploadWindow implements ActionListener {
     private JPanel uploadPanel = new JPanel();
     private String emptyField = "default";
 
-    public JFrame setUploadWindow(){
+    /**
+     * This method sets the variables of the JFrame
+     * @return
+     */
+    public JFrame setUploadWindow() {
         JFrame uploadFrame = new JFrame();
         uploadFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         uploadFrame.setLayout(new GridBagLayout());
@@ -40,14 +44,17 @@ public class UploadWindow implements ActionListener {
         uploadFrame.setLocationRelativeTo(null);
         uploadFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         uploadPanel = setUploadPanel();
-        uploadFrame.add(uploadPanel,frameGbc);
+        uploadFrame.add(uploadPanel, frameGbc);
         uploadFrame.getContentPane().setLayout(new GridBagLayout());
         uploadFrame.setVisible(true);
         return uploadFrame;
     }
 
+    /**
+     * This method sets the variables of the JPanel
+     * @return
+     */
     public JPanel setUploadPanel() {
-
         panelGbc.fill = GridBagConstraints.HORIZONTAL;
         panelGbc.insets.bottom = 1;
         panelGbc.insets.top = 1;
@@ -67,6 +74,10 @@ public class UploadWindow implements ActionListener {
         return uploadPanel;
     }
 
+    /**
+     * Sets the variables of the JLabel and JTextField of the file path field
+     * @param uploadPanel
+     */
     private void setFilePath(JPanel uploadPanel) {
         JLabel filePathLabel = new JLabel("File path:");
         panelGbc.gridx = 1;
@@ -84,6 +95,10 @@ public class UploadWindow implements ActionListener {
         uploadPanel.add(filePathField, panelGbc);
     }
 
+    /**
+     * Sets the variables of the JLabel and JTextField of the http field
+     * @param uploadPanel
+     */
     private void setHttp(JPanel uploadPanel) {
         JLabel httpLabel = new JLabel("YouTube http:");
         panelGbc.gridx = 1;
@@ -101,6 +116,10 @@ public class UploadWindow implements ActionListener {
         uploadPanel.add(httpField, panelGbc);
     }
 
+    /**
+     * Sets the variables of the JLabel and JTextField of the job name field
+     * @param uploadPanel
+     */
     private void setJobName(JPanel uploadPanel) {
         JLabel jobNameLabel = new JLabel("Job name:");
         panelGbc.gridx = 1;
@@ -120,10 +139,9 @@ public class UploadWindow implements ActionListener {
     }
 
     /**
-     * Method adds the email label and textfield.
+     * Sets the variables of the JLabel and JTextField of email field
      * @param uploadPanel
      */
-
     private void setEmail(JPanel uploadPanel) {
         JLabel emailLabel = new JLabel("Email:");
         panelGbc.gridx = 1;
@@ -143,6 +161,7 @@ public class UploadWindow implements ActionListener {
 
     /**
      * Method sets and add the JButtons to the panel
+     *
      * @param uploadPanel
      */
     void setButtons(JPanel uploadPanel) {
@@ -187,7 +206,7 @@ public class UploadWindow implements ActionListener {
     }
 
     /**
-     * Method sets the actions that will take place when buttons are pressed
+     * Method sets the actions that will take place when buttons are pressed. If a http has been entered into the http field then it first creates the mp3 from the youtube http
      *
      * @param actionEvent
      */
@@ -196,19 +215,17 @@ public class UploadWindow implements ActionListener {
         try {
             if (actionEvent.getSource() == sendButton) {
                 if (!httpField.getText().equals(emptyField)) {
-                    serviceUpload.getMp4FromYoutube(httpField.getText(), httpField.getText(), jobNameField.getText(), emailField.getText());
+                    serviceUpload.getMp4FromYoutube(httpField.getText());
+                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File("src/main/resources/audio.mp3"), emailField.getText(), true);
                 } else {
-                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File(filePathField.getText()), emailField.getText());
+                    serviceUpload.convertToBase64AndSend(jobNameField.getText(), new File(filePathField.getText()), emailField.getText(), false);
                 }
-            }
-            else if (actionEvent.getSource() == menuButton) {
+            } else if (actionEvent.getSource() == menuButton) {
                 MenuWindow menuWindow = new MenuWindow();
                 menuWindow.setMenuWindow();
-            }
-            else if (actionEvent.getSource() == filePathButton) {
+            } else if (actionEvent.getSource() == filePathButton) {
                 filePathField.setText(chooseFile().getAbsolutePath());
-            }
-            else if (actionEvent.getSource() == helpButton){
+            } else if (actionEvent.getSource() == helpButton) {
                 HelpWindow helpWindow = new HelpWindow("upload");
                 helpWindow.setHelpWindow();
             }

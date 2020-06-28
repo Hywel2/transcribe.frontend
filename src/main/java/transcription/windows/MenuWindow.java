@@ -16,6 +16,10 @@ public class MenuWindow implements ActionListener {
     private GridBagConstraints frameGbc = new GridBagConstraints();
     private JPanel menuPanel = new JPanel();
 
+    /**
+     * This method sets the variables of the JFrame
+     * @return
+     */
     public JFrame setMenuWindow(){
         JFrame menuFrame = new JFrame();
         menuFrame.getContentPane().setLayout(new GridBagLayout());
@@ -30,6 +34,10 @@ public class MenuWindow implements ActionListener {
         return menuFrame;
     }
 
+    /**
+     * This method sets the variables of the JPanel
+     * @return
+     */
     public JPanel setMenuPanel() {
 
         panelGbc.fill = GridBagConstraints.HORIZONTAL;

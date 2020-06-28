@@ -10,12 +10,12 @@ import java.nio.file.Paths;
 import java.util.logging.Logger;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
+import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
+import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
 public class HelpWindow implements ActionListener {
-    private static final Logger LOGGER = Logger.getLogger(MenuWindow.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(HelpWindow.class.getName());
 
-    private JTextArea jTextArea;
-    private JFrame helpFrame;
     private JButton returnButton;
     private GridBagConstraints panelGbc = new GridBagConstraints();
     private GridBagConstraints frameGbc = new GridBagConstraints();
@@ -26,8 +26,12 @@ public class HelpWindow implements ActionListener {
         this.previousWindow = previousWindow;
     }
 
+    /**
+     * This method sets the variables of the frame to be put in the help window
+     * @return
+     */
     public JFrame setHelpWindow() {
-        helpFrame = new JFrame();
+        JFrame helpFrame = new JFrame();
         helpFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         helpFrame.setLayout(new GridBagLayout());
         helpFrame.setTitle("Help");
@@ -41,6 +45,10 @@ public class HelpWindow implements ActionListener {
         return helpFrame;
     }
 
+    /**
+     * This method sets the variables of the panel to be put in the frame
+     * @return
+     */
     private JPanel setHelpPanel() {
         panelGbc.fill = GridBagConstraints.HORIZONTAL;
         panelGbc.insets.bottom = 1;
@@ -58,12 +66,16 @@ public class HelpWindow implements ActionListener {
         return helpPanel;
     }
 
+    /**
+     * This method creates the text panel that the help information is placed in
+     * @param helpPanel
+     */
     private void setText(JPanel helpPanel) {
-        jTextArea = new JTextArea(10, 50);
+        JTextArea jTextArea = new JTextArea(10, 50);
         jTextArea.setEditable(false);
         jTextArea.append(readTxtFile(previousWindow));
         JScrollPane scroll = new JScrollPane(jTextArea,
-                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+                VERTICAL_SCROLLBAR_ALWAYS, HORIZONTAL_SCROLLBAR_ALWAYS);
         panelGbc.gridx = 0;
         panelGbc.gridy = 1;
         panelGbc.weightx = 0.5;
@@ -73,6 +85,10 @@ public class HelpWindow implements ActionListener {
         helpPanel.add(scroll, panelGbc);
     }
 
+    /**
+     * This method sets the variables of the buttons
+     * @param helpPanel
+     */
     private void setButtons(JPanel helpPanel) {
         returnButton = new JButton("Return");
         panelGbc.gridx = 0;
@@ -82,10 +98,17 @@ public class HelpWindow implements ActionListener {
         helpPanel.add(returnButton, panelGbc);
     }
 
+    /**
+     * This method gives and actionListener to the button so tha it can respond to being pressed.
+     */
     private void setAction() {
         returnButton.addActionListener(this);
     }
 
+    /**
+     * This method sets the actions taken by buttons when pressed. It carries out this according the the window it has come from, allowing it to return to the right window.
+     * @param actionEvent
+     */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         try {
@@ -106,10 +129,14 @@ public class HelpWindow implements ActionListener {
         }
     }
 
-    private String readTxtFile(String previousWindow) {
+    /**
+     * This menu reads the information from the text file to put it in the jTextArea. The file can be modified to change the text.
+     * @param previousWindow
+     * @return
+     */
+    public String readTxtFile(String previousWindow) {
         try {
-            String menuHelpText = new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
-            return menuHelpText;
+            return new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
         } catch (IOException e) {
             e.printStackTrace();
         }

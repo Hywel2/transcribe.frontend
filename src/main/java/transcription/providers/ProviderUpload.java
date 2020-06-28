@@ -16,9 +16,7 @@ public class ProviderUpload {
      */
 
     public String executeUploadHttp(String mp3Base64, String jobName, String tag, String email) {
-        Http http = new Http();
-        String json;
-        json = ("{\"mp3Base64\":\"" + mp3Base64 + "hgend" + jobName + "\", \"tag\":\"" + tag + "\",\"email\":\"" + email + "\"}");
-        return http.sendPost(json);
+        String json = ("{\"mp3Base64\":\"" + mp3Base64 + "hgend" + jobName + "\", \"tag\":\"" + tag + "\",\"email\":\"" + email + "\"}");
+        return new Http().sendPost(json);
     }
 }
