@@ -39,6 +39,11 @@ public class ServiceUpload {
 
             byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
+
+            if (youTubeFlag) {
+                inputFile.delete();
+            }
+
             return cuttingLoop(mpBase64Piece, jobName, email);
         } catch (Exception e) {
             LOGGER.info("Something isn't right! Error: " + e);
