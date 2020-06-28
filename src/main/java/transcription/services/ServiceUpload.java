@@ -39,11 +39,6 @@ public class ServiceUpload {
 
             byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-
-            if (youTubeFlag) {
-                inputFile.delete();
-            }
-
             return cuttingLoop(mpBase64Piece, jobName, email);
         } catch (Exception e) {
             LOGGER.info("Something isn't right! Error: " + e);
@@ -193,15 +188,15 @@ public class ServiceUpload {
 
         for (int i = 0; i < youtubeUrl.length(); i++) {
 
+            if (youtubeUrl.charAt(i) != '=' && !equalsFlag) {
+                continue;
+            }
             if (youtubeUrl.charAt(i) == '=' && !equalsFlag) {
                 equalsFlag = true;
             }
-
-            if (youtubeUrl.charAt(i) != '=' && !equalsFlag || youtubeUrl.charAt(i) == '=' && !equalsFlag) {
-                continue;
+            if (!(youtubeUrl.charAt(i) == '=' && !equalsFlag) && youtubeUrl.charAt(i)!='=') {
+                id = id.append(youtubeUrl.charAt(i));
             }
-
-            id = id.append(youtubeUrl.charAt(i));
 
         }
         return id.toString();
@@ -241,6 +236,7 @@ public class ServiceUpload {
             http = http.append(html.charAt(i));
 
             if (html.substring(i, i + 10).equals("https://s0")) {
+                http.setLength(0);
                 http.append("h");
                 marker = true;
             }
