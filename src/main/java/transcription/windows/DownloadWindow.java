@@ -189,7 +189,7 @@ public class DownloadWindow implements ActionListener {
      *
      * @return File
      */
-    private File chooseFile() {
+    public File chooseFile() {
         JFileChooser chooser = new JFileChooser();
 
         chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
