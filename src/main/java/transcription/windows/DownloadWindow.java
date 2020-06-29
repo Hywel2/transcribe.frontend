@@ -25,6 +25,22 @@ public class DownloadWindow implements ActionListener {
     private ServiceDownload serviceDownload = new ServiceDownload();
     private JPanel downloadPanel = new JPanel();
 
+    public JButton getSelectDirectoryButton() {
+        return selectDirectoryButton;
+    }
+
+    public JButton getRetrieveButton() {
+        return retrieveButton;
+    }
+
+    public JButton getMenuButton() {
+        return menuButton;
+    }
+
+    public JButton getHelpButton() {
+        return helpButton;
+    }
+
     public JFrame setDownloadWindow() {
         JFrame downloadFrame = new JFrame();
         downloadFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);

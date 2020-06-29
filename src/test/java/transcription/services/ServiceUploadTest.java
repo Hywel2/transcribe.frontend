@@ -8,9 +8,11 @@ import transcription.providers.ProviderUpload;
 import ws.schild.jave.*;
 
 import java.io.*;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ServiceUploadTest {
     private String filePath = "src/test/resources/AudioTestFile.mp3";
@@ -23,10 +25,8 @@ public class ServiceUploadTest {
         new MockUp<Encoder>() {
             @Mock
             public void encode(MultimediaObject multimediaObject, File target, EncodingAttributes attributes) throws IllegalArgumentException, InputFormatException, EncoderException {
-                ;
             }
         };
-
         assertEquals("src/test/resources/Audio.mp3", serviceUpload.convertToMp3(filePath));
     }
 
@@ -65,9 +65,9 @@ public class ServiceUploadTest {
 
     @Test
     @DisplayName("Test convertToBase64AndSend")
-    void testConvertToBase64AndSend(){
+    void testConvertToBase64AndSend() {
         ServiceUpload serviceUpload = new ServiceUpload();
-        File file = new File ("src/test/java/resources/fakeMp4.txt");
+        File file = new File("src/test/java/resources/fakeMp4.txt");
         String jobName = "JOBNAME";
 
         new MockUp<ServiceUpload>() {
@@ -82,9 +82,9 @@ public class ServiceUploadTest {
 
     @Test
     @DisplayName("Test convertToBase64andSendCatchBlock")
-    void testConvertToBase64AndSendCatch(){
+    void testConvertToBase64AndSendCatch() {
         ServiceUpload serviceUpload = new ServiceUpload();
-        File file = new File ("src/test/java/resources/fakeMp4.txt");
+        File file = new File("src/test/java/resources/fakeMp4.txt");
         String jobName = "JOBNAME";
 
         new MockUp<ServiceUpload>() {
@@ -94,7 +94,7 @@ public class ServiceUploadTest {
             }
         };
 
-        assertEquals("\"complete\"", serviceUpload.convertToBase64AndSend(jobName, file, null, false));
+        assertNull(serviceUpload.convertToBase64AndSend(jobName, file, null, false));
     }
 
     @Test
@@ -110,4 +110,49 @@ public class ServiceUploadTest {
 
         assertNull(serviceUpload.convertToMp3(filePath));
     }
+
+    @Test
+    @DisplayName("any")
+    void testYoutube() {
+
+        new MockUp<URL>(){
+            @Mock
+            public final InputStream openStream() throws java.io.IOException{
+                return new InputStream() {
+                    @Override
+                    public int read() throws IOException {
+                        return 0;
+                    }
+                };
+            }
+        };
+
+        new MockUp<InputStream>(){
+            @Mock
+            public int read(byte b[]) throws IOException{
+                return 0;
+            }
+        };
+
+        new MockUp<ServiceUpload>(){
+            @Mock
+            public String loadConverter(String id) throws IOException{
+                String converter = new String(Files.readAllBytes(Paths.get("src/test/java/resources/mockConverter.txt")));
+                return converter;
+            }
+        };
+
+        new MockUp<OutputStream>(){
+            @Mock
+            public void write(byte b[]) throws IOException{
+                //Do nothing
+            }
+        };
+
+        assertTrue(serviceUpload.getMp4FromYoutube("https://www.youtube.com/watch?v=MTf6i3kV7Xw`"));
+    }
+
+
+
+
 }

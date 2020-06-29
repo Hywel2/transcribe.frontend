@@ -6,7 +6,9 @@ import transcription.windows.MenuWindow;
 
 import javax.swing.*;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class MenuWindowTest {
     @Test
@@ -14,5 +16,16 @@ public class MenuWindowTest {
     void testMenuWindow(){
         MenuWindow menuWindow = new MenuWindow();
         assertEquals(JFrame.class, menuWindow.setMenuWindow().getClass());
+    }
+
+    @Test
+    @DisplayName("ActionListener test")
+    void testActionListener(){
+        MenuWindow menuWindow = new MenuWindow();
+        menuWindow.setMenuWindow();
+
+        assertDoesNotThrow(() -> menuWindow.getHelpButton().doClick());
+        assertDoesNotThrow(() -> menuWindow.getDownloadButton().doClick());
+        assertDoesNotThrow(() -> menuWindow.getUploadButton().doClick());
     }
 }

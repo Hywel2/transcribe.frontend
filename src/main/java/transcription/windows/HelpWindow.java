@@ -26,6 +26,10 @@ public class HelpWindow implements ActionListener {
         this.previousWindow = previousWindow;
     }
 
+    public JButton getReturnButton() {
+        return returnButton;
+    }
+
     /**
      * This method sets the variables of the frame to be put in the help window
      * @return

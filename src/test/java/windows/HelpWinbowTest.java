@@ -6,8 +6,7 @@ import transcription.windows.HelpWindow;
 
 import javax.swing.*;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class HelpWinbowTest {
     @Test
@@ -24,5 +23,14 @@ public class HelpWinbowTest {
         HelpWindow helpWindow = new HelpWindow("menu");
         assertNull(helpWindow.readTxtFile(null));
 
+    }
+
+    @Test
+    @DisplayName("ActionListener test")
+    void testActionListener(){
+        HelpWindow helpWindow = new HelpWindow("menu");
+        helpWindow.setHelpWindow();
+
+        assertDoesNotThrow(() -> helpWindow.getReturnButton().doClick());
     }
 }

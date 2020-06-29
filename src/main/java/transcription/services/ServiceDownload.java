@@ -19,6 +19,7 @@ public class ServiceDownload {
      * @param filePath
      */
     private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
+
     public boolean sendDownloadHttp(String job, String filePath) {
 
         try {

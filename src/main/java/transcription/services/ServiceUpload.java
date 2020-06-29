@@ -154,7 +154,7 @@ public class ServiceUpload {
      *
      * @param httpPath String
      */
-    public void getMp4FromYoutube(String httpPath) {
+    public boolean getMp4FromYoutube(String httpPath) {
         try {
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
@@ -162,8 +162,10 @@ public class ServiceUpload {
                 os.write(mp3ByteArray);
                 os.flush();
             }
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -174,7 +176,7 @@ public class ServiceUpload {
      * @return byte[]
      * @throws IOException
      */
-    public static byte[] youtubeToMP3(String youtubeUrl) throws IOException {
+    public byte[] youtubeToMP3(String youtubeUrl) throws IOException {
         String id = getID(youtubeUrl);
         String converter = loadConverter(id);
         String mp3url = getMP3URL(converter);
@@ -214,7 +216,7 @@ public class ServiceUpload {
      * @return String
      * @throws IOException
      */
-    private static String loadConverter(String id) throws IOException {
+    public String loadConverter(String id) throws IOException {
         String url = "https://www.320youtube.com/watch?v=" + id;
         byte[] bytes = load(url);
         return new String(bytes);

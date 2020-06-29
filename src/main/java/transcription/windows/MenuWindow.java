@@ -16,6 +16,18 @@ public class MenuWindow implements ActionListener {
     private GridBagConstraints frameGbc = new GridBagConstraints();
     private JPanel menuPanel = new JPanel();
 
+    public JButton getDownloadButton() {
+        return downloadButton;
+    }
+
+    public JButton getUploadButton() {
+        return uploadButton;
+    }
+
+    public JButton getHelpButton() {
+        return helpButton;
+    }
+
     /**
      * This method sets the variables of the JFrame
      * @return

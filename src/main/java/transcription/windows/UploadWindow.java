@@ -31,6 +31,22 @@ public class UploadWindow implements ActionListener {
     private JPanel uploadPanel = new JPanel();
     private String emptyField = "default";
 
+    public JButton getHelpButton() {
+        return helpButton;
+    }
+
+    public JButton getSendButton() {
+        return sendButton;
+    }
+
+    public JButton getMenuButton() {
+        return menuButton;
+    }
+
+    public JButton getFilePathButton() {
+        return filePathButton;
+    }
+
     /**
      * This method sets the variables of the JFrame
      * @return
