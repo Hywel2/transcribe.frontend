@@ -458,6 +458,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/services/ServiceHttpAndTranslationTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/resources/base64Example.txt">
           <value>
             <set />
