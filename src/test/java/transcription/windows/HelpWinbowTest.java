@@ -1,12 +1,12 @@
-package windows;
+package transcription.windows;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import transcription.windows.HelpWindow;
 
 import javax.swing.*;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class HelpWinbowTest {
     @Test

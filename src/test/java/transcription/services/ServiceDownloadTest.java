@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Test;
 import transcription.providers.ProviderDownload;
 
 import java.io.File;
+import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ServiceDownloadTest {
 
@@ -21,8 +22,7 @@ public class ServiceDownloadTest {
 
         new MockUp<ProviderDownload>() {
             @Mock
-            public String sendDownloadHttp(String jobName) {
-
+            public String executeDownloadHttp(String jobName) {
                 return "DATA";
             }
         };
@@ -31,23 +31,23 @@ public class ServiceDownloadTest {
             filePath = filePath.substring(0, filePath.length() - 2);
         }
 
-        assertEquals(true, serviceDownload.sendDownloadHttp("DATA", filePath));
+        assertEquals("DATA", serviceDownload.sendDownloadHttp("DATA", filePath));
     }
 
-//    @Test
-//    @DisplayName("testing catch block for sendDownloadHttp")
-//    public void testCatchBlock() {
-//        ServiceDownload serviceDownload = new ServiceDownload();
-//        File file = new File("Main.java");
-//        String filePath = file.getAbsolutePath();
-//
-//        new MockUp<ProviderDownload>() {
-//            @Mock
-//            public String executeDownloadHttp(String jobName) throws IOException {
-//                throw new IOException("Forced Exception");
-//            }
-//        };
-//
-//        assertFalse(serviceDownload.sendDownloadHttp("JOBNAME", "file"));
-//    }
+    @Test
+    @DisplayName("testing catch block for sendDownloadHttp")
+    public void testCatchBlock() {
+        ServiceDownload serviceDownload = new ServiceDownload();
+        File file = new File("Main.java");
+        String filePath = file.getAbsolutePath();
+
+        new MockUp<ProviderDownload>() {
+            @Mock
+            public String executeDownloadHttp(String jobName) throws IOException {
+                throw new IOException("Forced Exception");
+            }
+        };
+
+        assertNull(serviceDownload.sendDownloadHttp("JOBNAME", "file"));
+    }
 }

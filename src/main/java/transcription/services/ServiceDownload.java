@@ -21,8 +21,8 @@ public class ServiceDownload {
     private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
 
     public String sendDownloadHttp(String job, String filePath) {
-        String json = providerDownload.executeDownloadHttp(job + ".json");
         try {
+            String json = providerDownload.executeDownloadHttp(job + ".json");
             Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.executeDownloadHttp(job + ".json").getBytes());
             LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
             LOGGER.info("complete");

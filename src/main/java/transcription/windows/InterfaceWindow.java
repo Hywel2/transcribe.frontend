@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.logging.Logger;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
-import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
+import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
 public class InterfaceWindow implements ActionListener {
@@ -52,6 +52,22 @@ public class InterfaceWindow implements ActionListener {
 
     public JButton getSelectFileJButton() {
         return selectFileJButton;
+    }
+
+    public JMenuItem getUploadYouTubeJMenuItem() {
+        return uploadYouTubeJMenuItem;
+    }
+
+    public JMenuItem getUploadFileJMenuItem() {
+        return uploadFileJMenuItem;
+    }
+
+    public JMenuItem getDownloadJMenuItem() {
+        return downloadJMenuItem;
+    }
+
+    public JMenuItem getHelpJMenuItem() {
+        return helpJMenuItem;
     }
 
     public JFrame setInterfaceWindow() {
@@ -171,10 +187,11 @@ public class InterfaceWindow implements ActionListener {
 
     private void setTextArea(Container interfaceContainer) {
         jTextArea.setText("Default");
+        jTextArea.setLineWrap(true);
         jTextArea.setEditable(false);
         jTextArea.append("");
         JScrollPane scroll = new JScrollPane(jTextArea,
-                VERTICAL_SCROLLBAR_ALWAYS, HORIZONTAL_SCROLLBAR_ALWAYS);
+                VERTICAL_SCROLLBAR_ALWAYS, HORIZONTAL_SCROLLBAR_NEVER);
         containerGbc.gridx = 2;
         containerGbc.gridy = 9;
         containerGbc.gridheight = 8;
