@@ -6,7 +6,7 @@ will require the job name when downloading.
 
 File path - Use the file chooser to select the file that you wish to transcribe.
 
-YouTube http - This is currently not required.
+Http - If you are transcribing a YouTube video, enter the http here
 
 Email - You do not need to provide an email and the file can be downloaded without this
 information. However, if you wish to receive an alert when the job is complete, you will

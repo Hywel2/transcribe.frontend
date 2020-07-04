@@ -5,6 +5,8 @@ import transcription.services.ServiceUpload;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -41,7 +43,7 @@ public class InterfaceWindow implements ActionListener {
     private ServiceDownload serviceDownload = new ServiceDownload();
     private JLabel pathJLabel = new JLabel("File path:");
     private JLabel emailJLabel = new JLabel("Email:");
-
+    private JTextArea jTextArea = new JTextArea(30, 60);
 
     public JButton getCopyToClipBoardJButton() {
         return copyToClipBoardJButton;
@@ -170,7 +172,6 @@ public class InterfaceWindow implements ActionListener {
     }
 
     private void setTextArea(Container interfaceContainer) {
-        JTextArea jTextArea = new JTextArea(30, 60);
         jTextArea.setEditable(false);
         jTextArea.append("");
         JScrollPane scroll = new JScrollPane(jTextArea,
@@ -225,7 +226,9 @@ public class InterfaceWindow implements ActionListener {
                 selectFileJButtonAction();
             }
             if (actionEvent.getSource() == copyToClipBoardJButton) {
-                //do nothing
+                StringSelection stringSelection = new StringSelection (jTextArea.getText());
+                Clipboard clpbrd = Toolkit.getDefaultToolkit ().getSystemClipboard ();
+                clpbrd.setContents (stringSelection, null);
             }
             if (actionEvent.getSource() == helpJMenuItem) {
                 helpJMenuItemAction();
