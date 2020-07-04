@@ -9,6 +9,8 @@ import ws.schild.jave.MultimediaObject;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -41,7 +43,7 @@ public class ServiceUpload {
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
 
             if (youTubeFlag) {
-                inputFile.delete();
+                Files.delete(Paths.get(inputFile.getPath()));
             }
 
             return cuttingLoop(mpBase64Piece, jobName, email);
@@ -164,6 +166,7 @@ public class ServiceUpload {
             }
             return true;
         } catch (IOException e) {
+            LOGGER.info(e.toString());
             e.printStackTrace();
             return false;
         }

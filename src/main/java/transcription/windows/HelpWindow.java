@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
@@ -84,7 +85,7 @@ public class HelpWindow{
         try {
             return new String(Files.readAllBytes(Paths.get("src/main/resources/"+previousWindow+"Help.txt")));
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.info(e.toString());
         }
         return null;
     }

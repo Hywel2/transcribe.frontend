@@ -70,6 +70,11 @@ public class InterfaceWindow implements ActionListener {
         return helpJMenuItem;
     }
 
+    /**
+     * This method creates the settings for the interfaceWindow JFrame, adding the JMenuBar, setting the contentPane,
+     * and several other features.
+     * @return JFrame
+     */
     public JFrame setInterfaceWindow() {
         JFrame interfaceJFrame = new JFrame();
         interfaceJFrame.setJMenuBar(setToolBar(toolBarJMenuBar));
@@ -84,6 +89,11 @@ public class InterfaceWindow implements ActionListener {
         return interfaceJFrame;
     }
 
+    /**
+     * This method sets the contentPane Container that has the various components in a GridBagConstraints layout.
+     * It adds the JTextFields, JLabels, JButtons and JTextArea using several methods.
+     * @return Container
+     */
     private Container setContentPane() {
         containerGbc.insets.bottom = 1;
         containerGbc.insets.top = 2;
@@ -104,6 +114,12 @@ public class InterfaceWindow implements ActionListener {
         return contentPaneContainer;
     }
 
+    /**
+     * This method take the JMenuBar provided when setting up the JFrame and adds the various JMenus and
+     * JMenuItems
+     * @param toolBarJMenuBar JMenuBar
+     * @return JMenuBar
+     */
     public JMenuBar setToolBar(JMenuBar toolBarJMenuBar) {
 
         JMenu accountJMenu = new JMenu("Accounts");
@@ -129,13 +145,17 @@ public class InterfaceWindow implements ActionListener {
         return toolBarJMenuBar;
     }
 
-    private void setPath(Container interfaceJPanel) {
+    /**
+     * This method sets the JLabel and JTextfield associated with the file path/http
+     * @param interfaceContainer Container
+     */
+    private void setPath(Container interfaceContainer) {
 
         containerGbc.gridx = 2;
         containerGbc.gridy = 1;
         containerGbc.gridwidth = 2;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(pathJLabel, containerGbc);
+        interfaceContainer.add(pathJLabel, containerGbc);
 
         pathJTextField = new JTextField();
         pathJTextField.setColumns(40);
@@ -144,17 +164,21 @@ public class InterfaceWindow implements ActionListener {
         containerGbc.gridy = 1;
         containerGbc.gridwidth = 8;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(pathJTextField, containerGbc);
+        interfaceContainer.add(pathJTextField, containerGbc);
     }
 
-    private void setJobName(Container interfaceJPanel) {
+    /**
+     * This method sets the JTextField and JLabel associated with the jobName
+     * @param interfaceContainer Container
+     */
+    private void setJobName(Container interfaceContainer) {
         JLabel jobNameLabel = new JLabel("Job name:");
 
         containerGbc.gridx = 2;
         containerGbc.gridy = 3;
         containerGbc.gridwidth = 2;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(jobNameLabel, containerGbc);
+        interfaceContainer.add(jobNameLabel, containerGbc);
 
         jobNameJTextField = new JTextField();
         jobNameJTextField.setColumns(40);
@@ -163,16 +187,20 @@ public class InterfaceWindow implements ActionListener {
         containerGbc.gridy = 3;
         containerGbc.gridwidth = 8;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(jobNameJTextField, containerGbc);
+        interfaceContainer.add(jobNameJTextField, containerGbc);
     }
 
-    private void setEmail(Container interfaceJPanel) {
+    /**
+     * This method sets the JTextFiled and JLabel associated with the email
+     * @param interfaceContainer Container
+     */
+    private void setEmail(Container interfaceContainer) {
 
         containerGbc.gridx = 2;
         containerGbc.gridy = 5;
         containerGbc.gridwidth = 2;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(emailJLabel, containerGbc);
+        interfaceContainer.add(emailJLabel, containerGbc);
 
         emailJTextField = new JTextField();
 
@@ -182,9 +210,13 @@ public class InterfaceWindow implements ActionListener {
         containerGbc.gridy = 5;
         containerGbc.gridwidth = 8;
         containerGbc.gridheight = 1;
-        interfaceJPanel.add(emailJTextField, containerGbc);
+        interfaceContainer.add(emailJTextField, containerGbc);
     }
 
+    /**
+     * This method sets the JTextArea
+     * @param interfaceContainer Container
+     */
     private void setTextArea(Container interfaceContainer) {
         jTextArea.setText("Default");
         jTextArea.setLineWrap(true);
@@ -199,6 +231,10 @@ public class InterfaceWindow implements ActionListener {
         interfaceContainer.add(scroll, containerGbc);
     }
 
+    /**
+     * This method creates sets the JButtons for the container
+     * @param interfaceContainer Container
+     */
     private void setButtons(Container interfaceContainer) {
         copyToClipBoardJButton = new JButton("Copy");
         containerGbc.gridx = 2;
@@ -223,6 +259,9 @@ public class InterfaceWindow implements ActionListener {
         interfaceContainer.add(selectFileJButton, containerGbc);
     }
 
+    /**
+     * This method adds ActionListeners to the JButtons and JMenuItems
+     */
     void setAction() {
         copyToClipBoardJButton.addActionListener(this);
         enterJButton.addActionListener(this);
@@ -233,6 +272,12 @@ public class InterfaceWindow implements ActionListener {
         downloadJMenuItem.addActionListener(this);
     }
 
+    /**
+     * This method creates the correct response according to the JButton or JMenuItem pressed. It calls the correct
+     * method depending on the component, or, in the case of the copyToClipBoardJButton it uses the Clipboard object
+     * to copy the content of the JTextArea
+     * @param actionEvent ActionEvent
+     */
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         try {
@@ -264,6 +309,10 @@ public class InterfaceWindow implements ActionListener {
         }
     }
 
+    /**
+     * This method creates the correct settings when the download JMenuItem is pressed. It sets the flags so the
+     * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
+     */
     private void downloadJMenuItemAction() {
         downloadFlag = true;
         youTubeFlag = false;
@@ -276,6 +325,10 @@ public class InterfaceWindow implements ActionListener {
         selectFileJButton.setText("Select directory");
     }
 
+    /**
+     * This method creates the correct settings when the uploadFile JMenuItem is pressed. It sets the flags so the
+     * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
+     */
     private void setUploadFileJMenuItemAction() {
         downloadFlag = false;
         youTubeFlag = false;
@@ -289,6 +342,10 @@ public class InterfaceWindow implements ActionListener {
         selectFileJButton.setVisible(true);
     }
 
+    /**
+     * This method creates the correct settings when the uploadYouTube JMenuItem is pressed. It sets the flags so the
+     * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
+     */
     private void setUploadYouTubeJMenuItemAction(){
         downloadFlag = false;
         youTubeFlag = true;
@@ -300,6 +357,10 @@ public class InterfaceWindow implements ActionListener {
         selectFileJButton.setVisible(false);
     }
 
+    /**
+     * This method creates the HelpWindow object, sending a parameter to allow the HelpWindow to display the
+     * correct information.
+     */
     private void helpJMenuItemAction() {
         String previousWindow;
         if (downloadFlag){
@@ -312,6 +373,10 @@ public class InterfaceWindow implements ActionListener {
         helpWindow.setHelpWindow();
     }
 
+    /**
+     * This creates the response of the pathJButton. It uses the downloadFlag to work out whether directories or
+     * files should be selected in the JFileChooser.
+     */
     private void selectFileJButtonAction() {
         JFileChooser chooser = new JFileChooser();
         if (downloadFlag) {
@@ -324,6 +389,10 @@ public class InterfaceWindow implements ActionListener {
         pathJTextField.setText(directoryOrFile.getAbsolutePath());
     }
 
+    /**
+     * This method creates the response of the enterJButton. It uses the downloadFlag and youTubeFlag to create
+     * the correct response.
+     */
     private void enterJButtonAction() {
         if (downloadFlag) {
             String jobName = jobNameJTextField.getText();
