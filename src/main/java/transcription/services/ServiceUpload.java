@@ -257,7 +257,7 @@ public class ServiceUpload {
     }
 
     /**
-     * This method uses the converter to load the mp3 byte array from the youtub website
+     * This method uses the converter to load the mp3 byte array from the youtube website
      *
      * @param url String
      * @return byte[]t

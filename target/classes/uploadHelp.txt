@@ -12,4 +12,4 @@ Email - You do not need to provide an email and the file can be downloaded witho
 information. However, if you wish to receive an alert when the job is complete, you will
 need to add an email to this field.
 
-Once the required information has been added, click send.
+Once the required information has been added, click submit.

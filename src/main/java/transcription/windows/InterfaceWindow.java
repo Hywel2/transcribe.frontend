@@ -17,7 +17,7 @@ import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
 public class InterfaceWindow implements ActionListener {
-    private static final Logger LOGGER = Logger.getLogger(DownloadWindow.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(InterfaceWindow.class.getName());
 
     private JButton copyToClipBoardJButton;
     private JButton enterJButton;
@@ -25,9 +25,6 @@ public class InterfaceWindow implements ActionListener {
     private JTextField pathJTextField;
     private JTextField jobNameJTextField;
     private JTextField emailJTextField;
-    private JMenu accountJMenu;
-    private JMenu jobsJMenu;
-    private JMenu helpJMenu;
     private JMenuBar toolBarJMenuBar = new JMenuBar();
     private JMenuItem uploadYouTubeJMenuItem;
     private JMenuItem uploadFileJMenuItem;
@@ -41,7 +38,7 @@ public class InterfaceWindow implements ActionListener {
     private boolean downloadFlag = false;
     private ServiceUpload serviceUpload = new ServiceUpload();
     private ServiceDownload serviceDownload = new ServiceDownload();
-    private JLabel pathJLabel = new JLabel("File path:");
+    private JLabel pathJLabel = new JLabel("http:");
     private JLabel emailJLabel = new JLabel("Email:");
     private JTextArea jTextArea = new JTextArea(30, 60);
 
@@ -92,9 +89,10 @@ public class InterfaceWindow implements ActionListener {
     }
 
     public JMenuBar setToolBar(JMenuBar toolBarJMenuBar) {
-        accountJMenu = new JMenu("Accounts");
-        jobsJMenu = new JMenu("Task");
-        helpJMenu = new JMenu("Help");
+
+        JMenu accountJMenu = new JMenu("Accounts");
+        JMenu jobsJMenu = new JMenu("Task");
+        JMenu helpJMenu = new JMenu("Help");
 
         toolBarJMenuBar.add(accountJMenu);
         toolBarJMenuBar.add(jobsJMenu);
@@ -172,6 +170,7 @@ public class InterfaceWindow implements ActionListener {
     }
 
     private void setTextArea(Container interfaceContainer) {
+        jTextArea.setText("Default");
         jTextArea.setEditable(false);
         jTextArea.append("");
         JScrollPane scroll = new JScrollPane(jTextArea,
@@ -203,6 +202,7 @@ public class InterfaceWindow implements ActionListener {
         containerGbc.gridy = 7;
         containerGbc.gridwidth = 3;
         containerGbc.gridheight = 1;
+        getSelectFileJButton().setVisible(false);
         interfaceContainer.add(selectFileJButton, containerGbc);
     }
 
@@ -269,13 +269,14 @@ public class InterfaceWindow implements ActionListener {
 
         pathJTextField.setVisible(true);
         selectFileJButton.setText("Select file");
+        selectFileJButton.setVisible(true);
     }
 
     private void setUploadYouTubeJMenuItemAction(){
         downloadFlag = false;
         youTubeFlag = true;
 
-        pathJLabel.setText("htttp");
+        pathJLabel.setText("http");
         emailJLabel.setVisible(true);
         emailJTextField.setVisible(true);
 
@@ -309,7 +310,8 @@ public class InterfaceWindow implements ActionListener {
     private void enterJButtonAction() {
         if (downloadFlag) {
             String jobName = jobNameJTextField.getText();
-            serviceDownload.sendDownloadHttp(jobName, pathJTextField.getText());
+            String job = serviceDownload.sendDownloadHttp(jobName, pathJTextField.getText());
+            jTextArea.setText(job);
         } else if (youTubeFlag) {
             serviceUpload.getMp4FromYoutube(pathJTextField.getText());
             serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File("src/main/resources/audio.mp3"), emailJTextField.getText(), true);
