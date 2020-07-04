@@ -148,6 +148,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/service/EncounterServiceInterface.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/AuroraConfiguration.xml">
           <value>
             <set />
@@ -174,6 +179,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/UserMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/AuthenticationFilterTest.java">
           <value>
             <set />
           </value>
@@ -223,6 +233,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/resources/requests/MCEncounter369.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/resources/requests/MCEncounter407.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/README.MD">
           <value>
             <set />
@@ -238,12 +258,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/ConnectionBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/adapters/EncounterJsonTypeHandler.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/model/IncompleteEncounter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/model/Secret.java">
           <value>
             <set />
           </value>
@@ -258,6 +288,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/rest/resource/VersionResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/encounter/service/EncounterService.java">
           <value>
             <set />
@@ -268,12 +303,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/AuthenticationFilterTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/ModelTestBase.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/integration/tests/ApiAuthorisedIT.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/integration/tests/ApiSchemaIT.java">
           <value>
             <set />
           </value>
@@ -293,12 +343,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/rest/resource/VersionResourceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/java/dvsa/incomplete/encounter/service/EncounterServiceTest.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/resources/endpoints.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/src/test/resources/schemas/encounter_schema.json">
           <value>
             <set />
           </value>
@@ -314,6 +374,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-training/projects/apprentice-passport-service/src/main/java/dvsa/passport/service/LambdaHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../CodeWars/src/main/java/Main.java">
           <value>
             <set />
           </value>
@@ -458,6 +523,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/models/Mp3Base64Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/providers/ProviderS3BucketControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/providers/ProviderTranscribeControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/services/ServiceHttpAndTranslationTest.java">
           <value>
             <set />
@@ -569,6 +649,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/HelpWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/InterfaceWindow.java">
           <value>
             <set />
           </value>

@@ -1,0 +1,27 @@
+
+¤
+java:S1186Æ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(”‚ˆŒüÿÿÿÿ8ğËÅ±.
+}
+java:S1450"[Remove the "accountJMenu" field and declare it as a local variable in the relevant methods.(Ëµªüÿÿÿÿ8ĞŒ¾š±.
+}
+java:S1450"`Remove the "downloadJMenuItem" field and declare it as a local variable in the relevant methods.(ÁÓÈ”8üÉãš±.
+O
+java:S3416"2Update this logger to use "InterfaceWindow.class".(ò© Ë8ÊÌ©™±.
+‚
+java:S1450"eRemove the "uploadYouTubeJMenuItem" field and declare it as a local variable in the relevant methods.(ãÇ¢8üÉãš±.
+z
+java:S1450"]Remove the "pathJTextField" field and declare it as a local variable in the relevant methods.(©…¾’8ÛØÖ¨±.
+€
+java:S1450"^Remove the "emailJTextField" field and declare it as a local variable in the relevant methods.(„µÿ‚ûÿÿÿÿ8‰í¹¨±.
+u
+java:S1450"XRemove the "helpJMenu" field and declare it as a local variable in the relevant methods.(ÎÃ´œ8ËµÂš±.
+~
+java:S1450"bRemove the "uploadFileJMenuItem" field and declare it as a local variable in the relevant methods.(¤œ“J8üÉãš±.
+G
+java:S1068"*Remove this unused "LOGGER" private field.(ò© Ë8ÊÌ©™±.
+~
+java:S1450"\Remove the "helpJMenuItem" field and declare it as a local variable in the relevant methods.(ë§Îñşÿÿÿÿ8¬çïš±.
+}
+java:S1450"`Remove the "jobNameJTextField" field and declare it as a local variable in the relevant methods.(¹«íõ8»²Ê²±.
+u
+java:S1450"XRemove the "jobsJMenu" field and declare it as a local variable in the relevant methods.(ÎÕİü8ËµÂš±.

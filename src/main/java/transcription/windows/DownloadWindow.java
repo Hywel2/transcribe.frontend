@@ -184,9 +184,7 @@ public class DownloadWindow implements ActionListener {
             }
 
             if (actionEvent.getSource() == retrieveButton) {
-                String jobName = jobField.getText();
 
-                serviceDownload.sendDownloadHttp(jobName, filePathField.getText());
             }
 
             if (actionEvent.getSource() == helpButton) {

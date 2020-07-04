@@ -72,13 +72,13 @@ public class UploadWindow implements ActionListener {
      */
     public JPanel setUploadPanel() {
         panelGbc.fill = GridBagConstraints.HORIZONTAL;
+        uploadPanel.setLayout(new GridBagLayout());
         panelGbc.insets.bottom = 1;
         panelGbc.insets.top = 1;
         panelGbc.insets.right = 1;
         panelGbc.insets.left = 1;
         panelGbc.weightx = 1;
         panelGbc.weighty = 1;
-        uploadPanel.setLayout(new GridBagLayout());
         setFilePath(uploadPanel);
         setHttp(uploadPanel);
         setJobName(uploadPanel);

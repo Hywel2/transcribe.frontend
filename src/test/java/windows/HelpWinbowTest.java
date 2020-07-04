@@ -24,13 +24,4 @@ public class HelpWinbowTest {
         assertNull(helpWindow.readTxtFile(null));
 
     }
-
-    @Test
-    @DisplayName("ActionListener test")
-    void testActionListener(){
-        HelpWindow helpWindow = new HelpWindow("menu");
-        helpWindow.setHelpWindow();
-
-        assertDoesNotThrow(() -> helpWindow.getReturnButton().doClick());
-    }
 }
