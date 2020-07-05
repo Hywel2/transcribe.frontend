@@ -1,10 +1,11 @@
 package transcription;
 
-import transcription.windows.MenuFrame;
+import transcription.windows.MenuWindow;
 
 public class Main {
 
     public static void main(String[] args) {
-        new MenuFrame();
+        MenuWindow menuWindow = new MenuWindow();
+        menuWindow.setMenuWindow();
     }
 }

@@ -1,0 +1,15 @@
+This window is used to upload the mp3/mp4 file that you wish to transcribe. The following
+explains the various fields:
+
+Job name - Give a unique job name to the upload. Make sure you make a note of this as you
+will require the job name when downloading.
+
+File path - Use the file chooser to select the file that you wish to transcribe.
+
+YouTube http - This is currently not required.
+
+Email - You do not need to provide an email and the file can be downloaded without this
+information. However, if you wish to receive an alert when the job is complete, you will
+need to add an email to this field.
+
+Once the required information has been added, click send.

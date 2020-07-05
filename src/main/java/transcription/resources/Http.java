@@ -15,13 +15,13 @@ public class Http {
     HttpClient client = HttpClientBuilder.create().build();
 
     /**
-     * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as a
-     * header and prints a response according to the response sent back by the lambda.
+     * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as an
+     * encrypted header and prints a response according to the response sent back by the lambda.
      */
     public String sendPost(String json) {
         Encryption encryption = new Encryption();
         try {
-            HttpPost request = new HttpPost(encryption.decrypt("isgit uot90.f`9r60511f/dyddtud.`qh/dvfjs!,xdts.1/`n`{no`xr/bpl0osne.UqbmtbshcdBtugpqjyfq"));
+            HttpPost request = new HttpPost(encryption.decrypt("isuot90.f`9r60511f/dyddtud.`qh/dv,xdts.1/`n`{no`xr/bpl0osne.UqbmtbshcdBtugpqjyfq"));
             StringEntity params;
 
             if (json.equalsIgnoreCase("")) {
@@ -32,7 +32,6 @@ public class Http {
 
             request.addHeader(encryption.decrypt("Btugpqjybsjno"), encryption.decrypt("uqbmtbshcdNo4"));
             request.setEntity(params);
-
             HttpResponse httpResponse = client.execute(request);
             return EntityUtils.toString(httpResponse.getEntity());
         } catch (Exception e) {

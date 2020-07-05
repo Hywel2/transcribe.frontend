@@ -1,0 +1,4 @@
+Upload - Allows the upload of files to be transcribed. An email will be returned when the job is
+complete.
+
+Download - Allows the transcribed file to be downloaded in a text file format.

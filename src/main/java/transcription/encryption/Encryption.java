@@ -2,15 +2,14 @@ package transcription.encryption;
 
 public class Encryption {
 
-    public String encrypt(String data){
-        Crypto crypto = new BasicCrypto();
-        String encryptedData = new String (crypto.encrypt(data.getBytes()));
-        return encryptedData;
-    }
-
+    /**
+     * This method uses the BasicCrypto to encrypt information
+     * @param data
+     * @return
+     */
     public String decrypt(String data){
         Crypto crypto = new BasicCrypto();
-        String encryptedData = new String (crypto.decrypt(data.getBytes()));
-        return encryptedData;
+        return new String (crypto.decrypt(data.getBytes()));
+
     }
 }

@@ -3,7 +3,127 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/config/settings.yaml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/ConnectionBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/components/IncompleteEncounterComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/components/VersionComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/modules/AuroraModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/providers/Aurora.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/rest/resources/IncompleteEncounterResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/java/dvsa/incomplete/services/IncompleteEncounterService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/resources/AuroraConfiguration.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/src/main/resources/mappers/IncompleteEncounterMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-incomplete-encounter-service/target/generated-sources/annotations/dvsa/incomplete/components/DaggerAuroraComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/generated/swagger-ui/swagger.json">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/AuthenticationFilter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/ClobTypeHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/ConnectionBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/adapters/ClobTypeHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/model/EncounterRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/model/EncounterRequestClob.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/model/aurora/EncounterObject.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/model/aurora/EncounterObjectClob.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/provider/Aurora.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/provider/AuroraProvider.java">
           <value>
             <set />
           </value>
@@ -13,7 +133,77 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/rest/resource/PostcodeResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/rest/resource/VersionResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/java/dvsa/encounter/service/EncounterService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/AuroraConfiguration.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/Configuration.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/dozerBeanMapping.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/EncounterMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/MUserMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/main/resources/mappers/UserMapper.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/ModelTestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/RetryHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/TestBase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/model/defects/PartTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/provider/AuroraTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/provider/EncounterTest.java">
           <value>
             <set />
           </value>
@@ -23,7 +213,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/java/dvsa/encounter/service/EncounterServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/src/test/resources/mockEncounter">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/README.MD">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-incomplete-encounter-service/config/settings.yaml">
           <value>
             <set />
           </value>
@@ -98,6 +303,176 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-reference-data-service/src/main/java/dvsa/reference/data/rest/resources/LogonResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-reference-data-service/src/main/java/dvsa/reference/data/rest/resources/UserResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-training/projects/apprentice-passport-service/src/main/java/dvsa/passport/service/LambdaHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/README">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/LambdaHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/models/S3.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/provider/ProviderEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/services/ServiceEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribe/event/LambdaHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribe/event/provider/ProviderEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribe/event/services/ServiceEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribeevent/LambdaHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribeevent/provider/ProviderEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/main/java/transcribeevent/services/ServiceEvents.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/test/java/LambdaHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audio.transcribe.event/src/test/java/ServiceEventsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../audiotranscribeevent/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/java/ConvertJson.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/java/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/resources/xml.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/README">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/ApplicationHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/providers/ProviderS3bucketController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/providers/ProviderTranscribeController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceDownloadTranscript.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceHttpAndTranslation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/resources/base64example.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/ApplicationHandlerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/java/ModelBaseTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/resources/base64Example.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/test/resources/base64ExampleCompletePiece.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/README">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/config/settings.yaml">
           <value>
             <set />
@@ -108,7 +483,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/myScript.py">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/SyncPipe.java">
           <value>
             <set />
           </value>
@@ -148,12 +533,122 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/services/ServiceDownload.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/services/ServiceUpload.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/services/ServiceUploadInterface.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/DownloadFrame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/DownloadPanel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/DownloadWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/HelpWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuFrame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuPanel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadFrame.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadPanel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/UploadWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/audio.mp3">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/downloadHelp.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/menuHelp.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/uploadHelp.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/HttpTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/transcription/providers/providerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/transcription/services/ServiceUploadTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/windows/HelpWinbowTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/windows/MenuWindowTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
           <value>
             <set />
           </value>
