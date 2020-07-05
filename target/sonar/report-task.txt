@@ -2,5 +2,5 @@ projectKey=SiphoAndHywel:audio.transcribe
 serverUrl=http://localhost:9002
 serverVersion=7.9.2.30863
 dashboardUrl=http://localhost:9002/dashboard?id=SiphoAndHywel%3Aaudio.transcribe
-ceTaskId=AXL3exhD75-h9136_2r9
-ceTaskUrl=http://localhost:9002/api/ce/task?id=AXL3exhD75-h9136_2r9
+ceTaskId=AXMbgWLZq1fiCvzCZdh6
+ceTaskUrl=http://localhost:9002/api/ce/task?id=AXMbgWLZq1fiCvzCZdh6

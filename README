@@ -11,6 +11,12 @@ One Paragraph of project description goes here
     sending the request. This will send out a http call that selects the file that collects the file from
     audio.transcribe.back to be inserted into the selected directory.
 
+    In addition, the user can select a http of a youtube video to transcribe it. Here, the program uses the 320youtube
+    website to download a url which downloads the video when it is called. The program then sends this mp3 to the AWS
+    (in the same way as above) and deletes the mp3 to avoid copyright.
+
+    A help window is also available for guidance during the program's use.
+
 Getting Started
 
    This file can be downloaded from github, using the SSH provided by the website. This is only available to
@@ -21,8 +27,7 @@ Getting Started
 
 Prerequisites
 
-Java is required and, if you wish to download videos from YouTube to transcribe, we would recommend installing
-youtube-dl from https://youtube-dl.org/.
+Java is required.
 
 Installing
 
@@ -42,7 +47,7 @@ Right click on test.java to run the jUnit tests.
 Explain what these tests test and why
 
 The tests are designed to check the functionality fo the code and maintain good coverage in order to prevent damage.
-There should be 100% coverage of new code and at least 95% coverage of the full code before merging new branches. jUnit
+There should be 100% coverage of new code and at least 90% coverage of the full code before merging new branches. jUnit
 tests are used throughout though Mockito is also available.
 
 Built With

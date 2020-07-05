@@ -9,6 +9,8 @@ import ws.schild.jave.MultimediaObject;
 
 import java.io.*;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -41,7 +43,7 @@ public class ServiceUpload {
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
 
             if (youTubeFlag) {
-                inputFile.delete();
+                Files.delete(Paths.get(inputFile.getPath()));
             }
 
             return cuttingLoop(mpBase64Piece, jobName, email);
@@ -154,7 +156,7 @@ public class ServiceUpload {
      *
      * @param httpPath String
      */
-    public void getMp4FromYoutube(String httpPath) {
+    public boolean getMp4FromYoutube(String httpPath) {
         try {
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
@@ -162,8 +164,11 @@ public class ServiceUpload {
                 os.write(mp3ByteArray);
                 os.flush();
             }
+            return true;
         } catch (IOException e) {
+            LOGGER.info(e.toString());
             e.printStackTrace();
+            return false;
         }
     }
 
@@ -174,7 +179,7 @@ public class ServiceUpload {
      * @return byte[]
      * @throws IOException
      */
-    public static byte[] youtubeToMP3(String youtubeUrl) throws IOException {
+    public byte[] youtubeToMP3(String youtubeUrl) throws IOException {
         String id = getID(youtubeUrl);
         String converter = loadConverter(id);
         String mp3url = getMP3URL(converter);
@@ -214,7 +219,7 @@ public class ServiceUpload {
      * @return String
      * @throws IOException
      */
-    private static String loadConverter(String id) throws IOException {
+    public String loadConverter(String id) throws IOException {
         String url = "https://www.320youtube.com/watch?v=" + id;
         byte[] bytes = load(url);
         return new String(bytes);
@@ -255,7 +260,7 @@ public class ServiceUpload {
     }
 
     /**
-     * This method uses the converter to load the mp3 byte array from the youtub website
+     * This method uses the converter to load the mp3 byte array from the youtube website
      *
      * @param url String
      * @return byte[]t
