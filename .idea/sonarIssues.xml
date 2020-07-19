@@ -68,6 +68,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-schema/src/main/java/dvsa/encounter/schema/model/notices/OffenceBaseType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../dvsa-stories/dvsa-encounter-service/generated/swagger-ui/swagger.json">
           <value>
             <set />
@@ -564,6 +569,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF">
           <value>
             <set />
           </value>

@@ -5,12 +5,13 @@ import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.logging.Logger;
 
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS;
 
 public class HelpWindow{
+    private static final Logger LOGGER = Logger.getLogger(HelpWindow.class.getName());
 
     private GridBagConstraints panelGbc = new GridBagConstraints();
     private GridBagConstraints frameGbc = new GridBagConstraints();
