@@ -386,7 +386,9 @@ public class InterfaceWindow implements ActionListener {
         }
         chooser.showOpenDialog(null);
         File directoryOrFile = chooser.getSelectedFile();
-        pathJTextField.setText(directoryOrFile.getAbsolutePath());
+        if (directoryOrFile!=null) {
+            pathJTextField.setText(directoryOrFile.getAbsolutePath());
+        }
     }
 
     /**
@@ -397,7 +399,12 @@ public class InterfaceWindow implements ActionListener {
         if (downloadFlag) {
             String jobName = jobNameJTextField.getText();
             String job = serviceDownload.sendDownloadHttp(jobName, pathJTextField.getText());
-            jTextArea.setText(job);
+            if (job.substring(1,33).equals("java.nio.file.NoSuchFileException")){
+                jTextArea.setText("File is not yet ready.");
+            }
+            else {
+                jTextArea.setText(job);
+            }
         } else if (youTubeFlag) {
             serviceUpload.getMp4FromYoutube(pathJTextField.getText());
             serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File("src/main/resources/audio.mp3"), emailJTextField.getText(), true);
