@@ -73,6 +73,7 @@ public class InterfaceWindow implements ActionListener {
     /**
      * This method creates the settings for the interfaceWindow JFrame, adding the JMenuBar, setting the contentPane,
      * and several other features.
+     *
      * @return JFrame
      */
     public JFrame setInterfaceWindow() {
@@ -92,6 +93,7 @@ public class InterfaceWindow implements ActionListener {
     /**
      * This method sets the contentPane Container that has the various components in a GridBagConstraints layout.
      * It adds the JTextFields, JLabels, JButtons and JTextArea using several methods.
+     *
      * @return Container
      */
     private Container setContentPane() {
@@ -117,6 +119,7 @@ public class InterfaceWindow implements ActionListener {
     /**
      * This method take the JMenuBar provided when setting up the JFrame and adds the various JMenus and
      * JMenuItems
+     *
      * @param toolBarJMenuBar JMenuBar
      * @return JMenuBar
      */
@@ -147,6 +150,7 @@ public class InterfaceWindow implements ActionListener {
 
     /**
      * This method sets the JLabel and JTextfield associated with the file path/http
+     *
      * @param interfaceContainer Container
      */
     private void setPath(Container interfaceContainer) {
@@ -169,6 +173,7 @@ public class InterfaceWindow implements ActionListener {
 
     /**
      * This method sets the JTextField and JLabel associated with the jobName
+     *
      * @param interfaceContainer Container
      */
     private void setJobName(Container interfaceContainer) {
@@ -192,6 +197,7 @@ public class InterfaceWindow implements ActionListener {
 
     /**
      * This method sets the JTextFiled and JLabel associated with the email
+     *
      * @param interfaceContainer Container
      */
     private void setEmail(Container interfaceContainer) {
@@ -215,6 +221,7 @@ public class InterfaceWindow implements ActionListener {
 
     /**
      * This method sets the JTextArea
+     *
      * @param interfaceContainer Container
      */
     private void setTextArea(Container interfaceContainer) {
@@ -233,6 +240,7 @@ public class InterfaceWindow implements ActionListener {
 
     /**
      * This method creates sets the JButtons for the container
+     *
      * @param interfaceContainer Container
      */
     private void setButtons(Container interfaceContainer) {
@@ -276,6 +284,7 @@ public class InterfaceWindow implements ActionListener {
      * This method creates the correct response according to the JButton or JMenuItem pressed. It calls the correct
      * method depending on the component, or, in the case of the copyToClipBoardJButton it uses the Clipboard object
      * to copy the content of the JTextArea
+     *
      * @param actionEvent ActionEvent
      */
     @Override
@@ -288,9 +297,9 @@ public class InterfaceWindow implements ActionListener {
                 selectFileJButtonAction();
             }
             if (actionEvent.getSource() == copyToClipBoardJButton) {
-                StringSelection stringSelection = new StringSelection (jTextArea.getText());
-                Clipboard clpbrd = Toolkit.getDefaultToolkit ().getSystemClipboard ();
-                clpbrd.setContents (stringSelection, null);
+                StringSelection stringSelection = new StringSelection(jTextArea.getText());
+                Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clpbrd.setContents(stringSelection, null);
             }
             if (actionEvent.getSource() == helpJMenuItem) {
                 helpJMenuItemAction();
@@ -346,7 +355,7 @@ public class InterfaceWindow implements ActionListener {
      * This method creates the correct settings when the uploadYouTube JMenuItem is pressed. It sets the flags so the
      * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
      */
-    private void setUploadYouTubeJMenuItemAction(){
+    private void setUploadYouTubeJMenuItemAction() {
         downloadFlag = false;
         youTubeFlag = true;
 
@@ -363,10 +372,9 @@ public class InterfaceWindow implements ActionListener {
      */
     private void helpJMenuItemAction() {
         String previousWindow;
-        if (downloadFlag){
+        if (downloadFlag) {
             previousWindow = "download";
-        }
-        else {
+        } else {
             previousWindow = "upload";
         }
         HelpWindow helpWindow = new HelpWindow(previousWindow);
@@ -386,7 +394,9 @@ public class InterfaceWindow implements ActionListener {
         }
         chooser.showOpenDialog(null);
         File directoryOrFile = chooser.getSelectedFile();
-        pathJTextField.setText(directoryOrFile.getAbsolutePath());
+        if (directoryOrFile != null) {
+            pathJTextField.setText(directoryOrFile.getAbsolutePath());
+        }
     }
 
     /**
@@ -400,9 +410,13 @@ public class InterfaceWindow implements ActionListener {
             jTextArea.setText(job);
         } else if (youTubeFlag) {
             serviceUpload.getMp4FromYoutube(pathJTextField.getText());
-            serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File("src/main/resources/audio.mp3"), emailJTextField.getText(), true);
+            if ((serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File("src/main/resources/audio.mp3"), emailJTextField.getText(), true)).equals("\"{FailureReason: The requested job name already exists,}\"")){
+                jTextArea.setText("The requested job name already exists. Please choose another.");
+            }
         } else {
-            serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File(pathJTextField.getText()), emailJTextField.getText(), false);
+            if ((serviceUpload.convertToBase64AndSend(jobNameJTextField.getText(), new File(pathJTextField.getText()), emailJTextField.getText(), false)).equals("\"{FailureReason: The requested job name already exists,}\"")){
+                jTextArea.setText("The requested job name already exists. Please choose another job name.");
+            }
         }
     }
 }

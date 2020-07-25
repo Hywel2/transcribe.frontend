@@ -1,0 +1,4 @@
+
+p
+java:S4042,"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Ø‰ ùÿÿÿÿ8åÎÖ¶.
+\	java:S899,";Do something with the "boolean" value returned by "delete".(Ø‰ ùÿÿÿÿ8åÎÖ¶.

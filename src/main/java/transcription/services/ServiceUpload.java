@@ -41,11 +41,11 @@ public class ServiceUpload {
 
             byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
+            Files.delete(Paths.get(inputFile.getAbsolutePath()));
 
             if (youTubeFlag) {
                 Files.delete(Paths.get(inputFile.getPath()));
             }
-
             return cuttingLoop(mpBase64Piece, jobName, email);
         } catch (Exception e) {
             LOGGER.info("Something isn't right! Error: " + e);
@@ -90,7 +90,6 @@ public class ServiceUpload {
             }
 
         }
-
         LOGGER.info("complete");
         return response;
     }
@@ -167,7 +166,6 @@ public class ServiceUpload {
             return true;
         } catch (IOException e) {
             LOGGER.info(e.toString());
-            e.printStackTrace();
             return false;
         }
     }

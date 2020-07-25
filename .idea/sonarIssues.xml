@@ -463,12 +463,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../converter/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../converter/src/main/java/ConvertJson.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../converter/src/main/java/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../converter/src/main/resources/result.txt">
           <value>
             <set />
           </value>
@@ -679,6 +689,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/MenuWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/PleaseWaitWindow.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/transcription/windows/PopUpWindow.java">
           <value>
             <set />
           </value>
