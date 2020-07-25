@@ -23,6 +23,9 @@ public class ServiceDownload {
     public String sendDownloadHttp(String job, String filePath) {
         try {
             String json = providerDownload.executeDownloadHttp(job + ".json");
+            if (json.length()>34 && json.substring(1,34).equals("java.nio.file.NoSuchFileException")){
+                return "File is not transcribed yet.";
+            }
             Files.write( Paths.get(filePath+"/"+job+".txt"), providerDownload.executeDownloadHttp(job + ".json").getBytes());
             LogManager.getLogManager().getLogger(Logger.GLOBAL_LOGGER_NAME).setLevel(Level.INFO);
             LOGGER.info("complete");

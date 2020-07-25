@@ -8,6 +8,4 @@ public class Main {
         InterfaceWindow interfaceWindow = new InterfaceWindow();
         interfaceWindow.setInterfaceWindow();
     }
-
-
 }

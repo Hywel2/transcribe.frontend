@@ -45,3 +45,5 @@ g
 7src/test/java/transcription/windows/HelpWinbowTest.java,7/0/700c50f58e4437a9ff6da75addee01ec15523927
 l
 <src/test/java/transcription/windows/InterfaceWindowTest.java,1/b/1b75df4c7e4c5b991cc73e1738cba01a7eee9a0a
+d
+4src/main/java/transcription/windows/PopUpWindow.java,4/a/4a766ba0501a5c95869804c5d1a0c4170e214c01

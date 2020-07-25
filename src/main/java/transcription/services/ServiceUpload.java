@@ -41,7 +41,7 @@ public class ServiceUpload {
 
             byte[] bytes = FileUtils.readFileToByteArray(inputFile);
             String mpBase64Piece = Base64.getEncoder().encodeToString(bytes);
-            inputFile.delete();
+            Files.delete(Paths.get(inputFile.getAbsolutePath()));
 
             if (youTubeFlag) {
                 Files.delete(Paths.get(inputFile.getPath()));
@@ -166,7 +166,6 @@ public class ServiceUpload {
             return true;
         } catch (IOException e) {
             LOGGER.info(e.toString());
-            e.printStackTrace();
             return false;
         }
     }
