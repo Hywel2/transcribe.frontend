@@ -6,7 +6,7 @@
 
     <groupId>SiphoAndHywel</groupId>
     <artifactId>audio.transcribe</artifactId>
-    <version>4.0.1</version>
+    <version>4.2.1</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
