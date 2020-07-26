@@ -65,7 +65,7 @@ public class ServiceUploadTest {
 
     @Test
     @DisplayName("Test convertToBase64AndSend")
-    void testConvertToBase64AndSend() {
+    void testConvertToBase64AndSend() throws IOException {
         ServiceUpload serviceUpload = new ServiceUpload();
         File file = new File("src/test/java/resources/fakeMp4.txt");
         String jobName = "JOBNAME";
@@ -78,6 +78,8 @@ public class ServiceUploadTest {
         };
 
         assertEquals("\"complete\"", serviceUpload.convertToBase64AndSend(jobName, file, null, false));
+        File newFile  = new File("src/test/java/resources/fakeMp4.txt");
+        newFile.createNewFile();
     }
 
     @Test
