@@ -4,6 +4,7 @@ import transcription.services.ServiceDownload;
 import transcription.services.ServiceUpload;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -393,6 +394,8 @@ public class InterfaceWindow implements ActionListener {
      */
     private void selectFileJButtonAction() {
         JFileChooser chooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("mp3 or mp4", "mp3", "MP3", "mp4", "MP4");
+        chooser.setFileFilter(filter);
         if (downloadFlag) {
             chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         } else {
