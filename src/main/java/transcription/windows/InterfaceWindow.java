@@ -71,6 +71,14 @@ public class InterfaceWindow implements ActionListener {
         return helpJMenuItem;
     }
 
+    public void setDownloadFlag(boolean downloadFlag) {
+        this.downloadFlag = downloadFlag;
+    }
+
+    public void setYouTubeFlag(boolean youTubeFlag) {
+        this.youTubeFlag = youTubeFlag;
+    }
+
     /**
      * This method creates the settings for the interfaceWindow JFrame, adding the JMenuBar, setting the contentPane,
      * and several other features.
