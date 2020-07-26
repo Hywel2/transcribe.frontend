@@ -323,6 +323,8 @@ public class InterfaceWindow implements ActionListener {
      * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
      */
     private void downloadJMenuItemAction() {
+        pathJTextField.setText(emptyField);
+
         downloadFlag = true;
         youTubeFlag = false;
 
@@ -339,6 +341,8 @@ public class InterfaceWindow implements ActionListener {
      * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
      */
     private void setUploadFileJMenuItemAction() {
+        pathJTextField.setText(emptyField);
+
         downloadFlag = false;
         youTubeFlag = false;
 
@@ -356,6 +360,8 @@ public class InterfaceWindow implements ActionListener {
      * program knows which way buttons should behave and sets visibility/text on JButtons and JLabels
      */
     private void setUploadYouTubeJMenuItemAction() {
+        pathJTextField.setText(emptyField);
+
         downloadFlag = false;
         youTubeFlag = true;
 
