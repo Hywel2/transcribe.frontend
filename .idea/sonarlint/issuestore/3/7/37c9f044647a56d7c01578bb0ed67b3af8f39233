@@ -1,3 +1,14 @@
 
-@
-java:S5786"Remove this 'public' modifier.(ğˆõşÿÿÿÿ8û ­±¶.
+ƒ
+java:S1130"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(şˆªÆ
+‚
+java:S1130x"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(³Æ×”
+W	java:S899Q"BDo something with the "boolean" value returned by "createNewFile".(«óˆ­
+O
+java:S1197„"8Move the array designator from the variable to the type.(®úæ
+x
+java:S1488Œ"aImmediately return this expression instead of assigning it to the temporary variable "converter".(á˜â
+T
+java:S1197“"8Move the array designator from the variable to the type.(—‚ÄÙûÿÿÿÿ
+¡
+java:S1130"ŠRemove the declaration of thrown exception 'ws.schild.jave.InputFormatException' which is a subclass of 'ws.schild.jave.EncoderException'.(şˆªÆ
