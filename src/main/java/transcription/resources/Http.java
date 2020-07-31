@@ -12,11 +12,13 @@ import java.util.logging.Logger;
 
 public class Http {
     private static final Logger LOGGER = Logger.getLogger(Http.class.getName());
-    HttpClient client = HttpClientBuilder.create().build();
+    private HttpClient client = HttpClientBuilder.create().build();
 
     /**
      * Sends a post request to the ApiGateway, set in the HttpPost object. It attaches the authorization token as an
      * encrypted header and prints a response according to the response sent back by the lambda.
+     * @param json String
+     * @return String
      */
     public String sendPost(String json) {
         Encryption encryption = new Encryption();

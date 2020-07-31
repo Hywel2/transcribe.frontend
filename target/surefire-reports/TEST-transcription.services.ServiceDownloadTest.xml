@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="transcription.services.ServiceDownloadTest" time="0.333" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="transcription.services.ServiceDownloadTest" time="0.706" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="25.232-b09"/>
     <property name="gopherProxySet" value="false"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audioTranscribeFront"/>
     <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
     <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audio.transcribe.front"/>
+    <property name="user.dir" value="/Users/hywelgriffiths/Documents/IntellijProjects/sipho/transcriptionSoftware/audioTranscribeFront"/>
     <property name="java.runtime.version" value="1.8.0_232-b09"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home/jre/lib/endorsed"/>
@@ -63,5 +63,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="transcription.services.ServiceDownloadTest" name="transcription.services.ServiceDownloadTest.testCatchBlock" time="0.333"/>
+  <testcase classname="transcription.services.ServiceDownloadTest" name="transcription.services.ServiceDownloadTest.testFileNotTranscribed" time="0.679"/>
+  <testcase classname="transcription.services.ServiceDownloadTest" name="transcription.services.ServiceDownloadTest.testJobNameDoesNotExist" time="0.002"/>
+  <testcase classname="transcription.services.ServiceDownloadTest" name="transcription.services.ServiceDownloadTest.testCatchBlock" time="0.025"/>
 </testsuite>

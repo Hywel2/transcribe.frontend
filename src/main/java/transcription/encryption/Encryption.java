@@ -10,6 +10,5 @@ public class Encryption {
     public String decrypt(String data){
         Crypto crypto = new BasicCrypto();
         return new String (crypto.decrypt(data.getBytes()));
-
     }
 }
