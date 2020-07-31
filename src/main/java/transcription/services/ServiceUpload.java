@@ -29,9 +29,8 @@ public class ServiceUpload {
      * @param email       String
      * @param youTubeFlag boolean
      * @return
-     * @throws IOException
+     * @throws Exception
      */
-
     public String convertToBase64AndSend(String jobName, File inputFile, String email, boolean youTubeFlag) {
         try {
 
@@ -57,8 +56,9 @@ public class ServiceUpload {
      * This method cuts the base64 into 1000 character pieces, sending each one as a http until it reaches the end tag.
      * It sets a tag to the status of start, end or middle, depending on which part of the base64 the code comes from.
      *
-     * @param mpBase64Piece
-     * @param email
+     * @param mpBase64Piece String
+     * @param jobName       String
+     * @param email         String
      */
     public String cuttingLoop(String mpBase64Piece, String jobName, String email) {
         String tag;
@@ -98,7 +98,8 @@ public class ServiceUpload {
      * Converts the mp4 file into the mp3 file
      *
      * @param mp4File
-     * @return
+     * @return String
+     * @throws Exception
      */
 
     public String convertToMp3(String mp4File) {
@@ -148,18 +149,18 @@ public class ServiceUpload {
         return mp4file;
     }
 
-    //methods for conversion download of youtube video//
-
     /**
      * Converts the audio of the youtube to a byte array and writes it to a file to be converted
      *
      * @param httpPath String
+     * @return boolean
+     * @throws IOException
      */
     public boolean getMp4FromYoutube(String httpPath) {
         try {
             byte[] mp3ByteArray = youtubeToMP3(httpPath);
             File mp3File = new File("src/main/resources/audio.mp3");
-            try(OutputStream os = new FileOutputStream(mp3File, true)) {
+            try (OutputStream os = new FileOutputStream(mp3File, true)) {
                 os.write(mp3ByteArray);
                 os.flush();
             }
@@ -177,7 +178,7 @@ public class ServiceUpload {
      * @return byte[]
      * @throws IOException
      */
-    public byte[] youtubeToMP3(String youtubeUrl) throws IOException {
+    public byte[] youtubeToMP3(String youtubeUrl){
         String id = getID(youtubeUrl);
         String converter = loadConverter(id);
         String mp3url = getMP3URL(converter);
@@ -202,7 +203,7 @@ public class ServiceUpload {
             if (youtubeUrl.charAt(i) == '=' && !equalsFlag) {
                 equalsFlag = true;
             }
-            if (!(youtubeUrl.charAt(i) == '=' && !equalsFlag) && youtubeUrl.charAt(i)!='=') {
+            if (!(youtubeUrl.charAt(i) == '=' && !equalsFlag) && youtubeUrl.charAt(i) != '=') {
                 id = id.append(youtubeUrl.charAt(i));
             }
 
@@ -215,9 +216,8 @@ public class ServiceUpload {
      *
      * @param id String
      * @return String
-     * @throws IOException
      */
-    public String loadConverter(String id) throws IOException {
+    public String loadConverter(String id){
         String url = "https://www.320youtube.com/watch?v=" + id;
         byte[] bytes = load(url);
         return new String(bytes);
@@ -251,9 +251,7 @@ public class ServiceUpload {
             if (html.charAt(i) == '\"' && marker) {
                 return http.substring(0, http.length() - 1);
             }
-
         }
-
         return null;
     }
 
@@ -261,23 +259,24 @@ public class ServiceUpload {
      * This method uses the converter to load the mp3 byte array from the youtube website
      *
      * @param url String
-     * @return byte[]t
+     * @return byte[]
      * @throws IOException
      */
-    private static byte[] load(String url) throws IOException {
-        URL url2 = new URL(url);
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        try (InputStream is = url2.openStream()) {
-            byte[] byteChunk = new byte[2500];
-            int n;
+    public byte[] load(String url) {
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()){
+            URL url2 = new URL(url);
+            try (InputStream is = url2.openStream()) {
+                byte[] byteChunk = new byte[2500];
+                int n;
 
-            while ((n = is.read(byteChunk)) > 0) {
-                baos.write(byteChunk, 0, n);
+                while ((n = is.read(byteChunk)) > 0) {
+                    baos.write(byteChunk, 0, n);
+                }
             }
-
-            baos.close();
-            baos.flush();
+            return baos.toByteArray();
+        } catch (IOException e) {
+            LOGGER.info(e.toString());
+            return new byte[]{};
         }
-        return baos.toByteArray();
     }
 }

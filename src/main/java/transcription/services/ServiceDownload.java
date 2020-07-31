@@ -10,18 +10,19 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class ServiceDownload {
+    private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
     ProviderDownload providerDownload = new ProviderDownload();
     private String notTrancribed = "File is not transcribed yet.";
     private String notExist = "Job name does not exist";
+
     /**
      * This method sends the request for a download to the provider. It then writes a file using the transcription text
      * that is returned by the server.
      *
-     * @param job
-     * @param filePath
+     * @param job String
+     * @param filePath String
+     * @return String
      */
-    private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
-
     public String sendDownloadHttp(String job, String filePath) {
         try {
             String json = providerDownload.executeDownloadHttp(job + ".json");
