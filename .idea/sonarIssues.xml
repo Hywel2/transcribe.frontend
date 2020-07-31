@@ -108,6 +108,31 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/ApplicationHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/providers/ProviderS3bucketController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/providers/ProviderTranscribeController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceDownloadTranscript.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../audio.transcribe.back/src/main/java/transcribe/back/services/ServiceHttpAndTranslation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />

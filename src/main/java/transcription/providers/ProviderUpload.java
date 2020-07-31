@@ -14,7 +14,6 @@ public class ProviderUpload {
      * @return String
      * @throws Exception
      */
-
     public String executeUploadHttp(String mp3Base64, String jobName, String tag, String email) {
         String json = ("{\"mp3Base64\":\"" + mp3Base64 + "hgend" + jobName + "\", \"tag\":\"" + tag + "\",\"email\":\"" + email + "\"}");
         return new Http().sendPost(json);

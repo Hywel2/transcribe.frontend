@@ -33,7 +33,6 @@ public class ServiceUpload {
      */
     public String convertToBase64AndSend(String jobName, File inputFile, String email, boolean youTubeFlag) {
         try {
-
             if (!youTubeFlag) {
                 inputFile = new File(convertToMp3(inputFile.getAbsolutePath()));
             }
@@ -74,11 +73,13 @@ public class ServiceUpload {
             }
 
         }
+
         base64List.add(mpBase64Piece);
 
         for (int n = 0; n < base64List.size(); n++) {
 
             if (base64List.get(n) != null) {
+
                 if (n == 0) {
                     tag = "start";
                 } else if (n == base64List.size() - 1) {
@@ -87,6 +88,7 @@ public class ServiceUpload {
                     tag = "middle";
                 }
                 response = providerUpload.executeUploadHttp(base64List.get(n), jobName, tag, email);
+
             }
 
         }
@@ -101,7 +103,6 @@ public class ServiceUpload {
      * @return String
      * @throws Exception
      */
-
     public String convertToMp3(String mp4File) {
         try {
             File source = new File(mp4File);
@@ -136,7 +137,6 @@ public class ServiceUpload {
      * @param mp4file String
      * @return String
      */
-
     public String createMp3(String mp4file) {
         Character character = mp4file.charAt(mp4file.length() - 1);
 
@@ -231,7 +231,6 @@ public class ServiceUpload {
      * @return String
      */
     private static String getMP3URL(String html) {
-
         StringBuilder http = new StringBuilder();
         boolean marker = false;
 
@@ -265,6 +264,7 @@ public class ServiceUpload {
     public byte[] load(String url) {
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()){
             URL url2 = new URL(url);
+
             try (InputStream is = url2.openStream()) {
                 byte[] byteChunk = new byte[2500];
                 int n;
@@ -273,6 +273,7 @@ public class ServiceUpload {
                     baos.write(byteChunk, 0, n);
                 }
             }
+
             return baos.toByteArray();
         } catch (IOException e) {
             LOGGER.info(e.toString());

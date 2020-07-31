@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class ServiceDownload {
     private static final Logger LOGGER = Logger.getLogger(ServiceDownload.class.getName());
-    ProviderDownload providerDownload = new ProviderDownload();
+    private ProviderDownload providerDownload = new ProviderDownload();
     private String notTrancribed = "File is not transcribed yet.";
     private String notExist = "Job name does not exist";
 
